@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The End is Nigh: Modder's Manual</title>
+
+		<meta charset="utf-8"/>
+		<meta name="description" content="A manual containing information regarding modding The End is Nigh"/>
+		<meta name="keywords" content="The End is Nigh,Modding,TEIN,Mod,Manual,Edmund McMillen,Tyler Glaiel"/>
+		<meta name="author" content="Joshua Robertson"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="contentback"></div>
+			<div class="header">
+				<h1 class="heading">Tilesets</h1>
+			</div>
+			<ul class="nav">
+				<!-- needs to be on one line otherwise space will be present between nav elements -->
+				<li><a href="../index.html">Home</a></li><li><a href="contents.html">Contents</a></li><li><a href="getstart.html">Getting Started</a></li><li><a href="editor.html">The Editor</a></li><li><a href="reference.html">Reference</a></li><li><a href="download.html">Download</a></li><li><a href="changelog.html">Changelog</a></li><li><a href="credits.html">Credits</a></li>
+			</ul>
+			<div class="content">
+				<h2>Contents</h2>
+				<div class="contents">
+					<h3><a href="tileset.html#overview">Overview</a> - Details general tileset information.</h3>
+					<h3><a href="tileset.html#variables">Variables Overview</a> - Details what each variable in a tileset means/does.</h3>
+					<!-- <h3><a href="tileset.html#listing">Tileset Listing</a> - Details what each existing tileset is.</h3> -->
+					<h3><a href="tileset.html#areaname">Area Name</a> - Details about the Area Name variable.</h3>
+					<h3><a href="tileset.html#arealabel">Area Label Frame</a> - Details about the Area Label Frame variable.</h3>
+					<h3><a href="tileset.html#areatype">Area Type</a> - Details about the Area Type variable.</h3>
+					<h3><a href="tileset.html#tilegraph">Tile Graphics</a> - Details about the Tile Graphics variable.</h3>
+					<h3><a href="tileset.html#overgraph">Overlay Graphics</a> - Details about the Overlay Graphics variable.</h3>
+					<h3><a href="tileset.html#back">Background Graphics</a> - Details about the Background Graphics variable.</h3>
+					<h3><a href="tileset.html#front">Foreground Graphics</a> - Details about the Foreground Graphics variable.</h3>
+					<h3><a href="tileset.html#palette">Palette</a> - Details about the Palette variable.</h3>
+					<h3><a href="tileset.html#music">Music</a> - Details about the Music variable.</h3>
+					<h3><a href="tileset.html#ambience">Ambience</a> - Details about the Ambience variable.</h3>
+					<h3><a href="tileset.html#musvol">Music Volume</a> - Details about the Music Volume variable.</h3>
+					<h3><a href="tileset.html#ambvol">Ambience Volume</a> - Details about the Ambience Volume variable.</h3>
+					<h3><a href="tileset.html#stopmusic">Stop Previous Music</a> - Details about the Stop Previous Music variable.</h3>
+					<h3><a href="tileset.html#npc">NPC</a> - Details about the NPC variable.</h3>
+					<h3><a href="tileset.html#artalt">Art Alts.</a> - Details about the Art Alts. variable.</h3>
+					<h3><a href="tileset.html#toxic">Toxic Timer</a> - Details about the Toxic Timer variable.</h3>
+					<h3><a href="tileset.html#intropng">Cart Intro PNG</a> - Details about the Cart Intro PNG variable.</h3>
+					<h3><a href="tileset.html#intropal">Cart Intro Palette</a> - Details about the Cart Intro Palette variable.</h3>
+				</div>
+				<h2 id="overview">Overview</h2>
+				<p>
+					Location in the unpacked data: <span class="variable">data\tilesets.txt</span><br/><br/>
+					The tilesets file is one of the most important when modding TEIN, especially in regards to adding new areas/zones. The file dictates general information about a given area, but also defines many of the traits and aspects that will make an area unique (graphical elements, what music to use, palette, etc.).<br/><br/>
+					Here is an example tileset taken from the game, ("The End" downward secret area tileset):
+				</p>
+				<div class="code">
+					<p>
+						01&emsp;1xd { #1 bonus downward areas<br/>
+						02&emsp;&emsp;&emsp;area_name "The End"<br/>
+						03&emsp;&emsp;&emsp;area_label_frame 1<br/>
+						04&emsp;&emsp;&emsp;tile_graphics Tilecity<br/>
+						05&emsp;&emsp;&emsp;overlay_graphics Overlayscity<br/>
+						06&emsp;&emsp;&emsp;background_graphics bg2<br/>
+						07&emsp;&emsp;&emsp;palette 1<br/>
+						08&emsp;&emsp;&emsp;fx_shader reflectionripples<br/>
+						09&emsp;&emsp;&emsp;<br/>
+						10&emsp;&emsp;&emsp;<br/>
+						11&emsp;&emsp;&emsp;music [hmk_secret_intro.ogg, hmk_secret_loop.ogg]<br/>
+						12&emsp;&emsp;&emsp;ambience rain.ogg<br/>
+						13&emsp;&emsp;&emsp;stop_previous_music false<br/>
+						14&emsp;&emsp;&emsp;<br/>
+						15&emsp;&emsp;&emsp;music_volume 1<br/>
+						16&emsp;&emsp;&emsp;ambience_volume 1<br/>
+						17&emsp;&emsp;&emsp;<br/>
+						18&emsp;&emsp;&emsp;area_type normal<br/>
+						19&emsp;&emsp;&emsp;<br/>
+						20&emsp;&emsp;&emsp;tile_particle_1 drip<br/>
+						21&emsp;&emsp;&emsp;<br/>
+						22&emsp;&emsp;&emsp;npc_1 NPCD6<br/>
+						23&emsp;&emsp;&emsp;npc_2 NPC0<br/>
+						24&emsp;&emsp;&emsp;npc_3 none<br/>
+						25&emsp;}
+					</p>
+				</div>
+				<p>
+					Whilst this may seem complex, the syntax for a tileset can be broken down and represented as the following:
+				</p>
+				<div class="code">
+					<p>
+						1&emsp;[TILESET_NAME] {<br/>
+						2&emsp;&emsp;&emsp;[VARIABLE_NAME] [VALUE]<br/>
+						3&emsp;&emsp;&emsp;...<br/>
+						4&emsp;}
+					</p>
+				</div>
+				<p>
+					The <span class="variable">#</span> followed by text, in The End example, is simply a comment and not interpreted/read by the game itself, hence why it was not added in the simplified syntax breakdown.<br/><br/>
+					So, overall, the "tilesets.txt" file simply stores a series of tilesets that define properties, features, and aspects of the different zones in the game. Allowing for them to make use of different assets, music, NPCs, alternate graphics, particles, etc.
+				</p>
+				<h2 id="variables">Variables Overview</h2>
+				<p>
+					A brief overview of all the variables a tilset can modify, with links to specific areas for more detail:<br/><br/>
+					<a href="tileset.html#areaname"><span class="variable">area_name</span></a> - The name that will appear on the save file. It is also used to reference the area in certain instances.<br/>
+					<a href="tileset.html#arealabel"><span class="variable">area_label_frame</span></a> - The title graphic in the game&#8217;s SWF that is displayed when the area is entered.<br/>
+					<a href="tileset.html#areatype"><span class="variable">area_type</span></a> - What sub-type of area is it, defines certain properties of the level (e.g. dark levels use tumors as lives).<br/>
+					<a href="tileset.html#tilegraph"><span class="variable">tile_graphics</span></a> - The graphical tileset to use, changes details about the visuals of the area&#8217;s layers.<br/>
+					<a href="tileset.html#overgraph"><span class="variable">overlay_graphics</span></a>  - The graphics that are displayed on top of the active layer (bricks, rocks, bones, etc.).<br/>
+					<a href="tileset.html#back"><span class="variable">background_graphics</span></a> - The background image to use for the area.<br/>
+					<a href="tileset.html#front"><span class="variable">foreground_graphics</span></a> - The foreground image to use for the area.<br/>
+					<span class="variable">midfx_graphics</span> - ???<br/>
+					<span class="variable">midfx_layer</span> - ???<br/>
+					<span class="variable">fx_shader</span> - The shader to apply certain visual effects in the area.<br/>
+					<span class="variable">fx_shader_mid</span> - ???<br/>
+					<span class="variable">shader_param</span> - Controls the intensity of the <span class="variable">mid_fx</span> layer (from 0 to 1, decimal numbers valid).<br/>
+					<a href="tileset.html#palette"><span class="variable">palette</span></a> - The row of the <span class="variable">palette.png</span> to use for rendering graphics. (Palette rows start couting from 0, not 1).<br/>
+					<a href="tileset.html#music"><span class="variable">music</span></a> - The music to play whilst in the area.<br/>
+					<a href="tileset.html#ambience"><span class="variable">ambience</span></a> - The ambient background noise that will be played in the area.<br/>
+					<a href="tileset.html#musvol"><span class="variable">music_volume</span></a> - The volume the area&#8217;s music should be played at.<br/>
+					<a href="tileset.html#ambvol"><span class="variable">ambience_volume</span></a> - The volume the area&#8217;s ambience should be played at.<br/>
+					<a href="tileset.html#stopmusic"><span class="variable">stop_previous_music</span></a> - A flag stating whether the previous music track should stop or continue playing silently.<br/>
+					<span class="variable">tile_particle_1 (to 5)</span> - A particle effect, defined in <span class="variable">particles.txt</span>, to assign to the two particle tiles.<br/>
+					<span class="variable">global_particle_1 (to ???)</span> - A particle effect, defined in particles.txt, to spawn globally throughout the area.<br/>
+					<a href="tileset.html#npc"><span class="variable">npc_1 (to 3)</span></a> - The NPCs, defined in npcs.txt, to assign to the three NPC tiles used in the level.<br/>
+					<span class="variable">decoration_1 (to ???)</span> - The decorations to assign to the ??? decoration tiles used in the level.<br/>
+					<a href="tileset.html#artalt"><span class="variable">art_alts</span></a> - Alternate sprite graphics to use on entities that allow for alts.<br/>
+					<a href="tileset.html#toxic"><span class="variable">toxic_timer</span></a> - Controls how long toxic clouds and water will take to kill the player in seconds.<br/>
+					<a href="tileset.html#intropng"><span class="variable">cart_intro_png</span></a> - The filename from the <span class="variable">textures\</span> folder to use as the cartridge area&#8217;s intro graphic.<br/>
+					<a href="tileset.html#intropal"><span class="variable">cart_intro_palette</span></a> - The palette to use when rendering the cartridge intro graphic.<br/>
+				</p>
+				<!--
+				<h2 id="listing">Tileset Listing</h2>
+				<p>
+					<span class="variable">i1</span> - Denial Iron Cartridge<br/>
+					<span class="variable">i2</span> - Anger Iron Cartridge<br/>
+					<span class="variable">i3</span> - Bargaining Iron Cartridge<br/>
+					<span class="variable">i4</span> - Depression Iron Cartridge<br/>
+					<span class="variable">i5</span> - Acceptance Iron Cartridge<br/>
+					<span class="variable">c1</span> - Mortaman Cartridge<br/>
+					<span class="variable">c2</span> - Blaster Massacre Cartridge<br/>
+					<span class="variable">c3</span> - River City Rancid Cartridge<br/>
+					<span class="variable">c4a</span> - Ash Climber Cartridge<br/>
+					<span class="variable">c4b</span> - Rubble Bobble Cartridge<br/>
+					<span class="variable">c4c</span> - Catastrovania Cartridge<br/>
+					<span class="variable">c5a</span> - Fallen Fantasy Cartridge<br/>
+					<span class="variable">c5b</span> - Morbid Gear Cartridge<br/>
+					<span class="variable">c5c</span> - Dig Dead Cartridge<br/>
+					<span class="variable">c6</span> - Super Mega Cart All Stars Cartridge<br/>
+					<span class="variable">c9</span> - The End is Nigh Cartridge<br/>
+					<span class="variable">g0</span> - Ghosts &#8217;N Grieving Glitch Cartridge<br/>
+					<span class="variable">g1</span> - Spike Tales Glitch Cartridge<br/>
+					<span class="variable">g2</span> - Scab or Die Glitch Cartridge<br/>
+					<span class="variable">g3</span> - Tombs and Torture Glitch Cartridge<br/>
+					<span class="variable">g4</span> - Pus-man Glitch Cartridge<br/>
+					<span class="variable">g5</span> - Dead Racer Glitch Cartridge<br/>
+					<span class="variable">g9</span> - The End is Nigh Glitch Cartridge<br/>
+					<span class="variable">1</span> - The End<br/>
+					<span class="variable">1xd</span> - The End Downwards Secret<br/>
+					<span class="variable">1xu</span> - The End Upwards Secret<br/>
+					<span class="variable">2</span> - Arid Flats<br/>
+					<span class="variable">2xd</span> - Arid Flats Downwards Secret<br/>
+					<span class="variable">2xu</span> - Arid Flats Upwards Secret<br/>
+					<span class="variable">3</span> - Overflow<br/>
+					<span class="variable">3xd</span> - Overflow Downwards Secret<br/>
+					<span class="variable">3xu</span> - Overflow Upwards Secret<br/>
+					<span class="variable">4</span> - The Split<br/>
+					<span class="variable">4a</span> - Wall of Sorrow<br/>
+					<span class="variable">4ax</span> - Wall of Sorrow Secret<br/>
+					<span class="variable">4b</span> - Retrograde<br/>
+					<span class="variable">4bx</span> - Retrograde Secret<br/>
+					<span class="variable">4c</span> - The Hollows<br/>
+					<span class="variable">4cx</span> - The Hollows Secret<br/>
+					<span class="variable">5a</span> - SS Exodus<br/>
+					<span class="variable">5ax</span> - SS Exodus Secret<br/>
+					<span class="variable">5b</span> - The Machine<br/>
+					<span class="variable">5bxd</span> - The Machine Downwards Secret<br/>
+					<span class="variable">5bxu</span> - The Machine Upwards Secret<br/>
+					<span class="variable">5c</span> - Golgotha<br/>
+					<span class="variable">5cx</span> - Golgotha Secret<br/>
+					<span class="variable">1d</span> - Anguish<br/>
+					<span class="variable">6x</span> - Anguish Secret<br/>
+					<span class="variable">2d</span> - Gloom<br/>
+					<span class="variable">7x</span> - Gloom Secret<br/>
+					<span class="variable">3d</span> - Blight<br/>
+					<span class="variable">8x</span> - Blight Secret<br/>
+					<span class="variable">6</span> - Ruin<br/>
+					<span class="variable">9x</span> - Ruin Secret<br/>
+					<span class="variable">7</span> - Nevermore<br/>
+					<span class="variable">10x</span> - The Future<br/>
+				</p>
+				-->
+				<h2 id="areaname">Area Name</h2>
+				<p>
+					The area name is a unique identifier for a given area, it is the text that will appear on the save file when a game is saved within the zone, when writing the label frame within the tilesets file, it should be wrapped in double-quotes "Example Name" allowing for spaces. Not doing this may confuse the game and cause problems when reading the area&#8217;s tileset.<br/><br/>
+					Whilst it may be assumed that this variable also controls the level name (bottom-right corner in-game), this is in fact incorrect. The individual level names are controlled via the "levelinfo.txt" file, in the "data\" folder of the unpacked game files; for more information on editing level info, click here. The text graphic displayed at the top of the screen when a new zone is entered is also not controlled by this property, see the Area Label Frame section below for more info.<br/><br/>
+					The only other factor controlled by the area name is the slant effect seen in Nevermore/The Future (see image below). By setting an area&#8217;s name to <span class="variable">"Nevermore"</span> it will be given said slanting effect, but as stated previously, will also result in the, most likely, unwanted side-effect of the save file displaying "Nevermore". The only, currently known, solution to setting the slant effect is by hacking and modifying a plain-text value contained withing the game&#8217;s executable located at address 0x00232A18. However, performing the hack and handling the legality of redistributing the executable is more effort than it is worth. Furthermore, the string appears to be of a fixed length, or at the very least only contain a few more bytes that could be overwritten. Meaning assigning a zone like the Wall of Sorrow the slanting effect would be impossible, due to this limitation.
+				</p>
+				<div class="center">
+					<img src="images/screenshots/scrn_slant_01.png" alt="Nevermore Slanting Effect" class="screenshot_l outlineblack"/>
+					<p><em>Notice the slight slant down on the left side of the screen, when compared to the right.</em></p>
+				</div>
+				<h2 id="arealabel">Area Label Frame</h2>
+				<p>
+					The area label is the unique graphic that appears on screen whenever a new area is entered. The area label frame variable refers to a specific frame of the area label symbol, located inside the game&#8217;s SWF, informing the game which graphic to render--basically acting as an ID for each graphic. Below is a list detailing what frame holds each graphic, and some examples of area labels on the right:
+				</p>
+				<table class="columns">
+					<tr>
+						<td width="100%">
+							<p>
+								00 - No Area Label<br/>
+								01 - The End<br/>
+								02 - Arid Flats<br/>
+								03 - Overflow<br/>
+								04 - The Split<br/>
+								05 - Wall of Sorrow<br/>
+								06 - SS Exodus<br/>
+								07 - Retrograde<br/>
+								08 - The Machine<br/>
+								09 - The Hollows<br/>
+								10 - Golgotha<br/>
+								11 - Anguish<br/>
+								12 - Gloom<br/>
+								13 - Blight<br/>
+								14 - Ruin<br/>
+								15 - Nevermore<br/>
+								16 - The Future<br/>
+							</p>
+						</td>
+						<td width="100%">
+							<div class="center"><img src="images/arealabels.png" alt="Area Label Examples"/></div>
+						</td>
+					</tr>
+				</table>
+				<p>
+					Adding new area labels, or modifying existing ones, involves modifying the game&#8217;s SWF. For more information on the SWF and modifying it, click here.
+				</p>
+				<h2 id="areatype">Area Type</h2>
+				<p>
+					The <span class="variable">area_type</span> variable controls specific aspects of a tileset/area, such as how it will handle deaths, etc. If the area type variable is left undefined, then the area will be of type <span class="variable">normal</span> -- the default value. The variable accepts the following values, with each one having a unique effect that will change the way the area acts:<br/><br/>
+					<span class="variable">ironcart</span><br/>
+					The retro monitor filter will be applied, as will retro sounds, and a cart intro graphic (<a href="tileset.html#intropng">cart_intro_png</a>) will be displayed when entering the area. Dying will send the player back to the first level in the area; if used in an area that was not reached via the TV/Console, then the player will be spawned in the last non-ironcart room they were in. Using the "Exit Cart" option from the menu will take the player back to 1-1.<br/><br/>
+					<span class="variable">cart</span><br/>
+					The retro monitor filter will be applied, as will retro sounds, and a cart intro graphic (<a href="tileset.html#intropng">cart_intro_png</a>) will be displayed when entering the area. The player will have a limited number of lives to beat the area. Using the "Exit Cart" option from the menu will take the player back to 1-1.<br/><br/>
+					<span class="variable">glitch</span><br/>
+					The retro monitor filter will be applied, as will retro sounds, and a cart intro graphic (<a href="tileset.html#intropng">cart_intro_png</a>) will be displayed when entering the area. Graphical elements will be reset/randomised on every death. Using the "Exit Cart" option from the menu will take the player back to 1-1.<br/><br/>
+					<span class="variable">normal</span><br/>
+					The standard areas in the game, there are no extra effects or parameters added.<br/><br/>
+					<span class="variable">dark</span><br/>
+					The current tumor count will act as the player&#8217;s lives, and losing all lives will respawn the player at the first level in the area.<br/><br/>
+				</p>
+				<h2 id="tilegraph">Tile Graphics</h2>
+				<p>
+					The <span class="variable">tile_graphics</span> variable dictates what graphics are used when drawing the environment tiles for the game, these include the solid tiles and the modular background layer pieces. As can be seen in the example images, this could mean changing a damaged building wall in The End tileset, to a natural rocky wall in the Arid Flats tileset, and so on; allowing for each area to have a unique theme and visual flare. As well as the graphics for the environment tiles themselves, the value given to the tile graphics will also control what default decorations an area will use. However, these decorations can be overwritten by assigning new ones using the <span class="variable">decoration_1 (to ???)</span> variable. For more information on what these default decorations are, see the Decorations section on this page. If the variable is unset then it will be given the value of <span class="variable">Tile</span>, the default value. <span class="variable">None</span> is not a valid value for tile graphics, and will result in the game crashing on startup.<br/><br/>
+					Whilst it may be logical to also assume that the tile graphics will impact the small images drawn on top of the tiles (bricks, rocks, etc.), this is in fact not true and is instead controlled by the <span class="variable">overlay_graphics</span> variable. Furthermore, graphics such as Water, Lava, and Pollution/Toxic are also controlled via other factors, in this case shaders. For more info on adding shaders to tilesets, clic here.<br/><br/>
+					The specific graphics assigned to each tile within the tileset is determined randomly when the level is loaded, and in the case of <span class="variable">TileGlitch</span> graphics, further randomisation to the tiles will occur.<br/><br/>
+					As the tile graphics variable takes in movie clips as its value, this means that any of the available art alts. can be used as tile graphics. For a full list on all the available art alts. see the <a href="artalt.html">Art Alts.</a> section.<br/><br/>
+					Examples of the different tile graphics can be seen below.
+				</p>
+				<div class="center">
+					<table class="columns">
+						<tr>
+							<td>
+								<img src="images/artalts/tiles/tilecity.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Tilecity</span><br/>(The End, and Anguish)</p>
+							</td>
+							<td>
+								<img src="images/artalts/tiles/tilefield.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Tilefield</span><br/>(Arid Flats, and Retrograde)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/tiles/tilecaves.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Tilecaves</span><br/>(Overflow, and Blight)</p>
+							</td>
+							<td>
+								<img src="images/artalts/tiles/tiletox.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Tiletox</span><br/>(The Split, and Wall of Sorrow)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/tiles/tiletox2.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Tiletox2</span><br/>(The Hollows)</p>
+							</td>
+							<td>
+								<img src="images/artalts/tiles/tilehell.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Tilehell</span><br/>(Golgotha, and Gloom)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/tiles/tileairship.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Tileairship</span><br/>(SS Exodus)</p>
+							</td>
+							<td>
+								<img src="images/artalts/tiles/tilecomplex.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Tilecomplex</span><br/>(The Machine)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/tiles/theglow.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">theglow</span><br/>(Ruin, and Acceptance)</p>
+							</td>
+							<td>
+								<img src="images/artalts/tiles/tileend.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">TileEnd</span><br/>(Nevermore, and The Future)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/tiles/tileretro.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Tileretro</span><br/>(Retro and Iron Carts)</p>
+							</td>
+							<td>
+								<img src="images/artalts/tiles/tileglitch.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">TileGlitch</span><br/>(Glitch Carts)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/tiles/tilesewers.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Tilesewers</span><br/>(Unused)</p>
+							</td>
+							<td>
+								<img src="images/artalts/tiles/tile.png" alt="Tile Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Tile</span><br/>(N/A)</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<h2 id="overgraph">Overlay Graphics</h2>
+				<p>
+					The <span class="variable">overlay_graphics</span> variable dictates what graphics are drawn on top of the active/solid tiles and the first layer of modular background tiles. As can be seen in the example images, this could mean changing a few bricks in The End overlay, to a cluster of rocks in the Arid Flats overlay, and so on; allowing for each area to have a unique theme and visual flare. If the variable is unset then it will be given the value of <span class="variable">TileOverlays</span>, the default value. <span class="variable">None</span> is also a valid value for overlay graphics, and will result in no overlays being displayed for the area.<br/><br/>
+					The specific graphics overlayed on each tile in the level is determined randomly when the level is loaded, and if <span class="variable">TileGlitch</span> is being used as the <span class="variable">tile_graphics</span> value, then further randomisation to the tiles and overlays will occur.<br/><br/>
+					As the overlay graphics variable takes in movie clips as its value, this means that any of the available art alts. can be used as overlay graphics. For a full list on all the available art alts. see the <a href="artalt.html">Art Alts.</a> section.<br/><br/>
+					Examples of the different overlay graphics can be seen below.
+				</p>
+				<div class="center">
+					<table class="columns">
+						<tr>
+							<td>
+								<img src="images/artalts/overs/overlayscity.png" alt="Overlay Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Overlayscity</span><br/>(The End, and Anguish)</p>
+							</td>
+							<td>
+								<img src="images/artalts/overs/overlaysfield.png" alt="Overlay Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Overlaysfield</span><br/>(Arid Flats, and Retrograde)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/overs/overlayscaves.png" alt="Overlay Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Overlayscaves</span><br/>(Overflow, and Blight)</p>
+							</td>
+							<td>
+								<img src="images/artalts/overs/overlaystox.png" alt="Overlay Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Overlaystox</span><br/>(The Split, and Wall of Sorrow)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/overs/overlaystox2.png" alt="Overlay Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Overlaystox2</span><br/>(The Hollows)</p>
+							</td>
+							<td>
+								<img src="images/artalts/overs/overlayshell.png" alt="Overlay Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Overlayshell</span><br/>(Golgotha, and Gloom)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/overs/overlaysairship.png" alt="Overlay Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Overlaysairship</span><br/>(SS Exodus)</p>
+							</td>
+							<td>
+								<img src="images/artalts/overs/overlayscomplex.png" alt="Overlay Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Overlayscomplex</span><br/>(The Machine)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/overs/overlaystheglow.png" alt="Overlay Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Overlaystheglow</span><br/>(Ruin, and Acceptance)</p>
+							</td>
+							<td>
+								<img src="images/artalts/overs/overlaysend.png" alt="Overlay Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Overlaysend</span><br/>(Nevermore, and The Future)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/overs/overlaysretro.png" alt="Overlay Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Overlaysretro</span><br/>(Retro, Iron, and Glitch Carts)</p>
+							</td>
+							<td>
+								<img src="images/artalts/overs/tileoverlays.png" alt="Overlay Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">TileOverlays</span><br/>(N/A)</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<h2 id="back">Background Graphics</h2>
+				<p>
+					The <span class="variable">background_graphics</span> variable specifies what graphic to display as the background image of a level. If no <span class="variable">background_graphics</span> variable is specified then the game will render the background as a solid dark-grey colour; this is the same as if <span class="variable">None</span> is used as the background graphics value. Each background has a unique anchor-point, meaning each one will be placed in a level differently, sometimes resulting in the solid grey colour showing through in areas. The N0 tile can be used to offset the background within a level, so that it can be placed where desired.<br/><br/>
+					As the background graphics variable takes in movie clips as its value, this means that any of the available art alts. can be used as a background image. For a full list on all the available art alts. see the <a href="artalt.html">Art Alts.</a> section.<br/><br/>
+					Examples of the different background graphics can be seen below.
+				</p>
+				<div class="center">
+					<table class="columns">
+						<tr>
+							<td>
+								<img src="images/artalts/backs/bg2.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">bg2</span><br/>(The End, and Anguish)</p>
+							</td>
+							<td>
+								<img src="images/artalts/backs/ch2bg.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">ch2bg</span><br/>(Arid Flats, and Gloom)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/backs/ch3bg.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">ch3bg</span><br/>(Overflow, and Blight)</p>
+							</td>
+							<td>
+								<img src="images/artalts/backs/ch4abg.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">ch4abg</span><br/>(The Split, and Wall of Sorrow)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/backs/hellbg.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">hellbg</span><br/>(Golgotha)</p>
+							</td>
+							<td>
+								<img src="images/artalts/backs/field2bg.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">field2bg</span><br/>(Retrograde and The Machine)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/backs/background.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">Background</span><br/>(The Hollows)</p>
+							</td>
+							<td>
+								<img src="images/artalts/backs/airshipbg.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">airshipbg</span><br/>(SS Exodus)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/backs/bgsolid.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">bgsolid</span><br/>(Ruin and Acceptance)</p>
+							</td>
+							<td>
+								<img src="images/artalts/backs/neverbg.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">neverbg</span><br/>(Nevermore and The Future)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/backs/bgretro.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">bgretro</span><br/>(Retro and Glitch Carts)</p>
+							</td>
+							<td>
+								<img src="images/artalts/backs/bgretrox.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">bgretrox</span><br/>(Iron Carts)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/artalts/backs/bgretro2.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">bgretro2</span><br/>(Unused)</p>
+							</td>
+							<td>
+								<img src="images/artalts/backs/none.png" alt="Background Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">None</span><br/>(N/A)</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<h2 id="front">Foreground Graphics</h2>
+				<p>
+					The <span class="variable">foreground_graphics</span> variable specifies what graphic to display as the foreground image of a level. If no <span class="variable">foreground_graphics</span> variable is specified then the game will not render anything as the foreground; this is the same as if <span class="variable">None</span> is used as the foreground graphics value. Each foreground has a unique anchor-point, meaning each one will be placed in a level differently. The N1 tile can be used to offset the foreground within a level, so that it can be placed where desired.<br/><br/>
+					As the foreground graphics variable takes in movie clips as its value, this means that any of the available art alts. can be used as a foreground image. For a full list on all the available art alts. see the <a href="artalt.html">Art Alts.</a> section.<br/><br/>
+					Examples of the different foreground graphics can be seen below.
+				</p>
+				<div class="center">
+					<table class="columns">
+						<tr>
+							<td>
+								<img src="images/artalts/fronts/fg1.png" alt="Foreground Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">fg1</span><br/>(The End, and Anguish)</p>
+							</td>
+							<td>
+								<img src="images/artalts/fronts/fgretro.png" alt="Foreground Graphics" class="tilescrn outlineblack"/>
+								<p><span class="variable">fgretro</span><br/>(Unused)</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<h2 id="palette">Palette</h2>
+				<p>
+					The <span class="variable">palette</span> variable is used to specify which colour palette the tileset/area will use when drawing graphics to the screen. The number supplied as a value references a row of colours, in the palettes file, that will be used to draw the level. The file storing these colours is the <span class="variable">textures\palette.png</span> file. The first row in the file uses the ID number 0 and each palette going down follows consecutively, ending with palette 63 -- meaning there are 64 unique palettes in total. If no palette variable is specified for a tileset, it will use palette 0 by default.<br/><br/>
+					For more information on what each row and column of the palette file means, how to modify palettes themselves, how to expand the palettes file, and other general palette information, see the <a href="palette.html">Palettes</a> section of the reference.
+				</p>
+				<h2 id="music">Music</h2>
+				<p>
+					The <span class="variable">music</span> variable can take in either one or two filenames from the <span class="variable">audio\music\</span> folder (as well as its various sub-folders). This variable will dictate the looping background music that will play throughout the area. If one filename is supplied for the variable, it will simply play said music file continuously throughout the area. However, if two music files are given then the first file will be played once as an intro, and the second will be played on loop for the rest of the area. The syntax for these two methods of using <span class="variable">music</span> are as follows:
+				</p>
+				<div class="code">
+					<p>
+						music FILENAME.ogg # single-file<br/>
+						music [FILENAME_INTRO.ogg, FILENAME_LOOP.ogg] # multi-file
+					</p>
+				</div>
+				<p>
+					Where the all-caps <span class="variable">FILENAME</span> variants are various music files.<br/><br/>
+					The music files themselves are of type OGG and the <span class="variable">.ogg</span> extension must be added to the name when being referenced. For example:
+				</p>
+				<div class="code">
+					<p>
+						1&emsp;music 1812_loop #wrong<br/>
+						2&emsp;music [1812_intro, 1812_loop] # wrong<br/><br/>
+						3&emsp;music 1812_loop.ogg #correct<br/>
+						4&emsp;music [1812_intro.ogg, 1812_loop.ogg] # correct
+					</p>
+				</div>
+				<p>
+					Note that music is not just contained within the root folder and there are other sub-folders that contain music. When accessing retro, and glitch music it is important to include the appropriate directory/folderr name so that the game knows where to search for the files. Like so:
+				</p>
+				<div class="code">
+					<p>
+						1&emsp;music retro\danse_loop.ogg<br/>
+						2&emsp;music glitch\nobm_loop.ogg
+					</p>
+				</div>
+				<p>
+					The default music intros, loops, etc. are as follows:<br/><br/>
+					<span class="variable">danse_intro.ogg</span> and <span class="variable">danse_loop.ogg</span> - (The End)<br/>
+					<span class="variable">newworld_intro.ogg</span> and <span class="variable">newworld_loop.ogg</span> - (Arid Flats)<br/>
+					<span class="variable">1812_intro.ogg</span> and <span class="variable">1812_loop.ogg</span> - (Overflow)<br/>
+					<span class="variable">hungarian_rhapsody_intro.ogg</span> and <span class="variable">hungarian_rhapsody_loop.ogg</span> - (Wall of Sorrow)<br/>
+					<span class="variable">slave_intro.ogg</span> and <span class="variable">slave_loop.ogg</span> - (SS Exodus)<br/>
+					<span class="variable">dante_intro.ogg</span> and <span class="variable">dante_loop.ogg</span> - (The Hollows)<br/>
+					<span class="variable">hell_intro.ogg</span> and <span class="variable">hell_loop.ogg</span> - (Golgotha)<br/>
+					<span class="variable">fields_intro.ogg</span> and <span class="variable">fields_loop.ogg</span> - (Retrograde)<br/>
+					<span class="variable">bumblebee_intro.ogg</span> and <span class="variable">bumblebee_loop.ogg</span> - (The Machine)<br/>
+					<span class="variable">danse_intro_dark.ogg</span> and <span class="variable">danse_loop_dark.ogg</span> - (Anguish)<br/>
+					<span class="variable">newworld_intro_dark.ogg</span> and <span class="variable">newworld_loop_dark.ogg</span> - (Gloom)<br/>
+					<span class="variable">1812_intro_dark.ogg</span> and <span class="variable">1812_loop_dark.ogg</span> - (Blight)<br/>
+					<span class="variable">mountainking_fakeout.ogg</span> and <span class="variable">mountainking_loop.ogg</span> - (Ruin)<br/>
+					<span class="variable">escape.ogg</span> - (Acceptance)<br/>
+					<span class="variable">requiem_intro.ogg</span> and <span class="variable">requiem_loop.ogg</span> - (Nevermore and The Future)<br/>
+					<span class="variable">hmk_secret_intro.ogg</span> and <span class="variable">hmk_secret_loop.ogg</span> - (Downwards Secret)<br/>
+					<span class="variable">gymnopedies_intro.ogg</span> and <span class="variable">gymnopedies_loop.ogg</span> - (Upwards Secret)<br/>
+					<span class="variable">gynossiennes_intro.ogg</span> and <span class="variable">gynossiennes_loop.ogg</span> - (Main Menu)<br/>
+					<span class="variable">supercart.ogg</span> - (All (Iron) Carts Collected)<br/>
+					<span class="variable">the_end_is_nigh_vocals.ogg</span> - (Credits Vocals)<br/>
+					<span class="variable">credits.ogg</span> - (Credits Instrumental)<br/>
+					<span class="variable">newworld2_intro.ogg</span> and <span class="variable">newworld2_loop.ogg</span> - (Unused)<br/>
+					<span class="variable">gameover.ogg</span> - (Unused)<br/>
+					<span class="variable">mountainking_intro.ogg</span> - (Unused)<br/>
+					<br/>
+					<span class="variable">retro\danse_intro.ogg</span> and <span class="variable">retro\danse_loop.ogg</span> - (Mortaman)<br/>
+					<span class="variable">retro\newworld_intro.ogg</span> and <span class="variable">retro\newworld_loop.ogg</span> - (Blaster Massacre)<br/>
+					<span class="variable">retro\1812_intro.ogg</span> and <span class="variable">retro\1812_loop.ogg</span> - (River City Rancid)<br/>
+					<span class="variable">retro\hungarian_rhapsody_intro.ogg</span> and <span class="variable">retro\hungarian_rhapsody_loop.ogg</span> - (Ash Climber)<br/>
+					<span class="variable">retro\slave_intro.ogg</span> and <span class="variable">retro\slave_Loop.ogg</span> - (Fallen Fantasy)<br/>
+					<span class="variable">retro\dante_intro.ogg</span> and <span class="variable">retro\dante_loop.ogg</span> - (Catastrovania)<br/>
+					<span class="variable">retro\hell_intro.ogg</span> and <span class="variable">retro\hell_Loop.ogg</span> - (Dig Dead)<br/>
+					<span class="variable">retro\fields_intro.ogg</span> and <span class="variable">retro\fields_loop.ogg</span> - (Rubble Bobble)<br/>
+					<span class="variable">retro\bumblebee_intro.ogg</span> and <span class="variable">retro\bumblebee_loop.ogg</span> - (Morbid Gear)<br/>
+					<span class="variable">retro\beeth5_intro.ogg</span> and <span class="variable">retro\beeth5_loop.ogg</span> - (Super Mega Cart All Stars)<br/>
+					<span class="variable">retro\requiem_intro.ogg</span> and <span class="variable">retro\requiem_loop.ogg</span> - (Iron Carts)<br/>
+					<span class="variable">retro\turkish_intro.ogg</span> and <span class="variable">retro\turkish_loop.ogg</span> - (The End is Nigh)<br/>
+					<span class="variable">retro\gnossiennes_loop.ogg</span> - (Cartridge Menu)<br/>
+					<span class="variable">retro\gameover.ogg</span> - (Cartrige Game Over)<br/>
+					<br/>
+					<span class="variable">glitch\nobm_intro.ogg</span> and <span class="variable">glitch\nobm_loop.ogg</span> - (Scab or Die)<br/>
+					<span class="variable">glitch\newworld_intro.ogg</span> and <span class="variable">glitch\newworld_loop.ogg</span> - (Tombs and Torture)<br/>
+					<span class="variable">glitch\bumblebee_intro.ogg</span> and <span class="variable">glitch\bumblebee_loop.ogg</span> - (Pus-man)<br/>
+					<span class="variable">glitch\homk_intro.ogg</span> and <span class="variable">glitch\homk_loop.ogg</span> - (Ghosts &#8217;N Grieving)<br/>
+					<span class="variable">glitch\dante_intro.ogg</span> and <span class="variable">glitch\dante_loop.ogg</span> - (Dead Racer)<br/>
+					<span class="variable">glitch\dance_intro.ogg</span> and <span class="variable">glitch\dance_loop.ogg</span> - (Spike Tales)<br/>
+					<span class="variable">glitch\turkish_intro.ogg</span> and <span class="variable">glitch\turkish_loop.ogg</span> - (The End is Nigh Corrupted)<br/>
+					<br/>
+					If the <span class="variable">music</span> variable is left unset then no background music will be played in the area.
+				</p>
+				<h2 id="ambience">Ambience</h2>
+				<p>
+					The <span class="variable">ambience</span> variable takes in a filename from the <span class="variable">audio\ambience\</span> data folder. This variable will dictate the looping ambient noise that will play throughout the area. The ambience files are of type OGG and the <span class="variable">.ogg</span> extension must be added to the name when being referenced. For example:
+				</p>
+				<div class="code">
+					<p>
+						1&emsp;ambience caves # wrong<br/>
+						2&emsp;ambience caves.ogg # correct
+					</p>
+				</div>
+				<p>
+					The default available ambient sound loops are as follows:<br/><br/>
+					<span class="variable">caves.ogg</span> - (The Hollows, SS Exodus, Ruin)<br/>
+					<span class="variable">cogs.ogg</span> - (Unused)<br/>
+					<span class="variable">flesh.ogg</span> - (Retrograde, Nevermore)<br/>
+					<span class="variable">labloop.ogg</span> - (The Machine)<br/>
+					<span class="variable">rain.ogg</span> - (The End, Anguish)<br/>
+					<span class="variable">ruins.ogg</span> - (Overflow, Blight, Ruin, The Future)<br/>
+					<span class="variable">volcano.ogg</span> - (Anguish, Golgotha)<br/>
+					<span class="variable">water.ogg</span> - (Unused)<br/>
+					<span class="variable">wind.ogg</span> - (Arid Flats, Gloom, The Split, Wall of Sorrow)<br/><br/>
+					If the <span class="variable">ambience</span> variable is left unset then no ambient noise will be played in the area.
+				</p>
+				<h2 id="musvol">Music Volume</h2>
+				<p>
+					The <span class="variable">music_volume</span> variable controls the volume the music is played at, relative to the global music volume setting. Most areas will leave this variable at a value of <span class="variable">1</span>. If this value is left unset then it defaults to <span class="variable">1</span>.
+				</p>
+				<h2 id="ambvol">Ambience Volume</h2>
+				<p>
+					The <span class="variable">ambience_volume</span> variable controls the volume the ambience is played at, relative to the global sound volume setting. Most areas will leave this variable at a value of <span class="variable">1</span>. If this value is left unset then it defaults to <span class="variable">1</span>.
+				</p>
+				<h2 id="stopmusic">Stop Previous Music</h2>
+				<p>
+					The <span class="variable">stop_previous_music</span> variable is used to specify whether the previous music track being played should be stopped or not; it accepts either a <span class="variable">true</span> or <span class="variable">false</span> value. If it is set to <span class="variable">false</span> then when the previous area is re-entered the music will not play from the start again, this is usually used in secret areas so that the music does not reset everytime a secret is entered. However, if it is set to <span class="variable">true</span> then the music will restart from the beginning when the previous area is re-entered. The default value for this variable is <span class="variable">true</span>, so if the variable is left unset then the previous music track will be set to stop when entering the area.
+				</p>
+				<h2 id="npc">NPC</h2>
+				<p>
+					The <span class="variable">npc_x</span> variables (where <span class="variable">x</span> is a number between <span class="via">1</span> and <span class="variable">3</span>) are used to specify which NPCs from the <span class="variable">data\npcs.txt</span> will be spawned using the respective Z1 - 3 tiles, when placed in a level. If an NPC variable is left unset, then placing the corresponding NPC tile will simply do nothing and no NPC will be spawned. This will be the same if the NPC variable is assigned a value of <span class="variable">None</span>. Supplying an invalid/nonexistent NPC name to one of the variables will result in a GSON error when the room containing the NPC is entered.<br/><br/>
+					For more information about what NPCs are available to spawn, and how to modify and create new NPCs, see the <a href="npc.html">NPCs</a> section for detailed descriptions.
+				</p>
+				<h2 id="artalt">Art Alts.</h2>
+				<p>
+					The <span class="variable">art_alts</span> variable controls what graphics will be swapped out for other graphics within the area, and is quite different from many of the other variables seen within the tilesets file. So, the purpose of art alts. is to tell the game to replace any instance of a certain graphic and replace it with a different one; for example, replacing all tumor graphics to make them look like mega tumors instead. Note that entities altered by art alts. will still act exactly the same, they will just appear diffeent. The basic syntax for <span class="variable">art_alts</span> is as follows:
+				</p>
+				<div class="code">
+					<p>
+						1&emsp;art_alts [<br/>
+						2&emsp;&emsp;[ORIGINAL, REPLACEMENT]<br/>
+						3&emsp;&emsp;...<br/>
+						4&emsp;]<br/>
+					</p>
+				</div>
+				<p>
+					Where <span class="variable">ORIGINAL</span> is an art asset name to change, and <span class="variable">REPLACEMENT</span> is an art asset name that will replace the original asset. Line 2 in the example can then be repeated over-and-over again allowing for as many art alts. to be applied to an area as possible.<br/><br/>
+					There is no limit to what assets can be swapped, however, not all graphics will work correctly when being swapped; with some glitching or moving sporadically. To avoid this it is usually best to swap out similar graphics, or graphics of the same type (enemies, tiles, etc.). For a full list on all the available art alts. within the game, see the <a href="artalt.html">Art Alts.</a> section for more information. Do remember that art alts. are case-sensitive values.
+				</p>
+				<h2 id="toxic">Toxic Timer</h2>
+				<p>
+					The <span class="variable">toxic_timer</span> variable specifies how long it takes for toxic clouds and water to kill the player, in seconds. This variable allows for values containing a decimal-point. If the toxic timer is not specified the default time given is within 1.8 to 2.0 seconds (this is a rough approximation).
+				</p>
+				<h2 id="intropng">Cart Intro PNG</h2>
+				<p>
+					The <span class="variable">cart_intro_png</span> variable is used to specify what image to draw as the intro when entering a cartridge level, as well as the graphic used in the cartridge menu; this can be any graphic in the <span class="variable">textures\</span> folder, even newly added ones. When specifying the filename, the ".png" file extension does not need to be specified and adding it will result in the game crashing when it attempts to load the the tileset. Furthermore, unlike other variable values in the tilesets file, the intro PNG filename is not case-sensitive. If no value is specified the game will default to using <span class="variable">textures\titlecart.png</span> as the intro graphic and <span class="variable">textures\emptycart.png</span> as the cartridge menu graphic.<br/><br/>
+					The existing cartridge graphics are 160x90 pixels in size, scaled up to use a resolution of 1280x720 (a 16:9 aspect ratio). Cartridge graphics can be any size, but if they do not match the 16:9 aspect ratio, then the graphic will be displayed stretched and distorted. Furthermore, any number of colours is allowed in the PNG graphic, however, when rendered in-game the graphic will be limited to the colours in the chosen <span class="variable">cart_intro_palette</span>. Examples of both of these limitations can be seen below (the retro filter was disabled for easier and clearer viewing):
+				</p>
+				<div class="center">
+					<img src="images/screenshots/scrn_intropng_colour.png" alt="Cart Intro Colour Limitation" class="screenshot_l outlineblack"/>
+					<p><em>The title background image used here has far fewer colours than the original PNG.</em></p>
+				</div>
+				<div class="center">
+					<img src="images/screenshots/scrn_intropng_size.png" alt="Cart Intro Size Limitation" class="screenshot_l outlineblack"/>
+					<p><em>The square trophy image is stretched and distorted to fit the aspect ratio..</em></p>
+				</div>
+				<p>
+					When creating new cart intro graphics, it is best to use similar greyscale colours to those used in the original cart graphics. This will allow for more accurate control over what pixels map to what palette colours. Below is a useful palette to use when drawing cart intros, with each colour mapping one-to-one with the respective columns of the palette that will be used for rendering the PNG:
+				</p>
+				<div class="center">
+					<img src="images/cartpalette.png" alt="Cart Intro Palette" class="outlineblack"/>
+				</div>
+				<h2 id="intropal">Cart Intro Palette</h2>
+				<p>
+					The <span class="variable">cart_intro_palette</span> variable is used to specify what palette should be used to draw the intro graphic for a cartridge. As with regular palettes, the number references the row of colours to use from the <span class="variable">textures\palette.png</span> file -- starting from 0 and ending at 63. However, unlike regular palettes, the colours used in the cart intro images are not mapped to columns in the same way. Rather than column colours being mapped based on what element is being drawn (tile, background, etc.), cartridge palette columns map based on the greyscale shade. Using the greyscale palette specified in the <a href="tileset.html#intropng">Cart Intro PNG</a> section to draw cartridge graphics will help when mapping palette colours to a given intro image. If no palette variable is specified for a cart intro, it will use palette 0 by default.<br/><br/>
+					For more information on what each row and column of the palette file means, how to modify palettes themselves, how to expand the palettes file, and other general palette information, see the <a href="palette.html">Palettes</a> section of the reference.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

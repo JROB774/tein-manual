@@ -1,0 +1,440 @@
+.tileref
+{
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+}
+
+.tileref img
+{
+	-webkit-filter: none;
+	filter: none;
+}
+
+.tilegrid
+{
+	float: left;
+	display: inline;
+	width: 25%;
+	height: 100%;
+	margin-left: 64px;
+    border-spacing: 1px;
+    border-collapse: separate;
+}
+
+.tilegrid td, .tilegrid th
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.tilegrid td p, .tilegrid th p
+{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.tileinfo
+{
+	float: right;
+	width: 60%;
+	margin-right: 64px;
+	display: inline;
+	text-align: center;
+	vertical-align: middle;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	background-image: url("images/splat_tile.png");
+	-webkit-filter: drop-shadow(0px 0px 5px #000);
+	filter: drop-shadow(0px 0px 5px #000);
+}
+
+.tile
+{
+	width: 15px;
+	height: 15px;
+	border: 1px solid #FFF;
+	background-image: url("images/tiles.png");
+	background-color: #FFF;
+}
+
+.tile:hover
+{
+	-webkit-filter: drop-shadow(0px 0px 5px #FFF);
+	filter: drop-shadow(0px 0px 5px #FFF);
+}
+
+#tile_001 { background-position:    0px 0px; }
+#tile_002 { background-position:  -15px 0px; }
+#tile_003 { background-position:  -30px 0px; }
+#tile_004 { background-position:  -45px 0px; }
+#tile_005 { background-position:  -60px 0px; }
+#tile_006 { background-position:  -75px 0px; }
+#tile_007 { background-position:  -90px 0px; }
+#tile_008 { background-position: -105px 0px; }
+#tile_009 { background-position: -120px 0px; }
+#tile_010 { background-position: -135px 0px; }
+
+#tile_011 { background-position:    0px -15px; }
+#tile_012 { background-position:  -15px -15px; }
+#tile_013 { background-position:  -30px -15px; }
+#tile_014 { background-position:  -45px -15px; }
+#tile_015 { background-position:  -60px -15px; }
+#tile_016 { background-position:  -75px -15px; }
+#tile_017 { background-position:  -90px -15px; }
+#tile_018 { background-position: -105px -15px; }
+#tile_019 { background-position: -120px -15px; }
+#tile_020 { background-position: -135px -15px; }
+
+#tile_021 { background-position:    0px -30px; }
+#tile_022 { background-position:  -15px -30px; }
+#tile_023 { background-position:  -30px -30px; }
+#tile_024 { background-position:  -45px -30px; }
+#tile_025 { background-position:  -60px -30px; }
+#tile_026 { background-position:  -75px -30px; }
+#tile_027 { background-position:  -90px -30px; }
+#tile_028 { background-position: -105px -30px; }
+#tile_029 { background-position: -120px -30px; }
+#tile_030 { background-position: -135px -30px; }
+
+#tile_031 { background-position:    0px -45px; }
+#tile_032 { background-position:  -15px -45px; }
+#tile_033 { background-position:  -30px -45px; }
+#tile_034 { background-position:  -45px -45px; }
+#tile_035 { background-position:  -60px -45px; }
+#tile_036 { background-position:  -75px -45px; }
+#tile_037 { background-position:  -90px -45px; }
+#tile_038 { background-position: -105px -45px; }
+#tile_039 { background-position: -120px -45px; }
+#tile_040 { background-position: -135px -45px; }
+
+#tile_041 { background-position:    0px -60px; }
+#tile_042 { background-position:  -15px -60px; }
+#tile_043 { background-position:  -30px -60px; }
+#tile_044 { background-position:  -45px -60px; }
+#tile_045 { background-position:  -60px -60px; }
+#tile_046 { background-position:  -75px -60px; }
+#tile_047 { background-position:  -90px -60px; }
+#tile_048 { background-position: -105px -60px; }
+#tile_049 { background-position: -120px -60px; }
+#tile_050 { background-position: -135px -60px; }
+
+#tile_051 { background-position:    0px -75px; }
+#tile_052 { background-position:  -15px -75px; }
+#tile_053 { background-position:  -30px -75px; }
+#tile_054 { background-position:  -45px -75px; }
+#tile_055 { background-position:  -60px -75px; }
+#tile_056 { background-position:  -75px -75px; }
+#tile_057 { background-position:  -90px -75px; }
+#tile_058 { background-position: -105px -75px; }
+#tile_059 { background-position: -120px -75px; }
+#tile_060 { background-position: -135px -75px; }
+
+#tile_061 { background-position:    0px -90px; }
+#tile_062 { background-position:  -15px -90px; }
+#tile_063 { background-position:  -30px -90px; }
+#tile_064 { background-position:  -45px -90px; }
+#tile_065 { background-position:  -60px -90px; }
+#tile_066 { background-position:  -75px -90px; }
+#tile_067 { background-position:  -90px -90px; }
+#tile_068 { background-position: -105px -90px; }
+#tile_069 { background-position: -120px -90px; }
+#tile_070 { background-position: -135px -90px; }
+
+#tile_071 { background-position:    0px -105px; }
+#tile_072 { background-position:  -15px -105px; }
+#tile_073 { background-position:  -30px -105px; }
+#tile_074 { background-position:  -45px -105px; }
+#tile_075 { background-position:  -60px -105px; }
+#tile_076 { background-position:  -75px -105px; }
+#tile_077 { background-position:  -90px -105px; }
+#tile_078 { background-position: -105px -105px; }
+#tile_079 { background-position: -120px -105px; }
+#tile_080 { background-position: -135px -105px; }
+
+#tile_081 { background-position:    0px -120px; }
+#tile_082 { background-position:  -15px -120px; }
+#tile_083 { background-position:  -30px -120px; }
+#tile_084 { background-position:  -45px -120px; }
+#tile_085 { background-position:  -60px -120px; }
+#tile_086 { background-position:  -75px -120px; }
+#tile_087 { background-position:  -90px -120px; }
+#tile_088 { background-position: -105px -120px; }
+#tile_089 { background-position: -120px -120px; }
+#tile_090 { background-position: -135px -120px; }
+
+#tile_091 { background-position:    0px -135px; }
+#tile_092 { background-position:  -15px -135px; }
+#tile_093 { background-position:  -30px -135px; }
+#tile_094 { background-position:  -45px -135px; }
+#tile_095 { background-position:  -60px -135px; }
+#tile_096 { background-position:  -75px -135px; }
+#tile_097 { background-position:  -90px -135px; }
+#tile_098 { background-position: -105px -135px; }
+#tile_099 { background-position: -120px -135px; }
+#tile_100 { background-position: -135px -135px; }
+
+#tile_101 { background-position:    0px -150px; }
+#tile_102 { background-position:  -15px -150px; }
+#tile_103 { background-position:  -30px -150px; }
+#tile_104 { background-position:  -45px -150px; }
+#tile_105 { background-position:  -60px -150px; }
+#tile_106 { background-position:  -75px -150px; }
+#tile_107 { background-position:  -90px -150px; }
+#tile_108 { background-position: -105px -150px; }
+#tile_109 { background-position: -120px -150px; }
+#tile_110 { background-position: -135px -150px; }
+
+#tile_111 { background-position:    0px -165px; }
+#tile_112 { background-position:  -15px -165px; }
+#tile_113 { background-position:  -30px -165px; }
+#tile_114 { background-position:  -45px -165px; }
+#tile_115 { background-position:  -60px -165px; }
+#tile_116 { background-position:  -75px -165px; }
+#tile_117 { background-position:  -90px -165px; }
+#tile_118 { background-position: -105px -165px; }
+#tile_119 { background-position: -120px -165px; }
+#tile_120 { background-position: -135px -165px; }
+
+#tile_121 { background-position:    0px -180px; }
+#tile_122 { background-position:  -15px -180px; }
+#tile_123 { background-position:  -30px -180px; }
+#tile_124 { background-position:  -45px -180px; }
+#tile_125 { background-position:  -60px -180px; }
+#tile_126 { background-position:  -75px -180px; }
+#tile_127 { background-position:  -90px -180px; }
+#tile_128 { background-position: -105px -180px; }
+#tile_129 { background-position: -120px -180px; }
+#tile_130 { background-position: -135px -180px; }
+
+#tile_131 { background-position:    0px -195px; }
+#tile_132 { background-position:  -15px -195px; }
+#tile_133 { background-position:  -30px -195px; }
+#tile_134 { background-position:  -45px -195px; }
+#tile_135 { background-position:  -60px -195px; }
+#tile_136 { background-position:  -75px -195px; }
+#tile_137 { background-position:  -90px -195px; }
+#tile_138 { background-position: -105px -195px; }
+#tile_139 { background-position: -120px -195px; }
+#tile_140 { background-position: -135px -195px; }
+
+#tile_141 { background-position:    0px -210px; }
+#tile_142 { background-position:  -15px -210px; }
+#tile_143 { background-position:  -30px -210px; }
+#tile_144 { background-position:  -45px -210px; }
+#tile_145 { background-position:  -60px -210px; }
+#tile_146 { background-position:  -75px -210px; }
+#tile_147 { background-position:  -90px -210px; }
+#tile_148 { background-position: -105px -210px; }
+#tile_149 { background-position: -120px -210px; }
+#tile_150 { background-position: -135px -210px; }
+
+#tile_151 { background-position:    0px -225px; }
+#tile_152 { background-position:  -15px -225px; }
+#tile_153 { background-position:  -30px -225px; }
+#tile_154 { background-position:  -45px -225px; }
+#tile_155 { background-position:  -60px -225px; }
+#tile_156 { background-position:  -75px -225px; }
+#tile_157 { background-position:  -90px -225px; }
+#tile_158 { background-position: -105px -225px; }
+#tile_159 { background-position: -120px -225px; }
+#tile_160 { background-position: -135px -225px; }
+
+#tile_161 { background-position:    0px -240px; }
+#tile_162 { background-position:  -15px -240px; }
+#tile_163 { background-position:  -30px -240px; }
+#tile_164 { background-position:  -45px -240px; }
+#tile_165 { background-position:  -60px -240px; }
+#tile_166 { background-position:  -75px -240px; }
+#tile_167 { background-position:  -90px -240px; }
+#tile_168 { background-position: -105px -240px; }
+#tile_169 { background-position: -120px -240px; }
+#tile_170 { background-position: -135px -240px; }
+
+#tile_171 { background-position:    0px -255px; }
+#tile_172 { background-position:  -15px -255px; }
+#tile_173 { background-position:  -30px -255px; }
+#tile_174 { background-position:  -45px -255px; }
+#tile_175 { background-position:  -60px -255px; }
+#tile_176 { background-position:  -75px -255px; }
+#tile_177 { background-position:  -90px -255px; }
+#tile_178 { background-position: -105px -255px; }
+#tile_179 { background-position: -120px -255px; }
+#tile_180 { background-position: -135px -255px; }
+
+#tile_181 { background-position:    0px -270px; }
+#tile_182 { background-position:  -15px -270px; }
+#tile_183 { background-position:  -30px -270px; }
+#tile_184 { background-position:  -45px -270px; }
+#tile_185 { background-position:  -60px -270px; }
+#tile_186 { background-position:  -75px -270px; }
+#tile_187 { background-position:  -90px -270px; }
+#tile_188 { background-position: -105px -270px; }
+#tile_189 { background-position: -120px -270px; }
+#tile_190 { background-position: -135px -270px; }
+
+#tile_191 { background-position:    0px -285px; }
+#tile_192 { background-position:  -15px -285px; }
+#tile_193 { background-position:  -30px -285px; }
+#tile_194 { background-position:  -45px -285px; }
+#tile_195 { background-position:  -60px -285px; }
+#tile_196 { background-position:  -75px -285px; }
+#tile_197 { background-position:  -90px -285px; }
+#tile_198 { background-position: -105px -285px; }
+#tile_199 { background-position: -120px -285px; }
+#tile_200 { background-position: -135px -285px; }
+
+#tile_201 { background-position:    0px -300px; }
+#tile_202 { background-position:  -15px -300px; }
+#tile_203 { background-position:  -30px -300px; }
+#tile_204 { background-position:  -45px -300px; }
+#tile_205 { background-position:  -60px -300px; }
+#tile_206 { background-position:  -75px -300px; }
+#tile_207 { background-position:  -90px -300px; }
+#tile_208 { background-position: -105px -300px; }
+#tile_209 { background-position: -120px -300px; }
+#tile_210 { background-position: -135px -300px; }
+
+#tile_211 { background-position:    0px -315px; }
+#tile_212 { background-position:  -15px -315px; }
+#tile_213 { background-position:  -30px -315px; }
+#tile_214 { background-position:  -45px -315px; }
+#tile_215 { background-position:  -60px -315px; }
+#tile_216 { background-position:  -75px -315px; }
+#tile_217 { background-position:  -90px -315px; }
+#tile_218 { background-position: -105px -315px; }
+#tile_219 { background-position: -120px -315px; }
+#tile_220 { background-position: -135px -315px; }
+
+#tile_221 { background-position:    0px -330px; }
+#tile_222 { background-position:  -15px -330px; }
+#tile_223 { background-position:  -30px -330px; }
+#tile_224 { background-position:  -45px -330px; }
+#tile_225 { background-position:  -60px -330px; }
+#tile_226 { background-position:  -75px -330px; }
+#tile_227 { background-position:  -90px -330px; }
+#tile_228 { background-position: -105px -330px; }
+#tile_229 { background-position: -120px -330px; }
+#tile_230 { background-position: -135px -330px; }
+
+#tile_231 { background-position:    0px -345px; }
+#tile_232 { background-position:  -15px -345px; }
+#tile_233 { background-position:  -30px -345px; }
+#tile_234 { background-position:  -45px -345px; }
+#tile_235 { background-position:  -60px -345px; }
+#tile_236 { background-position:  -75px -345px; }
+#tile_237 { background-position:  -90px -345px; }
+#tile_238 { background-position: -105px -345px; }
+#tile_239 { background-position: -120px -345px; }
+#tile_240 { background-position: -135px -345px; }
+
+#tile_241 { background-position:    0px -360px; }
+#tile_242 { background-position:  -15px -360px; }
+#tile_243 { background-position:  -30px -360px; }
+#tile_244 { background-position:  -45px -360px; }
+#tile_245 { background-position:  -60px -360px; }
+#tile_246 { background-position:  -75px -360px; }
+#tile_247 { background-position:  -90px -360px; }
+#tile_248 { background-position: -105px -360px; }
+#tile_249 { background-position: -120px -360px; }
+#tile_250 { background-position: -135px -360px; }
+
+#tile_251 { background-position:    0px -375px; }
+#tile_252 { background-position:  -15px -375px; }
+#tile_253 { background-position:  -30px -375px; }
+#tile_254 { background-position:  -45px -375px; }
+#tile_255 { background-position:  -60px -375px; }
+#tile_256 { background-position:  -75px -375px; }
+#tile_257 { background-position:  -90px -375px; }
+#tile_258 { background-position: -105px -375px; }
+#tile_259 { background-position: -120px -375px; }
+#tile_260 { background-position: -135px -375px; }
+
+#tile_261 { background-position:    0px -390px; }
+#tile_262 { background-position:  -15px -390px; }
+#tile_263 { background-position:  -30px -390px; }
+#tile_264 { background-position:  -45px -390px; }
+#tile_265 { background-position:  -60px -390px; }
+#tile_266 { background-position:  -75px -390px; }
+#tile_267 { background-position:  -90px -390px; }
+#tile_268 { background-position: -105px -390px; }
+#tile_269 { background-position: -120px -390px; }
+#tile_270 { background-position: -135px -390px; }
+
+#tile_271 { background-position:    0px -405px; }
+#tile_272 { background-position:  -15px -405px; }
+#tile_273 { background-position:  -30px -405px; }
+#tile_274 { background-position:  -45px -405px; }
+#tile_275 { background-position:  -60px -405px; }
+#tile_276 { background-position:  -75px -405px; }
+#tile_277 { background-position:  -90px -405px; }
+#tile_278 { background-position: -105px -405px; }
+#tile_279 { background-position: -120px -405px; }
+#tile_280 { background-position: -135px -405px; }
+
+#tile_281 { background-position:    0px -420px; }
+#tile_282 { background-position:  -15px -420px; }
+#tile_283 { background-position:  -30px -420px; }
+#tile_284 { background-position:  -45px -420px; }
+#tile_285 { background-position:  -60px -420px; }
+#tile_286 { background-position:  -75px -420px; }
+#tile_287 { background-position:  -90px -420px; }
+#tile_288 { background-position: -105px -420px; }
+#tile_289 { background-position: -120px -420px; }
+#tile_290 { background-position: -135px -420px; }
+
+#tile_291 { background-position:    0px -435px; }
+#tile_292 { background-position:  -15px -435px; }
+#tile_293 { background-position:  -30px -435px; }
+#tile_294 { background-position:  -45px -435px; }
+#tile_295 { background-position:  -60px -435px; }
+#tile_296 { background-position:  -75px -435px; }
+#tile_297 { background-position:  -90px -435px; }
+#tile_298 { background-position: -105px -435px; }
+#tile_299 { background-position: -120px -435px; }
+#tile_300 { background-position: -135px -435px; }
+
+#tile_301 { background-position:    0px -450px; }
+#tile_302 { background-position:  -15px -450px; }
+#tile_303 { background-position:  -30px -450px; }
+#tile_304 { background-position:  -45px -450px; }
+#tile_305 { background-position:  -60px -450px; }
+#tile_306 { background-position:  -75px -450px; }
+#tile_307 { background-position:  -90px -450px; }
+#tile_308 { background-position: -105px -450px; }
+#tile_309 { background-position: -120px -450px; }
+#tile_310 { background-position: -135px -450px; }
+
+#tile_311 { background-position:    0px -465px; }
+#tile_312 { background-position:  -15px -465px; }
+#tile_313 { background-position:  -30px -465px; }
+#tile_314 { background-position:  -45px -465px; }
+#tile_315 { background-position:  -60px -465px; }
+#tile_316 { background-position:  -75px -465px; }
+#tile_317 { background-position:  -90px -465px; }
+#tile_318 { background-position: -105px -465px; }
+#tile_319 { background-position: -120px -465px; }
+#tile_320 { background-position: -135px -465px; }
+
+#tile_321 { background-position:    0px -480px; }
+#tile_322 { background-position:  -15px -480px; }
+#tile_323 { background-position:  -30px -480px; }
+#tile_324 { background-position:  -45px -480px; }
+#tile_325 { background-position:  -60px -480px; }
+#tile_326 { background-position:  -75px -480px; }
+#tile_327 { background-position:  -90px -480px; }
+#tile_328 { background-position: -105px -480px; }
+#tile_329 { background-position: -120px -480px; }
+#tile_330 { background-position: -135px -480px; }
+
+#tile_331 { background-position:    0px -495px; }
+#tile_332 { background-position:  -15px -495px; }
+#tile_333 { background-position:  -30px -495px; }
+#tile_334 { background-position:  -45px -495px; }
+#tile_335 { background-position:  -60px -495px; }
+#tile_336 { background-position:  -75px -495px; }
+#tile_337 { background-position:  -90px -495px; }
+#tile_338 { background-position: -105px -495px; }
+#tile_339 { background-position: -120px -495px; }
+#tile_340 { background-position: -135px -495px; }

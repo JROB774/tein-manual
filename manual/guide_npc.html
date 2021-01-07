@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The End is Nigh: Modder's Manual</title>
+
+		<meta charset="utf-8"/>
+		<meta name="description" content="A manual containing information regarding modding The End is Nigh"/>
+		<meta name="keywords" content="The End is Nigh,Modding,TEIN,Mod,Manual,Edmund McMillen,Tyler Glaiel"/>
+		<meta name="author" content="Joshua Robertson"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="contentback"></div>
+			<div class="header">
+				<h1 class="heading">How to Add NPCs</h1>
+			</div>
+			<ul class="nav">
+				<!-- needs to be on one line otherwise space will be present between nav elements -->
+				<li><a href="../index.html">Home</a></li><li><a href="contents.html">Contents</a></li><li><a href="getstart.html">Getting Started</a></li><li><a href="editor.html">The Editor</a></li><li><a href="reference.html">Reference</a></li><li><a href="download.html">Download</a></li><li><a href="changelog.html">Changelog</a></li><li><a href="credits.html">Credits</a></li>
+			</ul>
+			<div class="content">
+				<p>
+					The first step in making a custom NPC is to add an additional NPC to the <span class="variable">data\npcs.txt</span> file found in the unpacked game data. First, the NPC must be named; NPCs in game are named based on order of appearance, and race. Skeleton NPCs are named <span class="variable">NPCx</span> (where <span class="variable">x</span> is a unique number to differentiate them), Light Blob NPCs are named <span class="variable">NPCBx</span>, Ghosts are named <span class="variable">NPCGx</span>, Dark Blobs are named <span class="variable">NPCDx</span>, cameos such as Steven and Isaac, from Edmund&#8217;s other games are named <span class="variable">NPCXx</span>, and finally the large Stevens that transport Ash to the future are named <span class="variable">NPCHx</span>. Therefore custom NPCs should use a unique naming scheme, such as <span class="variable">NPCAx</span>, to prevent your mod from editing and conflicting with in-game NPCs.<br/><br/>
+					The basic description, such as <span class="variable">#basic sideways</span> that appears below the name has no effect and is used to identify NPCs.<br/><br/>
+					The <span class="variable">movieclip</span> decides what form your custom NPC takes.<br/><br/>
+					<span class="variable">sound_id</span> is similar, and decides the noises your NPC makes when it&#8217;s dialogue activates. These are fairly descriptive, such as <span class="variable">NPCSkull</span> making a bone-rattling noise when spoken to. Generally, the <span class="variable">sound_id</span> should match the <span class="variable">movieclip</span>.<br/><br/>
+					The <span class="variable">text</span> decides what your custom NPC says when spoken to. Each set of double-quotes <span class="variable">""</span> is a separate box of text that appears in sequence. The new-line character <span class="variable">\n</span> makes the text after it start on a new line. Text should be surrounded by square brackets <span class="variable">[]</span>, and dont forget to add curly brackets <span class="variable">{}</span> brackets around your NPC&#8217;s code, or else an error will occur when you enter the level.<br/><br/>
+					Here is an example of what an NPC entry could look like when complete:
+				</p>
+				<div class="code">
+					<p>
+						01&emsp;NPC0 {<br/>
+						02&emsp;#basic sideways<br/>
+						03&emsp;&emsp;movieclip NPC0<br/>
+						04&emsp;&emsp;sound_id NPCSkull<br/>
+						05&emsp;&emsp;text [<br/>
+						06&emsp;&emsp;&emsp;"oh \n . . . \n its you. . ."<br/>
+						07&emsp;&emsp;&emsp;"must be nice \n being alive \nn' all that"<br/>
+						08&emsp;&emsp;&emsp;"when i died \n that tumor wiggled out"<br/>
+						09&emsp;&emsp;&emsp;"it's been floating \n up there for years \n watching me"<br/>
+						10&emsp;&emsp;&emsp;"please\n dont take it. . . \n its all i have left"<br/>
+						11&emsp;&emsp;]<br/>
+						12&emsp;}
+					</p>
+				</div>
+				<p>
+					To add your NPC to a level, you must add your NPC to the level&#8217;s <span class="variable">data\tilesets.txt</span> code. The NPC&#8217;s name should be written after <span class="variable">npc_1</span>, <span class="variable">npc_2</span> or <span class="variable">npc_3</span>. Then, add your npc to the level using the level editor; NPCs are found in tiles Z1 - 3 in the editor, in order of number. See the <a href="tileref.html">Tile Reference</a> for more information on these particular tiles.<br/><br/>
+					After finishing the <a href="getstart.html">Getting Started / Tutorials</a> section, please see the <a href="reference.html">Modding Reference</a> and particularly the <a href="npc.html">NPCs</a> section for more information on the possible values and details regarding custom NPCs.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

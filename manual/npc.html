@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The End is Nigh: Modder's Manual</title>
+
+		<meta charset="utf-8"/>
+		<meta name="description" content="A manual containing information regarding modding The End is Nigh"/>
+		<meta name="keywords" content="The End is Nigh,Modding,TEIN,Mod,Manual,Edmund McMillen,Tyler Glaiel"/>
+		<meta name="author" content="Joshua Robertson"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="contentback"></div>
+			<div class="header">
+				<h1 class="heading">NPCs</h1>
+			</div>
+			<ul class="nav">
+				<!-- needs to be on one line otherwise space will be present between nav elements -->
+				<li><a href="../index.html">Home</a></li><li><a href="contents.html">Contents</a></li><li><a href="getstart.html">Getting Started</a></li><li><a href="editor.html">The Editor</a></li><li><a href="reference.html">Reference</a></li><li><a href="download.html">Download</a></li><li><a href="changelog.html">Changelog</a></li><li><a href="credits.html">Credits</a></li>
+			</ul>
+			<div class="content">
+				<h2>Contents</h2>
+				<div class="contents">
+					<h3><a href="npc.html#overview">Overview</a> - Details general NPC information.</h3>
+					<h3><a href="npc.html#npclist">NPC Listing (IDs and Movie Clips)</a> - Lists all the NPCs in the game.</h3>
+					<h3><a href="npc.html#soundid">Sound IDs</a> - Lists the available Sound IDs for NPCs.</h3>
+					<h3><a href="npc.html#text">Text</a> - Details about the text system for NPCs.</h3>
+					<h3><a href="npc.html#alttext">Alt. Text</a> - Details about the alternate text system.</h3>
+					<h3><a href="npc.html#adding">Adding NPCs</a> - Explains how to add NPCs to the game.</h3>
+					<h3><a href="npc.html#remarks">Remarks</a> - General and misc. information.</h3>
+				</div>
+				<h2 id="overview">Overview</h2>
+				<p>
+					Location in the unpacked data: <span class="variable">data\npcs.txt</span><br/><br/>
+					The NPCs file dictates information regarding all the available NPCs in the game; it defines the traits of each NPC: sound, graphics, text, and all of the aspects that make the different NPCs unique and interesting.<br/><br/>
+					Here is an example of the syntax of one NPC taken from the file (NPC0):
+				</p>
+				<div class="code">
+					<p>
+						01&emsp;NPC0 {<br/>
+						02&emsp;#basic sideways<br/>
+						03&emsp;&emsp;movieclip NPC0<br/>
+						04&emsp;&emsp;sound_id NPCSkull<br/>
+						05&emsp;&emsp;text [<br/>
+						06&emsp;&emsp;&emsp;"oh \n . . . \n its you. . ."<br/>
+						07&emsp;&emsp;&emsp;"must be nice \n being alive \nn&#8217; all that"<br/>
+						08&emsp;&emsp;&emsp;"when i died \n that tumor wiggled out"<br/>
+						09&emsp;&emsp;&emsp;"it&#8217;s been floating \n up there for years \n watching me"<br/>
+						10&emsp;&emsp;&emsp;"please\n dont take it. . . \n its all i have left"<br/>
+						11&emsp;&emsp;]<br/>
+						12&emsp;}
+					</p>
+				</div>
+				<p>
+					Whilst this may seem complex, the syntax for an NPC can be broken down and represented as the following:
+				</p>
+				<div class="code">
+					<p>
+						1&emsp;[NPC_ID] {<br/>
+						2&emsp;&emsp;moviclip [VALUE]<br/>
+						2&emsp;&emsp;sound_id [VALUE]<br/>
+						4&emsp;&emsp;text [<br/>
+						5&emsp;&emsp;&emsp;"[VALUE]"<br/>
+						6&emsp;&emsp;&emsp;...<br/>
+						7&emsp;&emsp;]<br/>
+						8&emsp;}
+					</p>
+				</div>
+				<p>
+					The <span class="variable">#</span> followed by text, in the example, is simply a comment and not interpreted/read by the game itself, hence why it was not added in the simplified syntax breakdown. These comments have been added to all the NPCs in the "npcs.txt" file to allow for more readability.<br/><br/>
+					So, overall, the "npcs.txt" file simply stores a series of NPCS and their properties, that can be placed into the game for the player to interact with. Read on for more information on each of these variables, as well as how to add/modify NPCs.
+				</p>
+				<h2 id="npclist">NPC Listing (IDs and Movie Clips)</h2>
+				<p>
+					A graphical list displaying all of the NPCs within the game. With their appropriate NPC IDs (the values used to set NPCs in the Tilesets file) below them, these values also double-up as being the names used to reference the particular <span class="variable">movie_clip</span> (graphic/sprite) that an NPC is given. Remember that variables and their values are case-sensitive, in the case of NPCs all of the IDs are fully capitalised, no lower-case.
+				</p>
+				<table class="npcs">
+					<tr>
+						<th colspan="6"><h2>Skeletons</h2></th>
+					</tr>
+					<tr>
+						<td><div class="center"><img src="images/npcs/npc00.png" alt="NPC00"><p>NPC0</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc01.png" alt="NPC01"><p>NPC1</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc02.png" alt="NPC02"><p>NPC2</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc03.png" alt="NPC03"><p>NPC3</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc04.png" alt="NPC04"><p>NPC4</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc05.png" alt="NPC05"><p>NPC5</p></div></td>
+					</tr>
+					<tr>
+						<td><div class="center"><img src="images/npcs/npc06.png" alt="NPC06"><p>NPC6</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc07.png" alt="NPC07"><p>NPC7</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc08.png" alt="NPC08"><p>NPC8</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc09.png" alt="NPC09"><p>NPC9</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc10.png" alt="NPC10"><p>NPC10</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc11.png" alt="NPC11"><p>NPC11</p></div></td>
+					</tr>
+					<tr>
+						<td><div class="center"><img src="images/npcs/npc12.png" alt="NPC12"><p>NPC12</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc13.png" alt="NPC13"><p>NPC13</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc14.png" alt="NPC14"><p>NPC14</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc15.png" alt="NPC15"><p>NPC15</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc16.png" alt="NPC16"><p>NPC16</p></div></td>
+						<td><div class="center"><img src="images/npcs/npc17.png" alt="NPC17"><p>NPC17</p></div></td>
+					</tr>
+				</table>
+				<table class="npcs">
+					<tr>
+						<th colspan="7"><h2>Light Blobs</h2></th>
+					</tr>
+					<tr>
+						<td><div class="center"><img src="images/npcs/npcb1.png" alt="NPCB1"><p>NPCB1</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcb2.png" alt="NPCB2"><p>NPCB2</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcb3.png" alt="NPCB3"><p>NPCB3</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcb4.png" alt="NPCB4"><p>NPCB4</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcb5.png" alt="NPCB5"><p>NPCB5</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcb6.png" alt="NPCB6"><p>NPCB6</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcb7.png" alt="NPCB7"><p>NPCB7</p></div></td>
+					</tr>
+				</table>
+				<table class="npcs">
+					<tr>
+						<th colspan="7"><h2>Ghosts</h2></th>
+					</tr>
+					<tr>
+						<td><div class="center"><img src="images/npcs/npcg1.png" alt="NPCG1"><p>NPCG1</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcg2.png" alt="NPCG2"><p>NPCG2</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcg3.png" alt="NPCG3"><p>NPCG3</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcg4.png" alt="NPCG4"><p>NPCG4</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcg5.png" alt="NPCG5"><p>NPCG5</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcg6.png" alt="NPCG6"><p>NPCG6</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcg7.png" alt="NPCG7"><p>NPCG7</p></div></td>
+					</tr>
+				</table>
+				<table class="npcs">
+					<tr>
+						<th colspan="7"><h2>Dark Blobs</h2></th>
+					</tr>
+					<tr>
+						<td><div class="center"><img src="images/npcs/npcd1.png" alt="NPCD1"><p>NPCD1</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcd2.png" alt="NPCD2"><p>NPCD2</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcd3.png" alt="NPCD3"><p>NPCD3</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcd4.png" alt="NPCD4"><p>NPCD4</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcd5.png" alt="NPCD5"><p>NPCD5</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcd6.png" alt="NPCD6"><p>NPCD6</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcd7.png" alt="NPCD7"><p>NPCD7</p></div></td>
+					</tr>
+				</table>
+				<table class="npcs">
+					<tr>
+						<th colspan="5"><h2>Characters</h2></th>
+					</tr>
+					<tr>
+						<td><div class="center"><img src="images/npcs/npcx1.png" alt="NPCX1"><p>NPCX1</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcx2.png" alt="NPCX2"><p>NPCX2</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcx3.png" alt="NPCX3"><p>NPCX3</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcx4.png" alt="NPCX4"><p>NPCX4</p></div></td>
+						<td><div class="center"><img src="images/npcs/npcx5.png" alt="NPCX5"><p>NPCX5</p></div></td>
+					</tr>
+				</table>
+				<table class="npcs">
+					<tr>
+						<th colspan="7"><h2>Stevens</h2></th>
+					</tr>
+					<tr>
+						<td><div class="center"><img src="images/npcs/npch1.png" alt="NPCH1"><p>NPCH1</p></div></td>
+						<td><div class="center"><img src="images/npcs/npch2.png" alt="NPCH2"><p>NPCH2</p></div></td>
+						<td><div class="center"><img src="images/npcs/npch3.png" alt="NPCH3"><p>NPCH3</p></div></td>
+						<td><div class="center"><img src="images/npcs/npch4.png" alt="NPCH4"><p>NPCH4</p></div></td>
+					</tr>
+				</table>
+				<br/>				
+				<p>
+					As well as the NPC movie clips listed above, NPCs can also be assigned any of the alternate art values as their <span class="variable">movie_clip</span> value. For a full listing on the available movie clips that can be used, see the <a href="file:///C:/Josh/Projects/TEIN_Manual/manual/artalt.html">Art Alts.</a> section.
+				</p>
+				<h2 id="soundid">Sound IDs</h2>
+				<p>
+					The <span class="variable">sound_id</span> variable is used to define the sound played when the NPC is spoken to and when text is advanced. The available sound IDs are as follows (the values in brackets mark what sound file each sound ID references):<br/><br/>
+					<span class="variable">
+						NPCSkull (audio\sfx\skullnpc.wav)<br/>
+						NPCBlob (audio\sfx\squishnpc.wav)<br/>
+						NPCGhost (audio\sfx\ghostnpc.wav)<br/>
+						NPCIsaac (audio\sfx\isaacnpc.wav)<br/>
+						NPCStevenCameo (audio\sfx\stevenheadwarpnpc.wav)<br/>
+						NPCGish (audio\sfx\gishnpc.wav)<br/>
+						NPCGuppy (audio\sfx\catnpc.wav)<br/>
+						NPCAether (audio\sfx\aethernpc.wav)<br/>
+						NPCSteven (audio\sfx\stevennpc.wav)<br/><br/>
+					</span>
+					New sounds can be created by modifying "mainsounds.txt" and "retrosounds.txt"; see the section Sounds for more information on creating new sounds.
+				</p>
+				<h2 id="text">Text</h2>
+				<p>
+					The <span class="variable">text</span> variable details what text will be displayed when the NPC is interacted with; there are certain formatting rules regarding this text that are quite important in ensuring that the NPC&#8217;s text works correctly and looks visually appealing. Below is some example text from an NPC that can be used to compare with what is being explained, to make it easier to understand:
+				</p>
+				<div class="code">
+					<p>
+						01&emsp;text [<br/>
+						02&emsp;&emsp;"when i used\n to hang off\n a wall"<br/>
+						03&emsp;&emsp;"id pull\n out from it \nand then"<br/>
+						04&emsp;&emsp;"id do a \n jump. . . and \n go like super far!"<br/>
+						05&emsp;&emsp;"but when i \ndidn&#8217;t pull \noutwards"<br/>
+						06&emsp;&emsp;"id mostly just \n go up higher"<br/>
+						07&emsp;&emsp;"i call it the \npull out method"<br/>
+						08&emsp;&emsp;"\n. . ." <br/>
+						09&emsp;&emsp;"i made that \none up years \nago"<br/>
+						10&emsp;&emsp;"i imagined it \nwould get more \nof a laugh"<br/>
+						11&emsp;&emsp;"\n. . ."<br/>
+						12&emsp;&emsp;"please \nleave me alone"<br/>
+						13&emsp;]
+					</p>
+				</div>
+				<p>
+					Text is entirely contained within square brackets <span class="variable">[]</span>. When writing text ensure that it is always wrapped inside these brackets or else the game may not interpret the text correctly -- or worse, crash.<br/><br/>
+					Text is then split into different sections, each section is encased within quotes <span class="variable">""</span>. These sections define when a button-prompt will appear asking the player to advance the text, when the user presses the appropriate button the text will advance and begin scrolling through to the next section. It is important to reguarly split text into sections for easier reading.<br/><br/>
+					Finally, a special type of character is used called a new-line <span class="variable">\n</span>, this character informs the game to start writing text on the next line, rather than being displayed itself. Once again, it is important to reguarly add new-lines so that the text does not clip outside of the text box; however, no more than three lines should be in any given text section, otherwise potential veritcal clipping may occur.<br/><br/>
+					The text box itself can fit appoximately 22 characters on each line, however, this number will vary depending on the characters used due to the font having varying character widths.
+				</p>
+				<h2 id="alttext">Alt. Text</h2>
+				<p>
+					The <span class="variable">alt_text</span> variable is used and formatted in exactly the same way as the regular <span class="variable">text</span> variable. However, this variable is only used on the four Steven NPCs and acts as the alternate text to display when the appropriate number of tumors has been collected. Below is a list of how many tumors is needed to make each NPC trigger their alternate text (these amounts are hard-coded):<br/><br/>
+					NPCH1 - 50 Tumors<br/>
+					NPCH2 - 100 Tumors<br/>
+					NPCH3 - 170 Tumors<br/>
+					NPCH4 - 300 Tumors<br/><br/>
+					Furthermore, the addresses for the various tumor counts needed to trigger alternate text are as follows:
+				</p>
+				<div class="code">
+					<p>
+						0x000E489D:&emsp;50<br/>
+						0x000E495C:&emsp;100<br/>
+						0x000E49A8:&emsp;170<br/>
+						0x000E4A3A:&emsp;300
+					</p>	
+				</div>
+				<p>
+					Attempting to apply the <span class="variable">alt_text</span> variable to any other NPC will do nothing. Based on testing, it is apparent that the NPC IDs that react to alternate text are hard-coded into the game and will require executable hacking to modify. The addresses for the alternate text NPCs are as follows:
+				</p>
+				<div class="code">
+					<p>
+						0x00231274:&emsp;"NPCH1"<br/>
+						0x002312AC:&emsp;"NPCH2"<br/>
+						0x002312B4:&emsp;"NPCH3"<br/>
+						0x00231294:&emsp;"NPCH4"
+					</p>
+				</div>
+				<p>
+					For more information on how to modify these values effectively, see the Executable Hacking section.
+				</p>
+				<h2 id="adding">Adding NPCs</h2>
+				<p>
+					To add an NPC, the first thing that must be done is a new NPC entry must be made in the "npcs.txt" file. This can be written out by following the syntax given in the <a href="npc.html#overview">Overview</a> section, or by copying an existing NPC entry and changing the values as neccessary. When making a new NPC ensure that its ID is completely unique from all the others, otherwise conflicts will occur. Then set all of its variables/properties appropriately, the information in the previous sections of this page can be used as a guide to help.<br/><br/>
+					Once the NPC has had all of its information filled out, it must then be assigned to a specific NPC tile (Z1 - 3), using the "tilesets.txt" file. Locate the specific area tileset that you wish for the NPC to appear in and add in an <span class="variable">npc_x</span> variable, where <span class="variable">x</span> is a value between 1 and 3; this refers to which NPC tile will be used to place the NPC. An example excerpt from "The End" tileset, shwocasing the NPC definitions:<br/><br/>
+				</p>
+				<div class="code">
+					<p>
+						1&emsp;1 {<br/>
+						2&emsp;&emsp;...<br/>
+						3&emsp;&emsp;<br/>
+						4&emsp;&emsp;npc_1 NPC0<br/>
+						5&emsp;&emsp;npc_2 NPC1<br/>
+						6&emsp;&emsp;npc_3 NPC2<br/>
+						7&emsp;&emsp;<br/>
+						8&emsp;&emsp;...<br/>
+						9&emsp;}
+					</p>
+				</div>
+				<p>
+					Once this is done, placing any one of the NPC tiles in a level using this tileset will spawn the new NPC.<br/><br/>
+					For more detailed information on modifying tilesets using the "tilesets.txt" file, click <a href="tileset.html">here</a>.
+				</p>
+				<h2 id="remarks">Remarks</h2>
+				<p>
+					Placing one of the NPC tiles (Z1 - 3) in a level with its value in the tileset being undefined or set to <span class="variable">none</span> will simply result in nothing appearing at the location. Fortunately the game will not crash or present any other kinds of abstract behaviour.<br/><br/>
+					Setting the NPCs <span class="variable">movieclip</span> or <span class="variable">sound_id</span> variables to invalid values will result in the game crashing when the level containing the NPC is entered. Futhermore, not includng any of these fields, including <span class="variable">text</span>, will also cause a crash. However, if any of these problems occur, the game will display a helpful error message making debugging such as issue relatively easy.<br/><br/>
+					Inclusion of the the <span class="variable">text</span> field but leaving it like so: <span class="variable">text = []</span> will lead to the game crashing when the NPC is interacted with; no error message is supplied in such instances.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

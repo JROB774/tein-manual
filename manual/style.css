@@ -1,0 +1,375 @@
+::-moz-selection
+{
+	color: white;
+	background: blue;
+}
+
+::selection
+{
+	color: white;
+	background: blue;
+}
+
+
+@font-face
+{
+	font-family: TheEnd;
+	src: url("fonts/theend.ttf");
+}
+
+html
+{
+	position: relative;
+	min-height: 100%;
+}
+
+body
+{
+	font-family: TheEnd, sans-serif;
+	font-size: 1.25em;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-color: #000;
+	background-image: url("images/background.jpg");
+}
+
+h1, h2, h3, h4, h5, h6, p
+{
+	margin-top: 0;
+	padding-left: 26px;
+	padding-right: 26px;
+	text-shadow: 1px 2px 4px #000, -1px -2px 4px #000;
+	color: #FFF;
+}
+
+mark
+{
+	text-shadow: none;
+}
+
+img
+{
+	-webkit-filter: drop-shadow(0px 0px 5px #000);
+	filter: drop-shadow(0px 0px 5px #000);
+}
+
+a, a:visited
+{
+	color: #AD746D;
+	text-decoration: none;
+}
+
+a:hover, a:active, a:focus
+{
+	color: #CC8982;
+	text-decoration: none;
+}
+
+a img
+{
+	border: none;
+}
+
+li p a
+{
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol, dl
+{
+	margin: 0;
+}
+
+ol li span
+{
+	left: 4px;
+}
+
+ul li
+{
+	color: #FFF;
+}
+
+ul li p
+{
+	padding: 0;
+}
+
+table
+{
+	display: block;
+	margin-left: 26px;
+	margin-right: 26px;	
+}
+
+th, td
+{
+	margin: 0;
+	padding: 0;
+}
+
+table.columns h2, table.columns p
+{
+	padding: 0;
+}
+
+table.columns img.tilescrn
+{
+	width: 90%;
+}
+
+table.npcs
+{
+	table-layout: fixed;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url("images/splat_npc.png");
+}
+
+table.npcs h2, table.npcs p
+{
+	margin: 0;
+	padding: 0;
+}
+
+table.npcs img
+{
+	width: 70%;
+}
+
+table.npcsounds
+{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+ul.nav
+{
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 24px;
+	list-style-type: none;
+	text-align: center;
+	overflow: hidden;
+}
+
+ul.nav li
+{
+	display: inline;
+	font-size: 1.1em;
+	-webkit-filter: drop-shadow(0px 0px 5px #000);
+	filter: drop-shadow(0px 0px 5px #000);
+}
+
+ul.nav li a, ul.nav li a:visited
+{
+	display: inline-block;
+	padding: 8px 16px 8px 16px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	color: #AD746D;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url("images/splat_button.png");
+}
+
+ul.nav li a:hover, ul.nav li a:active, ul.nav li a:focus
+{
+	color: #CC8982;
+}
+
+img.screenshot
+{
+	width: 35%;
+	height: 35%;
+}
+
+img.screenshot_l
+{
+	width: 50%;
+	height: 50%;
+}
+
+.container
+{
+	position: relative;
+	margin: 0 auto;
+	width: 960px;
+	min-height: 100%;
+}
+
+.contentback
+{
+	position: fixed;
+	margin: 0 auto;
+	width: 960px;
+	height: 100%;
+	overflow: hidden;
+	background: #333;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: -1;
+}
+
+.header
+{
+	display: block;
+	height: auto;
+	text-align: center;
+}
+
+.title
+{
+	width: 40%;
+	height: 40%;
+	-webkit-filter: drop-shadow(0px 0px 5px #000);
+	filter: drop-shadow(0px 0px 5px #000);
+}
+
+.heading
+{
+	padding-top: 32px;
+	padding-bottom: 32px;
+	margin-bottom: 0;
+	font-size: 6em;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url("images/splat_greeting.png");
+}
+
+.content
+{
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 24px;
+	width: 100%;
+}
+
+.content ul, .content ol
+{
+	padding: 0 15px 15px 40px;
+}
+
+.greeting
+{
+	display: table-cell;
+	position: relative;
+	margin: 0 auto;
+	width: 960px;
+	height: 360px;
+	text-align: center;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url("images/splat_greeting.png");
+	-webkit-filter: drop-shadow(0px 0px 5px #000);
+	filter: drop-shadow(0px 0px 5px #000);
+}
+
+.enter
+{
+	text-align: center;
+	padding-bottom: 16px;
+}
+
+.enter a img, .enter a:visited img
+{
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+	-webkit-filter: drop-shadow(0px 0px 5px #000);
+	filter: drop-shadow(0px 0px 5px #000);
+}
+
+.enter a:hover img, .enter a:active img, .enter a:focus img
+{
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url("images/splat_enter.png");
+}
+
+.variable
+{
+	font-family: "Courier New", "Courier", monospace;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+.contents
+{
+	margin-bottom: 24px;
+}
+
+.contents h1, .contents h3, .credits h2, .downloads h2, .downloads h3, .downloads p
+{
+	margin-bottom: 0;
+}
+
+.contents p, .credits p, .downloads p, .downloads h3
+{
+	margin-top: 0;
+}
+
+.credits p, .downloads p
+{
+	color: #CCC;
+}
+
+.code
+{
+	display: block;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-bottom: 20px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	font-family: "Courier New", "Courier", monospace;
+	font-size: 0.6em;
+	background: #333;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.code p
+{
+	margin-bottom: 0;
+}
+
+.outlinewhite
+{
+	border: 3px solid #FFF;
+}
+
+.outlineblack
+{
+	border: 3px solid #000;
+}
+
+.indev
+{
+	/* display: none; */
+}
+
+.indev h3
+{
+	color: yellow;
+}
+
+.center
+{
+	text-align: center;
+	padding-bottom: 16px;
+}
+
+.center img
+{
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}

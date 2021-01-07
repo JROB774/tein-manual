@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The End is Nigh: Modder's Manual</title>
+
+		<meta charset="utf-8"/>
+		<meta name="description" content="A manual containing information regarding modding The End is Nigh"/>
+		<meta name="keywords" content="The End is Nigh,Modding,TEIN,Mod,Manual,Edmund McMillen,Tyler Glaiel"/>
+		<meta name="author" content="Joshua Robertson"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="contentback"></div>
+			<div class="header">
+				<h1 class="heading">Physics</h1>
+			</div>
+			<ul class="nav">
+				<!-- needs to be on one line otherwise space will be present between nav elements -->
+				<li><a href="../index.html">Home</a></li><li><a href="contents.html">Contents</a></li><li><a href="getstart.html">Getting Started</a></li><li><a href="editor.html">The Editor</a></li><li><a href="reference.html">Reference</a></li><li><a href="download.html">Download</a></li><li><a href="changelog.html">Changelog</a></li><li><a href="credits.html">Credits</a></li>
+			</ul>
+			<div class="content">
+				<h2>Contents</h2>
+				<div class="contents">
+					<h3><a href="physics.html#overview">Overview</a> - Details general physics information.</h3>
+					<h3><a href="physics.html#player">Player Physics</a> - Details variables and files regarding player physics.</h3>
+					<h3><a href="physics.html#platform">Platform Physics</a> - Details variables and files regarding platform physics.</h3>
+					<h3><a href="physics.html#remarks">Remarks</a> - General and misc. information.</h3>
+				</div>
+				<h2 id="overview">Overview</h2>
+				<p>
+					The various physics files define a variety of variables/values that can be redefined to control the physics of the game. Note that this effects the game on a global scale and cannot be defined to only impact specific areas. Modifying the different physics files can lead to some drastic changes to gameplay and can even create entirely new methods of play, making it an extremely powerful modding tool.<br/><br/>
+					The physics files are split into two main categories: <a href="physics.html#player">player physics</a>, which defines variables directly relating to the control and feel of the player; and <a href="physics.html#platform">platform physics</a>, which defines variables controlling how the various tag movement tiles move tiles/entities.
+				</p>
+				<h2 id="player">Player Physics</h2>
+				<p>
+					Location in the unpacked data: <span class="variable">data\playerphysics.txt</span><br/>
+					Location in the unpacked data: <span class="variable">data\playerphysics_lowgrav.txt</span><br/>
+					Location in the unpacked data: <span class="variable">data\playerphysics_water.txt</span><br/>
+					<br/>
+					The player physics files define a variety of different variables relating specifically to how the player moves throughout the game world. The values will control, movement speed, jump height, long-jump speed, and much more. Player physics is split into three different files, all containing the same variables: the first, <span class="variable">playerphysics.txt</span>, is the standard physics for the player when moving around levels, on ground and in air; the second, <span class="variable">playerphysics_lowgrav.txt</span>, is the physics used when the player is within a gravitational-pull beam; and the third, <span class="variable">playerphysics_water.txt</span>, is the physics applied when the player is currently in a liquid (water, or toxic water). The variables contained within these three files are as follows:<br/>
+					<br/>
+					<span class="variable">gravity</span> - The gravity applied to the player normally.<br/>
+					<span class="variable">leniency</span> - The amount of time a player can fall through the air and still jump.<br/>
+					<span class="variable">max_fallspeed</span> - The maximum speed the player can reach whilst fall.<br/>
+					<span class="variable">maxspeed</span> - ???<br/>
+					<span class="variable">runspeed</span> - The maximum movement speed of the player.<br/>
+					<span class="variable">ground_friction</span> - The friction applied to turning whilst on the ground.<br/>
+					<span class="variable">stop_friction</span> - How quickly the player stops moving after releasing a move key.<br/>
+					<span class="variable">air_friction</span> - The friction applied to turning whilst in the air.<br/>
+					<span class="variable">fastfall_gravity</span> - The gravity applied to the player whilst fast-falling.<br/>
+					<span class="variable">fastfall_jerkdown</span> - Inital jerkdown force applied to the player when fast-fall is initiated.<br/>
+					<span class="variable">fastfall_maxspeed</span> - The maximum speed the player can reach whilst fast-falling.<br/>
+					<span class="variable">float_time</span> - ???<br/>
+					<span class="variable">jumpheight</span> - The max height of the player&#8217;s jump.<br/>
+					<span class="variable">release_jumpheight</span> - The height of the player&#8217;s short hop (tapping the jump button).<br/>
+					<span class="variable">longjump_slidethreshold</span> - ???<br/>
+					<span class="variable">longjump_speed</span> - The speed at which the player moves during a long jump.<br/>
+					<span class="variable">longjump_height</span> - The height gained when performing a long jump from a ledge.<br/>
+					<span class="variable">longjump_airfriction</span> - The friction applied to turning during a long jump.<br/>
+					<span class="variable">ledgejump_height</span> - The height gained from a normal ledge jump (not a long jump).<br/>
+					<span class="variable">enemy_bounceheight_nojump</span> - The height gained by the player when bouncing off an enemy.<br/>
+					<span class="variable">enemy_bounceheight_jump</span> - The height gained by the player when bouncing off an enemy with a jump.<br/>
+					<span class="variable">mush_bounceheight_nojump</span> - The height gained by the player when bouncing off a spring.<br/>
+					<span class="variable">mush_bounceheight_jump</span> - The height gained by the player when bouncing off a spring with a jump.<br/>
+					<span class="variable">enemy_prebounce_time</span> - ???<br/>
+					<span class="variable">enemy_postbounce_time</span> - How long the "no jump" bounce force is applied for? (Impacts no jump bounce height.)<br/>
+					<span class="variable">swimspeed</span> - The speed the player moves horizontally in the water.<br/>
+					<span class="variable">water_exitheight</span> - The height gained when jumping out of the water.<br/>
+				</p>
+				<h2 id="platform">Platform Physics</h2>
+				<p>
+					Location in the unpacked data: <span class="variable">data\platformphysics.txt</span><br/>
+					<br/>
+					The platform physics file defines a variety of different variables relating specifically to how the various movement tag tiles will move tiles aroud levels. The speeds for each tile type can be set from within this file, which contains the following variables:<br/>
+					<br/>
+					<span class="variable">MovingPlatformSpeedLow</span> - The speed at which tags F8-G1 move tiles.<br/>
+					<span class="variable">MovingPlatformSpeedMed</span> - The speed at which tags G2-G5 move tiles.<br/>
+					<span class="variable">MovingPlatformSpeedHigh</span> - The speed at which tags G6-G9 move tiles.<br/>
+					<span class="variable">SmoothMovingPlatformSpeedXSlow</span> - The speed at which tags N2-N5 move tiles.<br/>
+					<span class="variable">SmoothMovingPlatformSpeedLow</span> - The speed at which tags ID-I5 move tiles.<br/>
+					<span class="variable">SmoothMovingPlatformSpeedMed</span> - The speed at which tags I6-I9 move tiles.<br/>
+					<span class="variable">SmoothMovingPlatformSpeedHigh</span> - The speed at which tags J0-J3 move tiles.<br/>
+					<span class="variable">FallingPlatformGravityLow</span> - The speed at which tag F2 makes tiles fall.<br/>
+					<span class="variable">FallingPlatformGravityMed</span> - The speed at which tag F3 makes tiles fall.<br/>
+					<span class="variable">FallingPlatformGravityHigh</span> - The speed at which tag F4 makes tiles fall.<br/>
+					<span class="variable">WeightedPlatformSpeedSlow</span> - The speed at which tag L7 makes tiles move.<br/>
+					<span class="variable">WeightedPlatformSpeedMed</span> - The speed at which tag L8 makes tiles move.<br/>
+					<span class="variable">WeightedPlatformSpeedHigh</span> - The speed at which tag L9 makes tiles move.<br/>
+					<span class="variable">SmasherSpeedLow</span> - No effect.<br/>
+					<span class="variable">SmasherSpeedMed</span> - No effect.<br/>
+					<span class="variable">SmasherSpeedHigh</span> - No effect.<br/>
+					<span class="variable">SmasherDelayLow</span> - No effect.<br/>
+					<span class="variable">SmasherDelayMed</span> - No effect.<br/>
+					<span class="variable">SmasherDelayHigh</span> - No effect.<br/>
+				</p>
+				<h2 id="remarks">Remarks</h2>
+				<p>
+					The physics variables are handled globally and, currently, cannot be modified to only be applied in certain areas of the game. This limits some potential uses that physics modifications could potentially have.<br/><br/>
+					Removing a variable from any of the physics files will lead to it being assigned a default value, most likely <span class="variable">0</span>. However, leaving a variable without a value in the file will result in undefined and obscure behaviour from the game and is not recommended at all.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

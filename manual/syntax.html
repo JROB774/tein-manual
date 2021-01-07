@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The End is Nigh: Modder's Manual</title>
+
+		<meta charset="utf-8"/>
+		<meta name="description" content="A manual containing information regarding modding The End is Nigh"/>
+		<meta name="keywords" content="The End is Nigh,Modding,TEIN,Mod,Manual,Edmund McMillen,Tyler Glaiel"/>
+		<meta name="author" content="Joshua Robertson"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="contentback"></div>
+			<div class="header">
+				<h1 class="heading">Manual Syntax</h1>
+			</div>
+			<ul class="nav">
+				<!-- needs to be on one line otherwise space will be present between nav elements -->
+				<li><a href="../index.html">Home</a></li><li><a href="contents.html">Contents</a></li><li><a href="getstart.html">Getting Started</a></li><li><a href="editor.html">The Editor</a></li><li><a href="reference.html">Reference</a></li><li><a href="download.html">Download</a></li><li><a href="changelog.html">Changelog</a></li><li><a href="credits.html">Credits</a></li>
+			</ul>
+			<div class="content">
+				<p>
+					This manual references and deals with a variety of different types of data regarding The End is Nigh. As a result, it is important that this data can be spotted and understood easily during reading and not mistaken for regular text. To make this a possibility different rules about syntax and formatting have been put into place, the following sections outline these rules and where they will apply.
+				</p>
+				<h2>Variables/Data</h2>
+				<p>
+					Case-sensitive and important data values, variable names, etc. will be formatted like so:<br/><br/>
+					<span class="variable">variable_name_or_value</span><br/><br/>
+					Using this clear, monospace, font allows for such values to easily stand out in large blocks of text, as well as allowing for the case of each letter to be clearly visisble; this is important as such variable names will often be case-sensitive. Note file paths, and directories, are also formatted using this method; for example:<br/><br/>
+					<span class="variable">audio\sfx\npc.wav</span><br/><br/>
+					This is a standard way of representing file paths and should be easily understandable.
+				</p>
+				<h2>Code/Files</h2>
+				<p>
+					The End is Nigh makes use of many external data files to store important information for the game. Excerpts from these files will be formatted like so:
+				</p>
+				<div class="code">
+					<p>
+						1&emsp;example_code {<br/>
+						2&emsp;&emsp;some_value<br/>
+						3&emsp;&emsp;<mark>value_of_importance</mark><br/>
+						4&emsp;&emsp;etc<br/>
+						5&emsp;}
+					</p>
+				</div>
+				<p>
+					This is done for similar reasons to variables/data (hence the similar formatting). Furthermore, values of extreme importance, relevant to the current topic, will be highlighted. As can be seen on line 3 of the example code above.<br/><br/>
+					When an ellipsis is used in an exerpt from one of the game's many files, it means that there is extra data that has been omitted due to lack of relevance. This allows readers to see that what is being shown is only a small section of a larger piece of data.<br/><br/>When an ellipsis is used in a piece of examply syntax it means that the data can carry on after what is being shown, representing that the variable can take multiple values.
+				</p>
+				<h2>Memory Addresses</h2>
+				<p>
+					When dealing with executable hacking, memory addresses are an important aspect, they are formatted the same as variables but are written out in hexadecimal, this is noted by the prefix <span class="variable">0x</span>. Memory addresses, being referenced in-line, will often look like the following:<br/><br/>
+					<span class="variable">
+						0x20ADC108: ...<br/><br/>
+					</span>
+					However, lists of memory addresses will be formatted in a similar fashion to code/files:
+				</p>
+				<div class="code">
+					<p>
+						0x20ADC108:&emsp;...<br/>
+						0x22CBFB12:&emsp;...<br/>
+						0x124A0802:&emsp;...
+					</p>
+				</div>
+				<p>
+					With the value stored at the memory address written after the colon (where the ellipsis is present in the examples).
+				</p>
+				<h2>Tile References</h2>
+				<p>
+					Tiles will often be refferred to using the following ID formatting: Z1, Z1 - 3, etc. These IDs, consisting of letters and numbers, refer to the specific location the tile can be found at in the <a href="tileref.html">Tile Reference</a>. The number refers to the horizontal position in the table and the letter referes to the vertical position. When a hypen is present between two tile values it means all tiles within that given range are being referred to.<br/><br/>
+					This method is used as it makes looking-up the tiles much easier than having to search through the reference for a specific name to appear.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
