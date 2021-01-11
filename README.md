@@ -1,3 +1,3 @@
-# TEIN Manual
+# The End is Nigh Modding Manual
 
 Under development...
