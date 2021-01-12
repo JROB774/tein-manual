@@ -3,6 +3,7 @@
 // Call create table each time this is modified
 var res = {original: [], current_filtered: []};
 
+/*
 Papa.parse("./tiles.csv", {
     download: true,
     delimiter: "|",
@@ -14,6 +15,9 @@ Papa.parse("./tiles.csv", {
         createTable(res.current_filtered, 10);    
     }
 });
+*/
+
+
 
 function createTable(res, width){
     var table = document.createElement('table');
