@@ -1,15 +1,16 @@
 'use strict;'
 
-var res;
+// Call create table each time this is modified
+var res = {original: [], current_filtered: []};
 
 Papa.parse("./tiles.csv", {
     download: true,
     delimiter: "|",
     header: true,
 	complete: function(results) {
-        res = results;
-        console.log(results);
-        createTable(res.data, 3);    
+        res.original = results.data;
+        res.current_filtered = res.original
+        createTable(res.current_filtered, 3);    
     }
 });
 
