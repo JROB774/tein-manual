@@ -17,7 +17,24 @@ Papa.parse("./tiles.csv", {
 });
 */
 
+//var locale = JSON.parse("./en.json");
+//var cats = JSON.parse("./categories.json");
+//var tiles = JSON.parse("./tiles.json");
 
+function getLocale(key){
+    const regex = /\{.*\}/g;
+    s = en[key];
+    while(regex.exec(s)){
+        var matches = s.match(regex);
+        for(var i in matches){
+            s = s.replace(i, locale[i.substring(1, i.length - 1)]);
+        }
+    }
+
+    return s;
+}
+
+console.log(getLocale("tile_solid_hidden_tip"));
 
 function createTable(res, width){
     var table = document.createElement('table');
