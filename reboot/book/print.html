@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The End is Nigh Modders Manual</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="landing.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="getting_started/getting_started.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="getting_started/manual_syntax.html"><strong aria-hidden="true">2.1.</strong> Manual Syntax</a></li><li class="chapter-item expanded "><a href="getting_started/adding_npcs.html"><strong aria-hidden="true">2.2.</strong> How to add NPCs</a></li></ol></li><li class="chapter-item expanded "><a href="reference/reference.html"><strong aria-hidden="true">3.</strong> Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="reference/tiles.html"><strong aria-hidden="true">3.1.</strong> Tile Reference</a></li><li class="chapter-item expanded "><a href="reference/palettes.html"><strong aria-hidden="true">3.2.</strong> Palettes</a></li><li class="chapter-item expanded "><a href="npcs.html"><strong aria-hidden="true">3.3.</strong> NPCs</a></li><li class="chapter-item expanded "><a href="art_alts.html"><strong aria-hidden="true">3.4.</strong> Art Alts.</a></li><li class="chapter-item expanded "><a href="tilesets.html"><strong aria-hidden="true">3.5.</strong> Tilesets</a></li><li class="chapter-item expanded "><a href="physics.html"><strong aria-hidden="true">3.6.</strong> Physics</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">The End is Nigh Modders Manual</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>Welcome to The End is Nigh: Modder's Manual!</p>
+<p>This manual plans to detail modding for The End is Nigh, providing help and information in
+a variety of different areas. Hopefully helping new modders begin learning and understanding
+the basics, as well as acting as a helpful reference for those more experienced.
+There are three main sections to the manual:</p>
+<pre><code>+ Getting started/tutorials
++ Using the editor
++ The reference
+</code></pre>
+<p>Each main category is split into easier to digest chunks. Another useful part of the manual is the Downloads section, which supplies useful tools to allow for modding The End is Nigh.</p>
+<h1><a class="header" href="#getting-started" id="getting-started">Getting Started</a></h1>
+<p>This section explains how to get setup and started in TEIN modding, with tutorials showcasing how to carry out certain tasks, such as unpack the game data, create a level, etc. By the end of the section and tutorials, you will have created a small new zone for the game, and obtained a basic understanding of modding different aspects of the game. This area of the manual will not go into in-depth detail about every aspect of modding, see the Modding Reference section for detailed information.</p>
+<h2><a class="header" href="#a-hrefgetting_startedmanual-syntaxa" id="a-hrefgetting_startedmanual-syntaxa"><a href="getting_started/">Manual Syntax</a></a></h2>
+<p>Information regarding common syntax and formatting rules used throughout the manual. This will make further reading of the manual much easier, as you will have a greater understanding of how the manual represents different types of data/info.</p>
+<h2><a class="header" href="#a-hrefgetting_startedhow-to-add-npcsa" id="a-hrefgetting_startedhow-to-add-npcsa"><a href="getting_started/">How to Add NPCs</a></a></h2>
+<p>A detailed and simple beginner's guide explaining how to add custom NPCs to the game.</p>
+<h2><a class="header" href="#a-hrefgetting_startedvarious-video-tutorialsa" id="a-hrefgetting_startedvarious-video-tutorialsa"><a href="getting_started/">Various Video Tutorials</a></a></h2>
+<p>Video tutorials regarding different aspects of modding The End is Nigh.</p>
+<h1><a class="header" href="#manual-syntax" id="manual-syntax">Manual Syntax</a></h1>
+<p>This manual references and deals with a variety of different types of data regarding The End is Nigh. As a result, it is important that this data can be spotted and understood easily during reading and not mistaken for regular text. To make this a possibility different rules about syntax and formatting have been put into place, the following sections outline these rules and where they will apply.</p>
+<h2><a class="header" href="#variablesdata" id="variablesdata">Variables/Data</a></h2>
+<p>Case-sensitive and important data values, variable names, etc. will be formatted like so:</p>
+<p><code>variable_name_or_value</code></p>
+<p>Using this clear, monospace, font allows for such values to easily stand out in large blocks of text, as well as allowing for the case of each letter to be clearly visisble; this is important as such variable names will often be case-sensitive. Note file paths, and directories, are also formatted using this method; for example:<br/><br/></p>
+<p><code>audio\sfx\npc.wav</code></p>
+<p>This is a standard way of representing file paths and should be easily understandable.</p>
+<h2><a class="header" href="#codefiles" id="codefiles">Code/Files</a></h2>
+<p>The End is Nigh makes use of many external data files to store important information for the game. Excerpts from these files will be formatted like so:</p>
+<pre><code class="language-c">example_code {
+some_value
+&lt;mark&gt;value_of_importance&lt;/mark&gt;
+etc
+}
+</code></pre>
+<p>This is done for similar reasons to variables/data (hence the similar formatting). Furthermore, values of extreme importance, relevant to the current topic, will be highlighted. As can be seen on line 3 of the example code above.</p>
+<p>When an ellipsis is used in an exerpt from one of the game's many files, it means that there is extra data that has been omitted due to lack of relevance. This allows readers to see that what is being shown is only a small section of a larger piece of data.</p>
+<p>When an ellipsis is used in a piece of examply syntax it means that the data can carry on after what is being shown, representing that the variable can take multiple values.</p>
+<h2><a class="header" href="#memory-addresses" id="memory-addresses">Memory Addresses</a></h2>
+<p>When dealing with executable hacking, memory addresses are an important aspect, they are formatted the same as variables but are written out in hexadecimal, this is noted by the prefix <span class="variable">0x</span>. Memory addresses, being referenced in-line, will often look like the following:<br/><br/></p>
+<pre><code class="language-asm">0x20ADC108: ...
+</code></pre>
+<p>However, lists of memory addresses will be formatted in a similar fashion to code/files:</p>
+<pre><code class="language-asm">0x20ADC108: ...
+0x22CBFB12: ...
+0x124A0802: ...
+</code></pre>
+<p>With the value stored at the memory address written after the colon (where the ellipsis is present in the examples).</p>
+<h2><a class="header" href="#tile-references" id="tile-references">Tile References</a></h2>
+<p>Tiles will often be refferred to using the following ID formatting: Z1, Z1 - 3, etc. These IDs, consisting of letters and numbers, refer to the specific location the tile can be found at in the <a href="getting_started/./reference/tiles.html">Tile Reference</a>. The number refers to the horizontal position in the table and the letter referes to the vertical position. When a hypen is present between two tile values it means all tiles within that given range are being referred to.</p>
+<p>This method is used as it makes looking-up the tiles much easier than having to search through the reference for a specific name to appear.</p>
+<h1><a class="header" href="#how-to-add-npcs" id="how-to-add-npcs">How to add NPCs</a></h1>
+<p>The first step in making a custom NPC is to add an additional NPC to the <code>data\npcs.txt</code> file found in the unpacked game data. First, the NPC must be named; NPCs in game are named based on order of appearance, and race. Skeleton NPCs are named <code>NPCx</code> (where <code>x</code> is a unique number to differentiate them), Light Blob NPCs are named <code>NPCBx</code>, Ghosts are named <code>NPCGx</code>, Dark Blobs are named <code>NPCDx</code>, cameos such as Steven and Isaac, from Edmund's other games are named <code>NPCXx</code>, and finally the large Stevens that transport Ash to the future are named <code>NPCHx</code>. Therefore custom NPCs should use a unique naming scheme, such as <code>NPCAx</code>, to prevent your mod from editing and conflicting with in-game NPCs.</p>
+<p>The basic description, such as <code>#basic sideways</code> that appears below the name has no effect and is used to identify NPCs.</p>
+<p>The <code>movieclip</code> decides what form your custom NPC takes.
+<code>sound_id</code> is similar, and decides the noises your NPC makes when it's dialogue activates. These are fairly descriptive, such as <code>NPCSkull</code> making a bone-rattling noise when spoken to. Generally, the <code>sound_id</code> should match the <code>movieclip</code>.</p>
+<p>The <code>text</code> decides what your custom NPC says when spoken to. Each set of double-quotes <code>&quot;&quot;</code> is a separate box of text that appears in sequence. The new-line character <code>\n</code> makes the text after it start on a new line. Text should be surrounded by square brackets <code>[]</code>, and dont forget to add curly brackets <code>{}</code> brackets around your NPC's code, or else an error will occur when you enter the level.</p>
+<p>Here is an example of what an NPC entry could look like when complete:</p>
+<pre><code class="language-plaintext">NPC0 {
+    #basic sideways
+    movieclip NPC0
+    sound_id NPCSkull
+    text [
+        &quot;oh \n . . . \n its you. . .&quot;
+        &quot;must be nice \n being alive \nn' all that&quot;
+        &quot;when i died \n that tumor wiggled out&quot;
+        &quot;it's been floating \n up there for years \n watching me&quot;
+        &quot;please\n dont take it. . . \n its all i have left&quot;
+    ]
+} 
+</code></pre>
+<p>To add your NPC to a level, you must add your NPC to the level's <code>data\tilesets.txt</code> code. The NPC's name should be written after <code>npc_1</code>, <code>npc_2</code> or <code>npc_3</code>. Then, add your npc to the level using the level editor; NPCs are found in tiles Z1 - 3 in the editor, in order of number. See the <a href="getting_started/../reference/tiles.html">Tile Reference</a> for more information on these particular tiles.</p>
+<p>After finishing the <a href="getting_started/./getting_started.html">Getting Started / Tutorials</a> section, please see the <a href="getting_started/../reference/reference.html">Modding Reference</a> and particularly the <a href="getting_started/npc.html">NPCs</a> section for more information on the possible values and details regarding custom NPCs.</p>
+<h1><a class="header" href="#reference" id="reference">Reference</a></h1>
+<p>This section acts as a detailed reference where individual areas of modding can be looked at in-depth. This area does not cover modding basics and does not need to be viewed/read in sequence. Use this section if a specific piece of information needs to be found, e.g. what a certain tile does, what palettes are assigned to what areas, what the various data files do, etc. For more general tutorials and basic modding see the <a href="reference/../getting_started/getting_started.html">Getting Started / Tutorials</a> section.</p>
+<h2><a class="header" href="#a-hrefreferencetileshtmltile-referencea" id="a-hrefreferencetileshtmltile-referencea"><a href="reference/./tiles.html">Tile Reference</a></a></h2>
+<p>A complete reference of all the game’s tiles that can be used within the editor. Supplying detailed information on their layer, type, and a description outlining each tile’s unique properties.</p>
+<h2><a class="header" href="#a-hrefreferencepaletteshtmlpalettesa" id="a-hrefreferencepaletteshtmlpalettesa"><a href="reference/./palettes.html">Palettes</a></a></h2>
+<p>Detailed information on how the game’s colour palettes work, what palettes are used by each area, and how to modify/add custom palettes.</p>
+<h2><a class="header" href="#a-hrefreferencenpcshtmlnpcsa" id="a-hrefreferencenpcshtmlnpcsa"><a href="reference/./npcs.html">NPCs</a></a></h2>
+<p>Information regarding NPCs and the &quot;npcs.txt&quot; file. Listing all the currently existing NPCs and how to modify them, as well as add new ones.</p>
+<h2><a class="header" href="#a-hrefreferenceart_altshtmlart-altsa" id="a-hrefreferenceart_altshtmlart-altsa"><a href="reference/./art_alts.html">Art Alts.</a></a></h2>
+<p>Showcases and references all the different alternate art assets that can be used to swap out graphics for the different entities in the game.</p>
+<h2><a class="header" href="#a-hrefreferencetilesetshtmltilesetsa" id="a-hrefreferencetilesetshtmltilesetsa"><a href="reference/./tilesets.html">Tilesets</a></a></h2>
+<p>A reference of all the available variables and values contained within the tilesets file, as well as how to modify said file to create custom tilesets.</p>
+<h2><a class="header" href="#a-hrefreferencephysicshtmlphysicsa" id="a-hrefreferencephysicshtmlphysicsa"><a href="reference/./physics.html">Physics</a></a></h2>
+<p>Details regarding the various physics files that control how the player and tiles affected by movement tags move, and what each variable in the files means.</p>
+<h1><a class="header" href="#tile-reference" id="tile-reference">Tile Reference</a></h1>
+<script> console.log("easy game") </script><h1><a class="header" href="#palettes" id="palettes">Palettes</a></h1>
+<h1><a class="header" href="#npcs" id="npcs">NPCs</a></h1>
+<h1><a class="header" href="#art-alts" id="art-alts">Art Alts.</a></h1>
+<h1><a class="header" href="#tilesets" id="tilesets">Tilesets</a></h1>
+<h1><a class="header" href="#physics" id="physics">Physics</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
