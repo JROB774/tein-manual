@@ -9,7 +9,7 @@
     "name" : "tile_spikes_l_name", 
     "tooltip" : "tile_spikes_tip",
     "layer" : "active",
-    "ids" :  [2, 3, 4,, 5]
+    "ids" :  [2, 3, 4, 5]
 },
 "spikes_s": {
     "name" : "tile_spikes_s_name", 
