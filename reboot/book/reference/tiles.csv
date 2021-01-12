@@ -1,0 +1,5 @@
+Name|Layer|Type|Movable|Description
+Empty/Air|Active|Basic|False|Nothing, these tiles are not rendered and have no collision, making up the empty space of levels.
+Solid|Active|Basic|True|These tiles make up the basis of most levels. The player and other entities collide with these tiles and cannot pass through them.
+Large Spike (Right)|Active|Basic|True|This tile kills the player on contact, the direction is simply cosmetic.
+Large Spike (Down)|Active|Basic|True|This tile kills the player on contact, the direction is simply cosmetic.

@@ -252,7 +252,20 @@ etc
 <h2><a class="header" href="#a-hrefreferencephysicshtmlphysicsa" id="a-hrefreferencephysicshtmlphysicsa"><a href="reference/./physics.html">Physics</a></a></h2>
 <p>Details regarding the various physics files that control how the player and tiles affected by movement tags move, and what each variable in the files means.</p>
 <h1><a class="header" href="#tile-reference" id="tile-reference">Tile Reference</a></h1>
-<script> console.log("easy game") </script><h1><a class="header" href="#palettes" id="palettes">Palettes</a></h1>
+<p>Test</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<script>
+    var res;
+    Papa.parse("./tiles.csv", {
+        download: true,
+        delimiter: "|",
+        header: true,
+	    complete: function(results) {
+            res = results;
+            console.log(results);
+	    }
+    });
+</script><h1><a class="header" href="#palettes" id="palettes">Palettes</a></h1>
 <h1><a class="header" href="#npcs" id="npcs">NPCs</a></h1>
 <h1><a class="header" href="#art-alts" id="art-alts">Art Alts.</a></h1>
 <h1><a class="header" href="#tilesets" id="tilesets">Tilesets</a></h1>
