@@ -176,11 +176,17 @@ blockquote {
 /* Custom **********************************************************************/
 /*******************************************************************************/
 
-.tile_container {
+#tile_container {
   display: flex;
   flex-direction: row;
-
-  .tile_data {
-    flex-direction: column;
-  }
 }
+
+#tile_table {
+  min-width: 230px;
+  flex-grow: 1;
+}
+
+#tile_data {
+  flex-direction: column;
+}
+

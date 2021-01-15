@@ -7,5 +7,10 @@ Test
 
 <div id="tile_container">
     <div id="tile_table"></div>
-    <div id="tile_data"></div>
+    <div id="tile_data">
+        <h3 id="tile_name"></h3>
+        <p id="tile_layer"></p>
+        <p id="tile_type"></p>
+        <p id="tile_note"></p>
+    </div>
 </div>

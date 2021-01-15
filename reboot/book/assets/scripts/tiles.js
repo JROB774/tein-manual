@@ -14,7 +14,6 @@ async function Setup() {
     console.log(cats);
 
     for(var cat in cats){
-        console.log(cat);
         createTable(cats[cat].tiles, 10, cats[cat].name);
     }
 }
@@ -30,7 +29,6 @@ function getLocale(key){
     while(regex.exec(s)){
         var matches = s.match(regex);
         for(var i in matches){
-            console.log(matches[i]);
             s = s.replace(matches[i], locale[matches[i].substring(1, matches[i].length - 1)]);
         }
     }
@@ -42,13 +40,6 @@ function createTable(res, width, header){
     var table = document.createElement('table');
     table.setAttribute("id", "category_" + header);
     var tableBody = document.createElement('tbody');
-    // Ew, use a reduce.
-    //tableBody.appendChild(
-    //    document.createElement('tr').appendChild(
-    //        document.createElement('td').appendChild(
-    //            document.createElement('h3').appendChild(
-    //                document.createTextNode(header)))));
-
 
     for(let i = 0; i < Math.ceil(res.length / width); ++i){
         var row = document.createElement('tr');
@@ -64,6 +55,7 @@ function createTable(res, width, header){
             img = document.createElement("IMG");
             img.setAttribute("src", "../assets/images/tiles/small/" + id + ".png");
             img.setAttribute("alt", id);
+            img.onclick = function (){ renderTileData(tile, header) };
 
             cell.appendChild(img);
             row.appendChild(cell);
@@ -77,6 +69,14 @@ function createTable(res, width, header){
         document.createElement('h3').appendChild(
             document.createTextNode(header)));
     document.getElementById("tile_table").appendChild(tableBody);
+}
+
+function renderTileData(tile, t_type){
+    console.log("Render called on:" + tile);
+    document.getElementById("tile_layer").innerHTML = "Layer: " + tile.layer;
+    document.getElementById("tile_name").innerHTML  = getLocale(tile.name);
+    document.getElementById("tile_note").innerHTML  = getLocale(tile.tooltip);
+    document.getElementById("tile_type").innerHTML  = t_type;
 }
 
 Setup();
