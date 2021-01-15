@@ -164,6 +164,213 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#palettes" id="palettes">Palettes</a></h1>
+<h2><a class="header" href="#contents" id="contents">Contents</a></h2>
+<ul>
+<li><a href="#Overview">Overview</a> - Details general palette information.</li>
+<li><a href="#Columns">Columns</a> - Lists what all the palette columns are mapped to.</li>
+<li><a href="#Rows">Rows</a> - Lists all the palettes in the game.</li>
+<li><a href="#Modifying-Palettes">Modifying Palettes</a> - Explains how to modify existing palettes.</li>
+<li><a href="#Adding-palettes">Adding Palettes</a> - Explains how to add new palettes.</li>
+<li><a href="#remarks">Remarks</a> - General and misc. information.</li>
+</ul>
+<h2><a class="header" href="#overview" id="overview">Overview</a></h2>
+<p>Location in the unpacked data: <code>textures\palette.png</code></p>
+<p>Palettes are used to recolour the many different assests in The End is Nigh.
+By loading different palettes for each unique area of the game, each zone is
+able to look drastically different whilst using many of the same assets.</p>
+<p>The file that defines the palette information can be opened in any basic paint
+program to be modified, allowing for changes to be made to existing palettes as
+well as the ability to create entirely new ones.</p>
+<p>The palette is made up of pixels, and these pixels are interpreted in two ways:
+as rows, and as a columns. The rows marks a unique palette that can be set, with
+its row number acting as its palette ID (0 - 63). Whereas each column the pixel
+is in (0 - 15) specifies what graphics the colour in that particular palette row
+will be mapped to, whether its background tiles, water/lava, tile details, etc. </p>
+<h2><a class="header" href="#columns" id="columns">Columns</a></h2>
+<p>The following section describes what assets/graphics each column of the palette
+is mapped to:</p>
+<ul>
+<li>00 - Active tiles (solids, spikes, etc) and the player.</li>
+<li>01 - Color of rings in carts</li>
+<li>02 - Decorations for active tiles (bricks, rocks, etc.).</li>
+<li>03 - Decorations for the first background layer.</li>
+<li>04 - First background layer.</li>
+<li>05 - Second background layer.</li>
+<li>06 - Skulls, seen on a veriety of enemies throughout the game.</li>
+<li>07 - Background image, layer 1.</li>
+<li>08 - Background image, layer 2.</li>
+<li>09 - Background image, layer 3.</li>
+<li>10 - Background image, layer 4.</li>
+<li>11 - Background image, layer 5.</li>
+<li>12 - Certain NPCs, and miscellaneous objects.</li>
+<li>13 - Toxic/Pollution, and miscellaneous objects.</li>
+<li>14 - Lava and water (a more desaturated version of the lava colour).</li>
+<li>15 - Character eyes and other facial features, text, and the glow effect in The Hollows.</li>
+</ul>
+<p><img src="../assets/images/palette.png" alt="The Palette" /></p>
+<p>These palette columns will also impact other small features of the game’s
+graphics. However, these are the main uses of each of the different columns. </p>
+<h2><a class="header" href="#rows" id="rows">Rows</a></h2>
+<p>The following section describes each palette row, and where it is used in the game:</p>
+<ul>
+<li>00 - Super Mega Cart All Stars Intro Screen and The Game Intro Screen</li>
+<li>01 - The End and The Save Select Menu</li>
+<li>02 - Arid Flats</li>
+<li>03 - Overflow</li>
+<li>04 - The Split and Wall of Sorrow</li>
+<li>05 - Retrograde</li>
+<li>06 - The Hollows</li>
+<li>07 - Unused</li>
+<li>08 - SS Exodus</li>
+<li>09 - The Machine</li>
+<li>10 - Golgotha and Anguish</li>
+<li>11 - Gloom</li>
+<li>12 - Blight</li>
+<li>13 - Ruin</li>
+<li>14 - The End is Nigh Cartridge + Intro Screen and Corrupted Cartridge + Intro Screen</li>
+<li>15 - Unused</li>
+<li>16 - Mortaman Cartridge</li>
+<li>17 - Blaster Massacre Cartridge</li>
+<li>18 - Nevermore/The Future</li>
+<li>19 - River City Rancid Cartridge</li>
+<li>20 - Ash Climber Cartridge</li>
+<li>21 - Catastrovania Cartridge</li>
+<li>22 - Rubble Robble Cartridge</li>
+<li>23 - Fallen Fantasy Cartridge</li>
+<li>24 - Morbid Gear Cartridge</li>
+<li>25 - Dig Dead Cartridge</li>
+<li>26 - Super Mega Cart All Stars Cartridge</li>
+<li>27 - Spike Tales Cartridge</li>
+<li>28 - Scab or Die Cartridge</li>
+<li>29 - Tombs and Torture Cartridge</li>
+<li>30 - Mortaman Intro Screen and Pus-Man Cartridge + Intro Screen</li>
+<li>31 - Blaster Massacre Intro Screen</li>
+<li>32 - River City Rancid Intro Screen</li>
+<li>33 - Ash Climber Intro Screen</li>
+<li>34 - Catastrovania Intro Screen</li>
+<li>35 - Rubble Robble Intro Screen</li>
+<li>36 - Fallen Fantasy Intro Screen</li>
+<li>37 - Morbid Gear Intro Screen</li>
+<li>38 - Dig Dead Intro Screen</li>
+<li>39 - Unused</li>
+<li>40 - Spike Tales Intro Screen</li>
+<li>41 - Scab or Die Intro Screen</li>
+<li>42 - Tombs and Torture Intro Screen</li>
+<li>43 - Ghosts ’N Grieving Cartridge</li>
+<li>44 - Ghosts ’N Grieving Intro Screen</li>
+<li>45 - Depression Cartridge + Intro Screen</li>
+<li>46 - Denial Cartridge + Intro Screen</li>
+<li>47 - Anger Cartridge + Intro Screen</li>
+<li>48 - Bargaining Cartridge + Intro Screen</li>
+<li>49 - Acceptance Cartridge + Intro Screen</li>
+<li>50 - Dead Racer Cartridge + Intro Screen</li>
+</ul>
+<p>All palettes onwards are unused and will display completely white unless
+modified. This leaves modders with 16 palettes that can be added without needing
+to modify the palette to accept more colours; see the second-half of the 
+following section for details on how to add more palettes.</p>
+<h2><a class="header" href="#modifying-palettes" id="modifying-palettes">Modifying Palettes</a></h2>
+<p>Once the palette.png file has been modified, or if you simply want to give an
+area an existing palette, the tilesets.txt needs to be modified for a palette to
+be assigned. Locate the unpacked game data and navigate to the &quot;data&quot; directory,
+in there will be a file called &quot;tilesets.txt&quot;, open this file. Locate the area
+which you would wish to modify, this can be found by looking at the area_name
+variable which will list the name of each area. Once the area has been found
+simply set the palette variable to the row number of your desired palette;
+remember that the top-most row in the palette.png image is palette 0 and they
+continue incrementing upwards in value the further down the image they are.</p>
+<p>In the example below, the Arid Flats has been assigned the palette 10 (which is
+used for Golgotha and Anguish). Changing this value and relaunching the game
+produces the results on the right, compared to the original palette seen on the
+left.</p>
+<p><img src="../assets/images/screenshots/scrn_pal_01.png" alt="Arid Flats Palette 1" /> <img src="../assets/images/screenshots/scrn_pal_02.png" alt="Arid Flats Palette 2" /></p>
+<p>For a more in-depth look at the various aspects of the tilesets.txt file, as well
+as how to modify it, click <a href="./tiles.html">here</a>.</p>
+<h2><a class="header" href="#adding-palettes" id="adding-palettes">Adding Palettes</a></h2>
+<p>In its default state, the palettes file can only store 64 unique palette entries
+(rows). However, this can be changed by modifying aspects of certain shader,
+which can be located in the &quot;shaders&quot; directory of the unpacked data. Two
+specific shaders will need to be modified for this to work &quot;colormapped.shader&quot;
+and &quot;colormapped_duplicatedforstupidreasons.shader&quot;, as these shaders control
+how colours from the palette are mapped to colours used by the game's assets.</p>
+<p>Open both palettes in any text editor (Notepad, Notepad++, Sublime-Text, etc.)
+and you will see the following text:</p>
+<h3><a class="header" href="#colormapped" id="colormapped">colormapped:</a></h3>
+<pre><code class="language-c">#version 130
+
+uniform mat2x4 color_xform;
+uniform sampler2D palettetex;
+uniform float palette;
+
+#if COMPILING_VERTEX_PROGRAM
+
+    void vert(){
+        //gl_FrontColor = gl_Color * color_xform[0] + color_xform[1];
+        vec4 outcolor = gl_Color * color_xform[0] + color_xform[1];
+        gl_FrontColor = vec4(texture(palettetex, vec2((outcolor.r*15.0+.5)/16.0,(palette+.5)/64.0)).rgb,
+        outcolor.a);
+        gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+    }
+
+#elif COMPILING_FRAGMENT_PROGRAM
+
+    void frag(){
+        gl_FragColor = gl_Color;
+    }
+
+#endif 
+</code></pre>
+<h3><a class="header" href="#colormapped_duplicatedforstupidreasons" id="colormapped_duplicatedforstupidreasons">colormapped_duplicatedforstupidreasons</a></h3>
+<pre><code class="language-c">#version 130
+
+uniform mat2x4 color_xform;
+uniform sampler2D palettetex;
+uniform float palette;
+
+#if COMPILING_VERTEX_PROGRAM
+
+    void vert(){
+        //gl_FrontColor = gl_Color * color_xform[0] + color_xform[1];
+        vec4 outcolor = gl_Color * color_xform[0] + color_xform[1];
+    
+        gl_FrontColor = vec4(texture(palettetex, vec2((outcolor.r*15.0+.5)/16.0,(palette+.5)/64.0)).rgb,
+        outcolor.a);
+        if(outcolor.r &lt; .1 &amp;&amp; outcolor.g &lt; .1 &amp;&amp; outcolor.b &gt; .9){
+            gl_FrontColor = vec4(0.0,0.0,0.0, outcolor.a);
+        }
+        gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+    }
+
+#elif COMPILING_FRAGMENT_PROGRAM
+
+    void frag(){
+        gl_FragColor = gl_Color;
+    }
+
+#endif
+</code></pre>
+<p>The highlighted values are the important ones, the 16.0 is the number of columns 
+in the palette file (width) and the 64.0 is the number of rows in the palette
+file (height). The height is the only value that needs to be modified, simply
+change this value in both shaders to the number of however many palettes you
+would like, make sure this matches your palette file itself. Now the new palette
+row number (64 onwards) needs to simply be referenced in the &quot;tilesets.txt&quot; file
+for the area that will use the new palette (see the <a href="#Modifying-Palettes">Modifying Palettes</a> section
+if you do not know how to set a palette for an area), and that is all that needs
+to be done to add more palette rows to the game.</p>
+<p>For more information regarding shaders, click here. </p>
+<h2><a class="header" href="#remarks" id="remarks">Remarks</a></h2>
+<p>Expanding the &quot;palette.png&quot; file to add more palettes, without making the
+appropriate changes to the colour mapping shaders, will result in incorrect
+colours and palettes being displayed.</p>
+<p>Transparency/alpha is not read from the palette, so saving semi-transparent
+pixels will simply result in the same colour being used in-game, but with the
+alpha being set to full - removing the transparency. Fully transparent pixels
+will either be black or white, depending on how the paint program being used to 
+modify the palette handles saving transparency.</p>
+<p>The map screen will make use of colours from the currently loaded area palette
+to tint the different icons, graphics, etc. As will other graphical elements,
+such as the tumor counter, NPC text boxes, etc. </p>
 
                     </main>
 
