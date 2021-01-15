@@ -131,7 +131,7 @@ left.
 ![Arid Flats Palette 1](../assets/images/screenshots/scrn_pal_01.png) ![Arid Flats Palette 2](../assets/images/screenshots/scrn_pal_02.png)
 
 For a more in-depth look at the various aspects of the tilesets.txt file, as well
-as how to modify it, click [here](./tiles.md).
+as how to modify it, click [here](./tileset.md).
 
 ## Adding Palettes
 In its default state, the palettes file can only store 64 unique palette entries
