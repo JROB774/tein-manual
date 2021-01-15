@@ -55,7 +55,11 @@ function createTable(res, width, header){
             img = document.createElement("IMG");
             img.setAttribute("src", "../assets/images/tiles/small/" + id + ".png");
             img.setAttribute("alt", id);
-            img.onclick = function (){ renderTileData(tile, header) };
+
+            cell.onclick = (function(tile) {
+                return function (){
+                    renderTileData(tile, header);
+            };})(tile, header);
 
             cell.appendChild(img);
             row.appendChild(cell);
@@ -71,12 +75,15 @@ function createTable(res, width, header){
     document.getElementById("tile_table").appendChild(tableBody);
 }
 
-function renderTileData(tile, t_type){
-    console.log("Render called on:" + tile);
+function renderTileData(tile, t_type, id){
     document.getElementById("tile_layer").innerHTML = "Layer: " + tile.layer;
     document.getElementById("tile_name").innerHTML  = getLocale(tile.name);
     document.getElementById("tile_note").innerHTML  = getLocale(tile.tooltip);
     document.getElementById("tile_type").innerHTML  = t_type;
+    var i = document.getElementById("tile_large_image");
+    i.src = "../assets/images/tiles/large/" + tile.ids[0] + ".png";
+    i.alt = "Large icon for tile: " + tile.name;
+   
 }
 
 Setup();
