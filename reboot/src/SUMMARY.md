@@ -19,7 +19,7 @@
       - [Text](./reference/npcs/text.md)
       - [Alt. Text](./reference/npcs/alt.md)
       - [Adding NPCs](./reference/npcs/adding.md)
-      - [Remarks](./reference/remarks.md)
+      - [Remarks](./reference/npcs/remarks.md)
     - [Art Alts.](./reference/art_alts.md)
     - [Tilesets](./reference/tilesets.md)
     - [Physics](./reference/physics.md)
