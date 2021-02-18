@@ -7,9 +7,9 @@ var tiles  = {};
 
 // Call create table each time this is modified
 async function Setup() {
-    locale = await GetJson("https://raw.githubusercontent.com/JROB774/tein-manual/master/reboot/src/reference/en.json");
-    cats   = await GetJson("https://raw.githubusercontent.com/JROB774/tein-manual/master/reboot/src/reference/categories.json");
-    tiles  = await GetJson("https://raw.githubusercontent.com/JROB774/tein-manual/master/reboot/src/reference/tiles.json");
+    locale = await GetJson("https://raw.githubusercontent.com/JROB774/tein-manual/master/reboot/src/reference/tiles/en.json");
+    cats   = await GetJson("https://raw.githubusercontent.com/JROB774/tein-manual/master/reboot/src/reference/tiles/categories.json");
+    tiles  = await GetJson("https://raw.githubusercontent.com/JROB774/tein-manual/master/reboot/src/reference/tiles/tiles.json");
 
     console.log(cats);
 

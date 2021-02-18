@@ -225,3 +225,32 @@ blockquote {
   margin-top: auto;
   text-align: center;
 }
+
+/* Alts ************************************************************************/
+/*******************************************************************************/
+
+.splat-alts {
+  background-image: url("../assets/images/splat_npc.png");
+  background-size: 100% 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.alts-container {
+  display: flex;
+  flex-direction: column;
+  /* Set in code now...*/
+  /*flex: 0 0 33.33333%*/
+}
+
+.alts-container img {
+  width: 5em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alts-container p {
+  margin-top: auto;
+  text-align: center;
+}
