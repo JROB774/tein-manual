@@ -173,7 +173,7 @@ blockquote {
     font-weight: bold;
 }
 
-/* Custom **********************************************************************/
+/* Tile ************************************************************************/
 /*******************************************************************************/
 
 #tile_container {
@@ -194,4 +194,24 @@ blockquote {
 
 .mini-tile {
   background: #ffffff;
+}
+
+
+/* NPC *************************************************************************/
+/*******************************************************************************/
+
+.splat-npc {
+  background-image: url("../assets/images/splat_npc.png");
+  background-size: 100% 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.npc-container {
+  /* Set in code now...*/
+  /*flex: 0 0 33.33333%/*
+}
+
+.npc-container p {
+  text-align: center;
 }

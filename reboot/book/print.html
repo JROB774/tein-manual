@@ -501,7 +501,46 @@ such as the tumor counter, NPC text boxes, etc. </p>
 <p>The # followed by text, in the example, is simply a comment and not interpreted/read by the game itself, hence why it was not added in the simplified syntax breakdown. These comments have been added to all the NPCs in the &quot;npcs.txt&quot; file to allow for more readability.</p>
 <p>So, overall, the &quot;npcs.txt&quot; file simply stores a series of NPCS and their properties, that can be placed into the game for the player to interact with. Read on for more information on each of these variables, as well as how to add/modify NPCs. </p>
 <h1><a class="header" href="#npc-listing-ids-and-movie-clips" id="npc-listing-ids-and-movie-clips">NPC Listing (IDs and Movie Clips)</a></h1>
+<p>A graphical list displaying all of the NPCs within the game. With their 
+appropriate NPC IDs (the values used to set NPCs in the Tilesets file) below 
+them, these values also double-up as being the names used to reference the 
+particular movie_clip (graphic/sprite) that an NPC is given. Remember that
+variables and their values are case-sensitive, in the case of NPCs all of the
+IDs are fully capitalised, no lower-case.</p>
+<script src="../../assets/scripts/npcs.js"></script>
+<h2><a class="header" href="#skeletons" id="skeletons">Skeletons</a></h2>
+<script type="text/javascript">display_npcs("npc", 17, start = 0, padding = 2, per_row = 6)</script>
+<h2><a class="header" href="#light-blobs" id="light-blobs">Light Blobs</a></h2>
+<script type="text/javascript">display_npcs("npcb", 7)</script>
+<h2><a class="header" href="#ghosts" id="ghosts">Ghosts</a></h2>
+<script type="text/javascript">display_npcs("npcg", 7)</script>
+<h2><a class="header" href="#dark-blobs" id="dark-blobs">Dark Blobs</a></h2>
+<script type="text/javascript">display_npcs("npcd", 7)</script>
+<h2><a class="header" href="#characters" id="characters">Characters</a></h2>
+<script type="text/javascript">display_npcs("npcx", 5, start = 1, padding = 1, per_row = 5)</script>
+<h2><a class="header" href="#stevens" id="stevens">Stevens</a></h2>
+<script type="text/javascript">display_npcs("npch", 4, start = 1, padding = 1, per_row = 4)</script>
+<p>As well as the NPC movie clips listed above, NPCs can also be assigned any of
+the alternate art values as their ```movie_clip`` value. For a full listing on
+the available movie clips that can be used, see the 
+<a href="reference/npcs/./reference/art_alts.html">Art Alts</a>. section. </p>
 <h1><a class="header" href="#sound-ids" id="sound-ids">Sound IDs</a></h1>
+<p>The <code>sound_id</code> variable is used to define the sound played when the NPC is
+spoken to and when text is advanced. The available sound IDs are as follows (the
+values in brackets mark what sound file each sound ID references):</p>
+<pre><code>NPCSkull (audio\sfx\skullnpc.wav)
+NPCBlob (audio\sfx\squishnpc.wav)
+NPCGhost (audio\sfx\ghostnpc.wav)
+NPCIsaac (audio\sfx\isaacnpc.wav)
+NPCStevenCameo (audio\sfx\stevenheadwarpnpc.wav)
+NPCGish (audio\sfx\gishnpc.wav)
+NPCGuppy (audio\sfx\catnpc.wav)
+NPCAether (audio\sfx\aethernpc.wav)
+NPCSteven (audio\sfx\stevennpc.wav)
+</code></pre>
+<p>New sounds can be created by modifying <code>mainsounds.txt</code> and 
+<code>retrosounds.txt</code>; see the section Sounds for more information on
+creating new sounds. </p>
 <h1><a class="header" href="#text" id="text">Text</a></h1>
 <h1><a class="header" href="#alt-text" id="alt-text">Alt. Text</a></h1>
 <h1><a class="header" href="#adding-npcs" id="adding-npcs">Adding NPCs</a></h1>
