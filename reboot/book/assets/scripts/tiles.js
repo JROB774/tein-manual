@@ -53,7 +53,8 @@ function createTable(res, width, header){
             cell.setAttribute("id", "tile_" + id);
             
             img = document.createElement("IMG");
-            img.setAttribute("src", "../assets/images/tiles/small/" + id + ".png");
+            img.setAttribute("class", "mini-tile")
+            img.setAttribute("src", "../../assets/images/tiles/small/" + id + ".png");
             img.setAttribute("alt", id);
 
             cell.onclick = (function(tile) {
@@ -81,8 +82,8 @@ function renderTileData(tile, t_type, id){
     document.getElementById("tile_note").innerHTML  = getLocale(tile.tooltip);
     document.getElementById("tile_type").innerHTML  = t_type;
     var i = document.getElementById("tile_large_image");
-    i.src = "../assets/images/tiles/large/" + tile.ids[0] + ".png";
-    i.alt = "Large icon for tile: " + tile.name;
+    i.src = "../../assets/images/tiles/large/" + tile.ids[0] + ".png";
+    i.alt = "Large icon for tile: " + getLocale(tile.name);
    
 }
 

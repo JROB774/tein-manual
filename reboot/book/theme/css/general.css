@@ -179,6 +179,8 @@ blockquote {
 #tile_container {
   display: flex;
   flex-direction: row;
+  /*background: #ffffff;*/
+  /*max-width: 220px;*/
 }
 
 #tile_table {
@@ -190,3 +192,6 @@ blockquote {
   flex-direction: column;
 }
 
+.mini-tile {
+  background: #ffffff;
+}
