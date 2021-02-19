@@ -15,7 +15,7 @@ list below, to make finding the right art alt. easier.
 - [Overlays](./overlays.md) - Decorations on top of tile graphics.
 - [Backgrounds](./backgrounds.md) - Background Images
 - [Foregrounds](./foreground.md) - Foreground Images.
-- [Mix-FX Layers](./referece/art_alts/listings/fx.md) - Shader Effect layer graphics.
+- [Mix-FX Layers](./fx.md) - Shader Effect layer graphics.
 - [Particles](./particles.md) - Effects and particles
 - [Cutscenes](./cutscenes.md) - Video animations.
 - [Transitions](./transitions.md) - Screen transitions and effects.
