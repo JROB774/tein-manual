@@ -1,6 +1,7 @@
 # Summary
 
 - [Introduction](./landing.md)
+- [Downloads](./download.md)
 - [Getting Started](./getting_started/getting_started.md)
     - [Manual Syntax](./getting_started/manual_syntax.md)
     - [How to add NPCs](./getting_started/adding_npcs.md)
@@ -64,3 +65,5 @@
       - [Player Physics](./reference/physics/player.md)
       - [Platform Physics](./reference/physics/platform.md)
       - [Remarks](./reference/physics/remarks.md)
+- [Credits](./credits.md)
+- [Changelog](./changelog.md)

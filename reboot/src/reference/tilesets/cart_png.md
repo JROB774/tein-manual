@@ -22,7 +22,7 @@ clearer viewing):
 ![Cart Intro Colour Limitation](../../assets/images/screenshots/scrn_intropng_colour.png)
 The title background image used here has far fewer colours than the original PNG.
 
-![Cart Intro Size Limitation](../../assets/images/screenshots/scrn_intropng-size.png)
+![Cart Intro Size Limitation](../../assets/images/screenshots/scrn_intropng_size.png)
 The square trophy image is stretched and distorted to fit the aspect ratio.
 
 When creating new cart intro graphics, it is best to use similar greyscale
