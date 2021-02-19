@@ -244,10 +244,10 @@ blockquote {
 }
 
 .alts-container img {
-  width: 5em;
+  /*width: 5em;*/
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .alts-container p {

@@ -16,7 +16,7 @@ async function display_alt(folder, per_row = 5){
     console.log(files);
 
     files.forEach(file => {
-        container.appendChild(add_to_dom(path, file, per_row = 5));
+        container.appendChild(add_to_dom(path, file, per_row = per_row));
     })
 
     currentScript.insertAdjacentElement('afterend', container);
