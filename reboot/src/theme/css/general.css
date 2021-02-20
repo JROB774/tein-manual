@@ -173,12 +173,14 @@ blockquote {
     font-weight: bold;
 }
 
-/* Custom **********************************************************************/
+/* Tile ************************************************************************/
 /*******************************************************************************/
 
 #tile_container {
   display: flex;
   flex-direction: row;
+  /*background: #ffffff;*/
+  /*max-width: 220px;*/
 }
 
 #tile_table {
@@ -190,3 +192,65 @@ blockquote {
   flex-direction: column;
 }
 
+.mini-tile {
+  background: #ffffff;
+}
+
+
+/* NPC *************************************************************************/
+/*******************************************************************************/
+
+.splat-npc {
+  background-image: url("../assets/images/splat_npc.png");
+  background-size: 100% 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.npc-container {
+  display: flex;
+  flex-direction: column;
+  /* Set in code now...*/
+  /*flex: 0 0 33.33333%*/
+}
+
+.npc-container img {
+  width: 5em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.npc-container p {
+  margin-top: auto;
+  text-align: center;
+}
+
+/* Alts ************************************************************************/
+/*******************************************************************************/
+
+.splat-alts {
+  background-image: url("../assets/images/splat_npc.png");
+  background-size: 100% 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.alts-container {
+  display: flex;
+  flex-direction: column;
+  /* Set in code now...*/
+  /*flex: 0 0 33.33333%*/
+}
+
+.alts-container img {
+  /*width: 5em;*/
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.alts-container p {
+  margin-top: auto;
+  text-align: center;
+}

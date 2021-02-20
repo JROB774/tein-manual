@@ -1,0 +1,32 @@
+'use strict;'
+
+function display_npcs(name, until){
+    var container = document.createElement('div');
+    container.setAttribute("class", "splat-npc");
+
+    for(let i = 0; i <= until; ++i){
+
+        var div = document.createElement('div');
+        div.setAttribute("class", "npc-container");
+        
+        var img = document.createElement("IMG");
+        //img.setAttribute("class", "npc-image")
+        img.setAttribute("src", "../../assets/images/" + name + pad(i, 2) + ".png");
+        img.setAttribute("alt", id);
+
+        var p = document.createElement("p");
+        p.textContent(name + pad(i, 2));
+
+        div.appendChild(img);
+        div.appendChild(p);
+
+        container.appendChild(div);
+    }
+}
+
+function pad(n, width, z){
+    z = z || '0';
+    n = n + '';
+    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+
