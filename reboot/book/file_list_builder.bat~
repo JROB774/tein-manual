@@ -1,1 +1,0 @@
-for /f %%A in ('forfiles /s /m *.txt /c "cmd /c echo @relpath"') do echo %%~A
