@@ -4,7 +4,7 @@
 :root {
     --sidebar-width: 300px;
     --page-padding: 15px;
-    --content-max-width: 750px;
+    --content-max-width: 1000px;
     --menu-bar-height: 50px;
 }
 
@@ -37,6 +37,7 @@
     --quote-border: hsl(226, 15%, 22%);
 
     --table-border-color: hsl(210, 25%, 13%);
+    --table-bg-color: #14191f;
     --table-header-bg: hsl(210, 25%, 28%);
     --table-alternate-bg: hsl(210, 25%, 11%);
 
@@ -77,6 +78,7 @@
     --quote-border: hsl(234, 21%, 23%);
 
     --table-border-color: hsl(200, 7%, 13%);
+    --table-bg-color: #292c2f;
     --table-header-bg: hsl(200, 7%, 28%);
     --table-alternate-bg: hsl(200, 7%, 11%);
 
@@ -117,6 +119,7 @@
     --quote-border: hsl(197, 37%, 91%);
 
     --table-border-color: hsl(0, 0%, 95%);
+    --table-bg-color: #444;
     --table-header-bg: hsl(0, 0%, 80%);
     --table-alternate-bg: hsl(0, 0%, 97%);
 
@@ -157,6 +160,7 @@
     --quote-border: hsl(226, 15%, 22%);
 
     --table-border-color: hsl(226, 23%, 16%);
+    --table-bg-color: #282d3f;
     --table-header-bg: hsl(226, 23%, 31%);
     --table-alternate-bg: hsl(226, 23%, 14%);
 
@@ -197,6 +201,7 @@
     --quote-border: hsl(60, 5%, 70%);
 
     --table-border-color: hsl(60, 9%, 82%);
+    --table-bg-color: #3b2e2a;
     --table-header-bg: #b3a497;
     --table-alternate-bg: hsl(60, 9%, 84%);
 
@@ -238,6 +243,7 @@
         --quote-border: hsl(234, 21%, 23%);
 
         --table-border-color: hsl(200, 7%, 13%);
+        --table-bg-color: #444;
         --table-header-bg: hsl(200, 7%, 28%);
         --table-alternate-bg: hsl(200, 7%, 11%);
 

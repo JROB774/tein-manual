@@ -102,6 +102,7 @@ h4 a.header:target {
 table {
     margin: 0 auto;
     border-collapse: collapse;
+    background-color: var(--table-bg-color);
 }
 table td {
     padding: 3px 20px;
@@ -253,4 +254,59 @@ blockquote {
 .alts-container p {
   margin-top: auto;
   text-align: center;
+}
+
+table.npcs
+{
+	table-layout: fixed;
+	border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+table.npcs h2, table.npcs p
+{
+	color:#fff;
+    text-align: center;
+    margin: 0;
+	padding: 0;
+}
+
+table.npcs td{border: none;}
+table.nobgtable td{border: none;}
+
+table.npcs img
+{
+	width: 80%;
+}
+
+.variable
+{
+	font-family: "Courier New", "Courier", monospace;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.center
+{
+	text-align: center;
+	padding-bottom: 16px;
+}
+
+.center img
+{
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+table.nobgtable h2, table.nobgtable p
+{
+    text-align: center;
+    margin: 0;
+	padding: 0;
+}
+
+.nobgtable
+{
+    background-color: var(--bg);
 }

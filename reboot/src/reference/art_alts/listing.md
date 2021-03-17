@@ -19,8 +19,8 @@ The following listing displays all the known art alts. Many have pictures attach
 [GUI](listing.html#gui) - Interface elements and UI graphics.  
 [Misc.](listing.html#misc) - Assets that fit in no category above, or are unused.
 
-## General
 
+<h2 class="center">General</h2>
 <table id="general" class="npcs">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/general/player.png" alt="Player"><p><span class="variable">Player</span></p></div></td>
@@ -74,10 +74,8 @@ The following listing displays all the known art alts. Many have pictures attach
     </tr>
 </table>
 <br/>
-<br/>
 
-## Enemies
-
+<h2 class="center">Enemies</h2>
 <table id="enemy" class="npcs">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/enemy/movingorbblob.png" alt="MovingOrbBlob"><p><span class="variable">MovingOrbBlob</span></p></div></td>
@@ -160,10 +158,8 @@ The following listing displays all the known art alts. Many have pictures attach
     </tr>
 </table>
 <br/>
-<br/>
 
-## Mini
-
+<h2 class="center">Mini</h2>
 <table id="mini" class="npcs">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/mini/minidrone.png" alt="MiniDrone"><p><span class="variable">MiniDrone</span></p></div></td>
@@ -192,10 +188,8 @@ The following listing displays all the known art alts. Many have pictures attach
     </tr>
 </table>
 <br/>
-<br/>
 
-## Decorations
-
+<h2 class="center">Decorations</h2>
 <table id="decoration" class="npcs">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/decoration/decoration0.png" alt="Decoration0"><p><span class="variable">Decoration0</span></p></div></td>
@@ -222,10 +216,8 @@ The following listing displays all the known art alts. Many have pictures attach
     </tr>
 </table>
 <br/>
-<br/>
 
-## Retro
-
+<h2 class="center">Retro</h2>
 <table id="retro" class="npcs">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/retro/playerretro.png" alt="PlayerRetro"><p><span class="variable">MiniDrone</span></p></div></td>
@@ -299,10 +291,8 @@ The following listing displays all the known art alts. Many have pictures attach
     </tr>
 </table>
 <br/>
-<br/>
 
-## NPCs
-
+<h2 class="center">NPCs</h2>
 <table id="npc" class="npcs">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/npcs/npc0.png" alt="NPC9"><p><span class="variable">NPC0</span></p></div></td>
@@ -384,154 +374,145 @@ The following listing displays all the known art alts. Many have pictures attach
     </tr>
 </table>
 <br/>
-<br/>
 
-## Tilesets
-
-<table id="tileset" class="npcs columns">
+<h2 class="center">Tilesets</h2>
+<table id="tileset" class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tilecity.png" alt="TileCity" class="tilescrn"/><p><span class="variable">Tilecity</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tilefield.png" alt="TileField" class="tilescrn"/><p><span class="variable">Tilefield</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tilecaves.png" alt="TileCaves" class="tilescrn"/><p><span class="variable">Tilecaves</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tiletox.png" alt="TileTox" class="tilescrn"/><p><span class="variable">Tiletox</span></p></div></td></tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tiletox2.png" alt="TileTox2" class="tilescrn"/><p><span class="variable">Tiletox2</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tilehell.png" alt="TileHell" class="tilescrn"/><p><span class="variable">Tilehell</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tileairship.png" alt="TileAirship" class="tilescrn"/><p><span class="variable">Tileairship</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tilecomplex.png" alt="TileComplex" class="tilescrn"/><p><span class="variable">Tilecomplex</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/theglow.png" alt="TheGlow" class="tilescrn"/><p><span class="variable">theglow</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tileend.png" alt="TileEnd" class="tilescrn"/><p><span class="variable">TileEnd</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tileretro.png" alt="TileRetro" class="tilescrn"/><p><span class="variable">Tileretro</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tileglitch.png" alt="TileGlitch" class="tilescrn"/><p><span class="variable">TileGlitch</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tilesewers.png" alt="TileSewers" class="tilescrn"/><p><span class="variable">Tilesewers</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/tiles/tile.png" alt="Tile" class="tilescrn"/><p><span class="variable">Tile</span></p></div></td>
     </tr>
 </table>
 <br/>
-<br/>
 
-## Overlays
-
-<table id="overlay" class="npcs columns">
+<h2 class="center">Overlays</h2>
+<table id="overlay" class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/overs/overlayscity.png" alt="OverlaysCity" class="tilescrn"/><p><span class="variable">Overlayscity</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/overs/overlaysfield.png" alt="OverlaysField" class="tilescrn"/><p><span class="variable">Overlaysfield</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/overs/overlayscaves.png" alt="OverlaysCaves" class="tilescrn"/><p><span class="variable">Overlayscaves</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/overs/overlaystox.png" alt="OverlaysTox" class="tilescrn"/><p><span class="variable">Overlaystox</span></p></div></td></tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/overs/overlaystox2.png" alt="OverlaysTox2" class="tilescrn"/><p><span class="variable">Overlaystox2</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/overs/overlayshell.png" alt="OverlaysHell" class="tilescrn"/><p><span class="variable">Overlayshell</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/overs/overlaysairship.png" alt="OverlaysAirship" class="tilescrn"/><p><span class="variable">Overlaysairship</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/overs/overlayscomplex.png" alt="OverlaysComplex" class="tilescrn"/><p><span class="variable">Overlayscomplex</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/overs/overlaystheglow.png" alt="OverlaysTheGlow" class="tilescrn"/><p><span class="variable">Overlaystheglow</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/overs/overlaysend.png" alt="OverlaysEnd" class="tilescrn"/><p><span class="variable">Overlaysend</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/overs/overlaysretro.png" alt="OverlaysRetro" class="tilescrn"/><p><span class="variable">Overlaysretro</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/overs/tileoverlays.png" alt="TileOverlays" class="tilescrn"/><p><span class="variable">TileOverlays</span></p></div></td>
     </tr>
 </table>
 <br/>
-<br/>
 
-## Backgrounds
-
-<table id="background" class="npcs columns">
+<h2 class="center">Backgrounds</h2>
+<table id="background" class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/backs/bg2.png" alt="Bg2" class="tilescrn"/><p><span class="variable">bg2</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/backs/ch2bg.png" alt="Ch2Bg" class="tilescrn"/><p><span class="variable">ch2bg</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/backs/ch3bg.png" alt="Ch3Bg" class="tilescrn"/><p><span class="variable">ch3bg</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/backs/ch4abg.png" alt="Ch4ABg" class="tilescrn"/><p><span class="variable">ch4abg</span></p></div></td></tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/backs/background.png" alt="Background" class="tilescrn"/><p><span class="variable">Background</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/backs/hellbg.png" alt="HellBg" class="tilescrn"/><p><span class="variable">hellbg</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/backs/airshipbg.png" alt="AirshipBg" class="tilescrn"/><p><span class="variable">airshipbg</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/backs/field2bg.png" alt="Field2Bg" class="tilescrn"/><p><span class="variable">field2bg</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/backs/bgsolid.png" alt="BgSolid" class="tilescrn"/><p><span class="variable">bgsolid</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/backs/neverbg.png" alt="NeverBg" class="tilescrn"/><p><span class="variable">neverbg</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/backs/bgretro.png" alt="BgRetro" class="tilescrn"/><p><span class="variable">bgretro</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/backs/bgretrox.png" alt="BgRetroX" class="tilescrn"/><p><span class="variable">bgretrox</span></p></div></td>
     </tr>
 </table>
-<table class="npcs columns">
+<table class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/backs/bgretro2.png" alt="BgRetro2" class="tilescrn"/><p><span class="variable">bgretro2</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/backs/none.png" alt="None" class="tilescrn"/><p><span class="variable">None</span></p></div></td>
     </tr>
 </table>
 <br/>
-<br/>
 
-## Foregrounds
-
-<table id="foreground" class="npcs columns">
+<h2 class="center">Foregrounds</h2>
+<table id="foreground" class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/fronts/fg1.png" alt="Fg1" class="tilescrn"/><p><span class="variable">fg1</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/fronts/fgretro.png" alt="FgRetro" class="tilescrn"/><p><span class="variable">fgretro</span></p></div></td>
     </tr>
 </table>
 <br/>
-<br/>
 
 ## Mid-FX Layers
 
-<table id="midfx" class="npcs columns">
+<table id="midfx" class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/midfx/solidbox.png" alt="SolidBox" class="tilescrn"/><p><span class="variable">SolidBox</span></p></div></td>
         <td><div class="center"><img src="../../assets/images/artalts/midfx/shadebox.png" alt="ShadeBox" class="tilescrn"/><p><span class="variable">ShadeBox</span></p></div></td>
