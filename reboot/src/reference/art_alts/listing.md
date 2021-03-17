@@ -510,8 +510,7 @@ The following listing displays all the known art alts. Many have pictures attach
 </table>
 <br/>
 
-## Mid-FX Layers
-
+<h2 class="center">Mid-FX Layers</h2>
 <table id="midfx" class="nobgtable">
     <tr>
         <td><div class="center"><img src="../../assets/images/artalts/midfx/solidbox.png" alt="SolidBox" class="tilescrn"/><p><span class="variable">SolidBox</span></p></div></td>
