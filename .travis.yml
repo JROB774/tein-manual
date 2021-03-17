@@ -13,4 +13,4 @@ before_script:
   - cargo install-update -a
 
 script:
-  - mdbook build reboot && mdbook test reboot
+  - mdbook build reboot
