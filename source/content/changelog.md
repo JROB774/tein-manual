@@ -1,28 +1,20 @@
 # Changelog
-This page details information regarding the changes made between each version of
-the Modder’s manual, as well as release dates. Tracking of changes and the
-inclusion of a changelog did not begin until the August 6th 2017.
 
-## Version 0.1.10 (In progress)
-
+### Release v0.2.0 on February 20th, 2021
 - Rewrote manual using mdbooks, completely changing the structure and look of the manual.
 
-## Version 0.1.9 (October 8th 2019)
-
+### Release v0.1.9 on October 8th, 2019
 - Added information about the second row of the palettes
- 
-## Version 0.1.8 (October 1st 2017)
 
+### Release v0.1.8 on October 1st, 2017
 - Added video tutorials to the Getting Started section, provided by MAD.
 
-## Version 0.1.7 (September 22nd 2017)
-
+### Release v0.1.7 on September 22nd, 2017
 - Fixed a bug on the NPCs page where the link to the NPC Listing did not work correctly.
 - Updated the download for the Level Editor to version 0.1.4 (most recent verison).
 - Added a download to the template tile graphics for the Level Editor, for those that want to create custom tile graphics.
 
-## Version 0.1.6 (September 8th 2017)
-
+### Release v0.1.6 on September 8th, 2017
 - Fixes and improvements to layer information on the Tile Reference.
 - Added a download link for the new TEIN Editor application in the Downloads section.
 - Updates to the Manual Syntax page, specifically regarding memory address formatting.
@@ -52,9 +44,8 @@ inclusion of a changelog did not begin until the August 6th 2017.
     - Ambience.
     - Art Alts.
 - General fixes and improvements.
- 
-## Version 0.1.5 (August 13th 2017)
 
+### Release v0.1.5 on August 13th, 2017
 - Added a guide on "How to Add NPCs" to the Getting Started / Tutorials section, by FUNKENGINE.
 - Added a Manual Syntax page to the Getting Started / Tutorials section, outlining common syntax used in the manual.
 - Added directory/path locations to files and data on any pages suitable (e.g. the location of the Tilesets file).
@@ -63,8 +54,7 @@ inclusion of a changelog did not begin until the August 6th 2017.
 - Added the NPCs page, as well as links via both Contents and Modding Reference.
 - General fixes and improvements.
 
-## Version 0.1.4 (August 9th 2017)
-
+### Release v0.1.4 on August 9th, 2017
 - Removed temporary fix for hyphens appearing incorrectly, will find a permanent solution in a future version.
 - Changes to the Tile Reference:
     - Massive overhaul to information and details of the individual tiles (mostly enemies).
@@ -78,27 +68,23 @@ inclusion of a changelog did not begin until the August 6th 2017.
     - Added the Area Name and Area Label Frame sections.
     - Added the Overview and Variable Overview sections.
 
-## Version 0.1.3 (August 8th 2017)
-
+### Release v0.1.3 on August 8th, 2017
 - Fixed highlighting on "colormapped_duplicatdforstupidreasons" in Adding Palettes section.
 - Fixed problems with the Tile Reference jittering on certain screen sizes.
 
-## Version 0.1.2 (August 7th 2017)
-
+### Release v0.1.2 on August 7th, 2017
 - Added new Palette Remarks info regarding the effects of incorrectly resizing the palette file.
 - Removed the Palette Remarks info regarding resizing the palette file.
 - Added a new section to Palettes that explains how to add more palettes to the game.
 
-## Version 0.1.1 (August 7th 2017)
-
+### Release v0.1.1 on August 7th, 2017
 - Temporary fix for hyphens showing up incorrectly in the font.
 - Fixes and improvements to the Tile Reference (particularly the Agonyia (Large)).
 - Reformatted the Palettes page to take up less space and look more appealing.
 - Added a background splat effect to page headers/titles.
 - Added more padding to the top and bottom of page headers/titles.
 
-## Version 0.1.0 (August 6th 2017)
-
+### Release v0.1.0 on August 6th, 2017
 - Fixes and improvements to the Tile Reference (particularly the Weighted Movement Triggers).
 - Removed all links that referenced non-existent pages (particularly the Tilesets page), they were confusing.
 - Slight changes to the homepage text, explains the downloads section as well now.
@@ -114,5 +100,3 @@ inclusion of a changelog did not begin until the August 6th 2017.
 - Began implementing and adding content to the Credits page.
 - Added a Download page, for obtaining useful modding tools, etc.
 - Added a Changelog page for tracking updates/changes.
-
- 
