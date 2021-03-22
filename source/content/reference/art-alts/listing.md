@@ -418,7 +418,7 @@
         </tr>
         <tr>
             <td align="center"><img src="./../../../assets/images/art-alts/overlaystheglow.png"><code>Overlaystheglow</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/Overlaysend.png"><code>Overlaysend</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/overlaysend.png"><code>Overlaysend</code></td>
         </tr>
         <tr>
             <td align="center"><img src="./../../../assets/images/art-alts/overlaysretro.png"><code>Overlaysretro</code></td>
