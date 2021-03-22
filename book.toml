@@ -1,7 +1,7 @@
 [book]
 title = "The End is Nigh: Modding Manual"
 description = "A modding guide for the game The End is Nigh."
-author = "Thief3"
+authors = [ "Joshua Robertson", "Malik Kissarli" ]
 src = "source"
 language = "en"
 
