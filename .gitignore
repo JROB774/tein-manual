@@ -7,6 +7,8 @@
 
 mdbook.exe
 
+reboot/book
+
 # Emacs gitignore patterns taken from: https://github.com/github/gitignore/blob/master/Global/Emacs.gitignore
 
 # -*- mode: gitignore; -*-
