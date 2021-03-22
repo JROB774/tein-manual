@@ -7,8 +7,8 @@ language = "en"
 
 [output.html]
 theme = "source/theme"
-default-theme = "ayu"
-preferred-dark-scheem = "ayu"
+default-theme = "navy"
+preferred-dark-scheem = "navy"
 git-repository-url = "https://github.com/JROB774/tein-manual"
 
 [output.html.fold]
