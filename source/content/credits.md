@@ -14,4 +14,4 @@
 | **MattTheDuck**                 | Documenting NPC information.                                         |
 | **FUNKENGINE**                  | Writing up the original guide on how to add NPCs.                    |
 | **Mixelz**                      | Testing and improving the original Tile Reference section.           |
-| **The TEIN Public Discor**      | Research, documentation, help, testing, and support.                 |
+| **The TEIN Public Discord**     | Research, documentation, help, testing, and support.                 |
