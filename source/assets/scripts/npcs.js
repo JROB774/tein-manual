@@ -7,15 +7,15 @@ function display_npcs(name, until, start = 1, padding = 1, per_row = 7){
     for(let i = start; i <= until; ++i){
 
         var full = name + pad(i, padding);
-        
+
         var div = document.createElement('div');
         div.setAttribute("class", "npc-container");
         div.style.flexBasis = 100/per_row + "%";
         div.style.maxWidth = 100/per_row + "%";
-        
+
         var img = document.createElement("IMG");
         //img.setAttribute("class", "npc-image")
-        img.setAttribute("src", "../../assets/images/npcs/" + full + ".png");
+        img.setAttribute("src", "./assets/images/npcs/" + full + ".png");
         img.setAttribute("alt", full);
 
         var p = document.createElement("p");
