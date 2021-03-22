@@ -9,4 +9,5 @@ There are three main sections to the manual:
     + Using the editor
     + The reference
 
-Each main category is split into easier to digest chunks. Another useful part of the manual is the Downloads section, which supplies useful tools to allow for modding The End is Nigh.
+Each main category is split into easier to digest chunks. Another useful part of the manual is
+the Downloads section, which supplies useful tools to allow for modding The End is Nigh.

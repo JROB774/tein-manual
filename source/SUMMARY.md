@@ -1,6 +1,6 @@
 # Summary
 
-- [Introduction](./content/landing.md)
+- [Welcome](./content/welcome.md)
 - [Downloads](./content/download.md)
 - [Getting Started](./content/getting-started.md)
     - [Manual Syntax](./content/getting-started/manual-syntax.md)
