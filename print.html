@@ -1,0 +1,2492 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The End is Nigh: Modding Manual</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A modding guide for the game The End is Nigh.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="content/welcome.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item "><a href="content/download.html"><strong aria-hidden="true">2.</strong> Downloads</a></li><li class="chapter-item "><a href="content/getting-started.html"><strong aria-hidden="true">3.</strong> Getting Started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="content/getting-started/manual-syntax.html"><strong aria-hidden="true">3.1.</strong> Manual Syntax</a></li><li class="chapter-item "><a href="content/getting-started/adding-npcs.html"><strong aria-hidden="true">3.2.</strong> How to add NPCs</a></li></ol></li><li class="chapter-item "><a href="content/tein-editor.html"><strong aria-hidden="true">4.</strong> TEIN Editor</a></li><li class="chapter-item "><a href="content/reference.html"><strong aria-hidden="true">5.</strong> Reference</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="content/reference/tile-reference.html"><strong aria-hidden="true">5.1.</strong> Tile Reference</a></li><li class="chapter-item "><a href="content/reference/palettes.html"><strong aria-hidden="true">5.2.</strong> Palettes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="content/reference/palettes/columns.html"><strong aria-hidden="true">5.2.1.</strong> Columns</a></li><li class="chapter-item "><a href="content/reference/palettes/rows.html"><strong aria-hidden="true">5.2.2.</strong> Rows</a></li><li class="chapter-item "><a href="content/reference/palettes/modifying.html"><strong aria-hidden="true">5.2.3.</strong> Modifying</a></li><li class="chapter-item "><a href="content/reference/palettes/adding.html"><strong aria-hidden="true">5.2.4.</strong> Adding</a></li><li class="chapter-item "><a href="content/reference/palettes/remarks.html"><strong aria-hidden="true">5.2.5.</strong> Remarks</a></li></ol></li><li class="chapter-item "><a href="content/reference/npcs.html"><strong aria-hidden="true">5.3.</strong> NPCs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="content/reference/npcs/listing.html"><strong aria-hidden="true">5.3.1.</strong> Listing</a></li><li class="chapter-item "><a href="content/reference/npcs/sound.html"><strong aria-hidden="true">5.3.2.</strong> Sound IDs</a></li><li class="chapter-item "><a href="content/reference/npcs/text.html"><strong aria-hidden="true">5.3.3.</strong> Text</a></li><li class="chapter-item "><a href="content/reference/npcs/alt.html"><strong aria-hidden="true">5.3.4.</strong> Alt Text</a></li><li class="chapter-item "><a href="content/reference/npcs/adding.html"><strong aria-hidden="true">5.3.5.</strong> Adding</a></li><li class="chapter-item "><a href="content/reference/npcs/remarks.html"><strong aria-hidden="true">5.3.6.</strong> Remarks</a></li></ol></li><li class="chapter-item "><a href="content/reference/art-alts.html"><strong aria-hidden="true">5.4.</strong> Art Alts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="content/reference/art-alts/listing.html"><strong aria-hidden="true">5.4.1.</strong> Listing</a></li><li class="chapter-item "><a href="content/reference/art-alts/adding.html"><strong aria-hidden="true">5.4.2.</strong> Adding</a></li><li class="chapter-item "><a href="content/reference/art-alts/remarks.html"><strong aria-hidden="true">5.4.3.</strong> Remarks</a></li></ol></li><li class="chapter-item "><a href="content/reference/tilesets.html"><strong aria-hidden="true">5.5.</strong> Tilesets</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="content/reference/tilesets/variables.html"><strong aria-hidden="true">5.5.1.</strong> Variables Overview</a></li><li class="chapter-item "><a href="content/reference/tilesets/area-name.html"><strong aria-hidden="true">5.5.2.</strong> Area Name</a></li><li class="chapter-item "><a href="content/reference/tilesets/area-label.html"><strong aria-hidden="true">5.5.3.</strong> Area Label Frame</a></li><li class="chapter-item "><a href="content/reference/tilesets/area-type.html"><strong aria-hidden="true">5.5.4.</strong> Area Type</a></li><li class="chapter-item "><a href="content/reference/tilesets/tile-graphics.html"><strong aria-hidden="true">5.5.5.</strong> Tile Graphics</a></li><li class="chapter-item "><a href="content/reference/tilesets/overlay-graphics.html"><strong aria-hidden="true">5.5.6.</strong> Overlay Graphics</a></li><li class="chapter-item "><a href="content/reference/tilesets/back-graphics.html"><strong aria-hidden="true">5.5.7.</strong> Background Graphics</a></li><li class="chapter-item "><a href="content/reference/tilesets/front-graphics.html"><strong aria-hidden="true">5.5.8.</strong> Foreground Graphics</a></li><li class="chapter-item "><a href="content/reference/tilesets/palette.html"><strong aria-hidden="true">5.5.9.</strong> Palette</a></li><li class="chapter-item "><a href="content/reference/tilesets/music.html"><strong aria-hidden="true">5.5.10.</strong> Music</a></li><li class="chapter-item "><a href="content/reference/tilesets/ambience.html"><strong aria-hidden="true">5.5.11.</strong> Ambience</a></li><li class="chapter-item "><a href="content/reference/tilesets/music-volume.html"><strong aria-hidden="true">5.5.12.</strong> Music Volume</a></li><li class="chapter-item "><a href="content/reference/tilesets/ambience-volume.html"><strong aria-hidden="true">5.5.13.</strong> Ambience Volume</a></li><li class="chapter-item "><a href="content/reference/tilesets/stop-music.html"><strong aria-hidden="true">5.5.14.</strong> Stop Previous Music</a></li><li class="chapter-item "><a href="content/reference/tilesets/npc.html"><strong aria-hidden="true">5.5.15.</strong> NPC</a></li><li class="chapter-item "><a href="content/reference/tilesets/alts.html"><strong aria-hidden="true">5.5.16.</strong> Art Alts</a></li><li class="chapter-item "><a href="content/reference/tilesets/toxic.html"><strong aria-hidden="true">5.5.17.</strong> Toxic Timer</a></li><li class="chapter-item "><a href="content/reference/tilesets/cart-png.html"><strong aria-hidden="true">5.5.18.</strong> Cart Intro PNG</a></li><li class="chapter-item "><a href="content/reference/tilesets/cart-palette.html"><strong aria-hidden="true">5.5.19.</strong> Cart Intro Palette</a></li></ol></li><li class="chapter-item "><a href="content/reference/physics.html"><strong aria-hidden="true">5.6.</strong> Physics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="content/reference/physics/player.html"><strong aria-hidden="true">5.6.1.</strong> Player</a></li><li class="chapter-item "><a href="content/reference/physics/platform.html"><strong aria-hidden="true">5.6.2.</strong> Platform</a></li><li class="chapter-item "><a href="content/reference/physics/adding.html"><strong aria-hidden="true">5.6.3.</strong> Adding</a></li></ol></li></ol></li><li class="chapter-item "><a href="content/credits.html"><strong aria-hidden="true">6.</strong> Credits</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">The End is Nigh: Modding Manual</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/JROB774/tein-manual" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>Welcome to The End is Nigh: Modder's Manual!</p>
+<p>This manual plans to detail modding for The End is Nigh, providing help and information in
+a variety of different areas. Hopefully helping new modders begin learning and understanding
+the basics, as well as acting as a helpful reference for those more experienced.
+There are three main sections to the manual:</p>
+<pre><code>+ Getting started/tutorials
++ Using the editor
++ The reference
+</code></pre>
+<p>Each main category is split into easier to digest chunks. Another useful part of the manual is
+the Downloads section, which supplies useful tools to allow for modding The End is Nigh.</p>
+<h1 id="downloads"><a class="header" href="#downloads">Downloads</a></h1>
+<h1 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h1>
+<p>This section explains how to get setup and started in TEIN modding, with tutorials showcasing how to carry out certain tasks, such as unpack the game data, create a level, etc. By the end of the section and tutorials, you will have created a small new zone for the game, and obtained a basic understanding of modding different aspects of the game. This area of the manual will not go into in-depth detail about every aspect of modding, see the Modding Reference section for detailed information.</p>
+<h2 id="a-hrefcontentmanual-syntaxa"><a class="header" href="#a-hrefcontentmanual-syntaxa"><a href="content/">Manual Syntax</a></a></h2>
+<p>Information regarding common syntax and formatting rules used throughout the manual. This will make further reading of the manual much easier, as you will have a greater understanding of how the manual represents different types of data/info.</p>
+<h2 id="a-hrefcontenthow-to-add-npcsa"><a class="header" href="#a-hrefcontenthow-to-add-npcsa"><a href="content/">How to Add NPCs</a></a></h2>
+<p>A detailed and simple beginner's guide explaining how to add custom NPCs to the game.</p>
+<h2 id="a-hrefcontentvarious-video-tutorialsa"><a class="header" href="#a-hrefcontentvarious-video-tutorialsa"><a href="content/">Various Video Tutorials</a></a></h2>
+<p>Video tutorials regarding different aspects of modding The End is Nigh.</p>
+<h1 id="manual-syntax"><a class="header" href="#manual-syntax">Manual Syntax</a></h1>
+<p>This manual references and deals with a variety of different types of data regarding The End is Nigh. As a result, it is important that this data can be spotted and understood easily during reading and not mistaken for regular text. To make this a possibility different rules about syntax and formatting have been put into place, the following sections outline these rules and where they will apply.</p>
+<h2 id="variablesdata"><a class="header" href="#variablesdata">Variables/Data</a></h2>
+<p>Case-sensitive and important data values, variable names, etc. will be formatted like so:</p>
+<p><code>variable_name_or_value</code></p>
+<p>Using this clear, monospace, font allows for such values to easily stand out in large blocks of text, as well as allowing for the case of each letter to be clearly visisble; this is important as such variable names will often be case-sensitive. Note file paths, and directories, are also formatted using this method; for example:<br/><br/></p>
+<p><code>audio\sfx\npc.wav</code></p>
+<p>This is a standard way of representing file paths and should be easily understandable.</p>
+<h2 id="codefiles"><a class="header" href="#codefiles">Code/Files</a></h2>
+<p>The End is Nigh makes use of many external data files to store important information for the game. Excerpts from these files will be formatted like so:</p>
+<pre><code class="language-c">example_code {
+some_value
+&lt;mark&gt;value_of_importance&lt;/mark&gt;
+etc
+}
+</code></pre>
+<p>This is done for similar reasons to variables/data (hence the similar formatting). Furthermore, values of extreme importance, relevant to the current topic, will be highlighted. As can be seen on line 3 of the example code above.</p>
+<p>When an ellipsis is used in an exerpt from one of the game's many files, it means that there is extra data that has been omitted due to lack of relevance. This allows readers to see that what is being shown is only a small section of a larger piece of data.</p>
+<p>When an ellipsis is used in a piece of examply syntax it means that the data can carry on after what is being shown, representing that the variable can take multiple values.</p>
+<h2 id="memory-addresses"><a class="header" href="#memory-addresses">Memory Addresses</a></h2>
+<p>When dealing with executable hacking, memory addresses are an important aspect, they are formatted the same as variables but are written out in hexadecimal, this is noted by the prefix <span class="variable">0x</span>. Memory addresses, being referenced in-line, will often look like the following:<br/><br/></p>
+<pre><code class="language-asm">0x20ADC108: ...
+</code></pre>
+<p>However, lists of memory addresses will be formatted in a similar fashion to code/files:</p>
+<pre><code class="language-asm">0x20ADC108: ...
+0x22CBFB12: ...
+0x124A0802: ...
+</code></pre>
+<p>With the value stored at the memory address written after the colon (where the ellipsis is present in the examples).</p>
+<h2 id="tile-references"><a class="header" href="#tile-references">Tile References</a></h2>
+<p>Tiles will often be refferred to using the following ID formatting: Z1, Z1 - 3, etc. These IDs, consisting of letters and numbers, refer to the specific location the tile can be found at in the <a href="content/getting-started/./reference/tiles.html">Tile Reference</a>. The number refers to the horizontal position in the table and the letter referes to the vertical position. When a hypen is present between two tile values it means all tiles within that given range are being referred to.</p>
+<p>This method is used as it makes looking-up the tiles much easier than having to search through the reference for a specific name to appear.</p>
+<h1 id="how-to-add-npcs"><a class="header" href="#how-to-add-npcs">How to add NPCs</a></h1>
+<p>The first step in making a custom NPC is to add an additional NPC to the <code>data\npcs.txt</code> file found in the unpacked game data. First, the NPC must be named; NPCs in game are named based on order of appearance, and race. Skeleton NPCs are named <code>NPCx</code> (where <code>x</code> is a unique number to differentiate them), Light Blob NPCs are named <code>NPCBx</code>, Ghosts are named <code>NPCGx</code>, Dark Blobs are named <code>NPCDx</code>, cameos such as Steven and Isaac, from Edmund's other games are named <code>NPCXx</code>, and finally the large Stevens that transport Ash to the future are named <code>NPCHx</code>. Therefore custom NPCs should use a unique naming scheme, such as <code>NPCAx</code>, to prevent your mod from editing and conflicting with in-game NPCs.</p>
+<p>The basic description, such as <code>#basic sideways</code> that appears below the name has no effect and is used to identify NPCs.</p>
+<p>The <code>movieclip</code> decides what form your custom NPC takes.
+<code>sound_id</code> is similar, and decides the noises your NPC makes when it's dialogue activates. These are fairly descriptive, such as <code>NPCSkull</code> making a bone-rattling noise when spoken to. Generally, the <code>sound_id</code> should match the <code>movieclip</code>.</p>
+<p>The <code>text</code> decides what your custom NPC says when spoken to. Each set of double-quotes <code>&quot;&quot;</code> is a separate box of text that appears in sequence. The new-line character <code>\n</code> makes the text after it start on a new line. Text should be surrounded by square brackets <code>[]</code>, and dont forget to add curly brackets <code>{}</code> brackets around your NPC's code, or else an error will occur when you enter the level.</p>
+<p>Here is an example of what an NPC entry could look like when complete:</p>
+<pre><code class="language-plaintext">NPC0 {
+    #basic sideways
+    movieclip NPC0
+    sound_id NPCSkull
+    text [
+        &quot;oh \n . . . \n its you. . .&quot;
+        &quot;must be nice \n being alive \nn' all that&quot;
+        &quot;when i died \n that tumor wiggled out&quot;
+        &quot;it's been floating \n up there for years \n watching me&quot;
+        &quot;please\n dont take it. . . \n its all i have left&quot;
+    ]
+} 
+</code></pre>
+<p>To add your NPC to a level, you must add your NPC to the level's <code>data\tilesets.txt</code> code. The NPC's name should be written after <code>npc_1</code>, <code>npc_2</code> or <code>npc_3</code>. Then, add your npc to the level using the level editor; NPCs are found in tiles Z1 - 3 in the editor, in order of number. See the <a href="content/getting-started/../reference/tiles.html">Tile Reference</a> for more information on these particular tiles.</p>
+<p>After finishing the <a href="content/getting-started/./getting_started.html">Getting Started / Tutorials</a> section, please see the <a href="content/getting-started/../reference/reference.html">Modding Reference</a> and particularly the <a href="content/getting-started/npc.html">NPCs</a> section for more information on the possible values and details regarding custom NPCs.</p>
+<h1 id="tein-editor"><a class="header" href="#tein-editor">TEIN Editor</a></h1>
+<p>This section will showcase how to use the editor, providing information on how
+it works, how to use the tools contained within, shortcuts/hotkeys, etc. This
+area will not cover modding aspects of the game itself and instead will focus
+entirely on explaining the editor. For more information regarding modding the
+game see either the Getting Started / Tutorials section or the Modding Reference
+section.</p>
+<p><em>Under contruction</em></p>
+<h1 id="reference"><a class="header" href="#reference">Reference</a></h1>
+<p>This section acts as a detailed reference where individual areas of modding can be looked at in-depth. This area does not cover modding basics and does not need to be viewed/read in sequence. Use this section if a specific piece of information needs to be found, e.g. what a certain tile does, what palettes are assigned to what areas, what the various data files do, etc. For more general tutorials and basic modding see the <a href="content/../getting_started/getting_started.html">Getting Started / Tutorials</a> section.</p>
+<h2 id="a-hrefcontenttileshtmltile-referencea"><a class="header" href="#a-hrefcontenttileshtmltile-referencea"><a href="content/./tiles.html">Tile Reference</a></a></h2>
+<p>A complete reference of all the game’s tiles that can be used within the editor. Supplying detailed information on their layer, type, and a description outlining each tile’s unique properties.</p>
+<h2 id="a-hrefcontentpaletteshtmlpalettesa"><a class="header" href="#a-hrefcontentpaletteshtmlpalettesa"><a href="content/./palettes.html">Palettes</a></a></h2>
+<p>Detailed information on how the game’s colour palettes work, what palettes are used by each area, and how to modify/add custom palettes.</p>
+<h2 id="a-hrefcontentnpcshtmlnpcsa"><a class="header" href="#a-hrefcontentnpcshtmlnpcsa"><a href="content/./npcs.html">NPCs</a></a></h2>
+<p>Information regarding NPCs and the &quot;npcs.txt&quot; file. Listing all the currently existing NPCs and how to modify them, as well as add new ones.</p>
+<h2 id="a-hrefcontentart_altshtmlart-altsa"><a class="header" href="#a-hrefcontentart_altshtmlart-altsa"><a href="content/./art_alts.html">Art Alts.</a></a></h2>
+<p>Showcases and references all the different alternate art assets that can be used to swap out graphics for the different entities in the game.</p>
+<h2 id="a-hrefcontenttilesetshtmltilesetsa"><a class="header" href="#a-hrefcontenttilesetshtmltilesetsa"><a href="content/./tilesets.html">Tilesets</a></a></h2>
+<p>A reference of all the available variables and values contained within the tilesets file, as well as how to modify said file to create custom tilesets.</p>
+<h2 id="a-hrefcontentphysicshtmlphysicsa"><a class="header" href="#a-hrefcontentphysicshtmlphysicsa"><a href="content/./physics.html">Physics</a></a></h2>
+<p>Details regarding the various physics files that control how the player and tiles affected by movement tags move, and what each variable in the files means.</p>
+<h1 id="tile-reference"><a class="header" href="#tile-reference">Tile Reference</a></h1>
+<p>Test</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<script src="../../assets/scripts/tiles.js"></script>
+<div id="tile_container">
+    <div id="tile_table"></div>
+    <div id="tile_data">
+        <h3 id="tile_name"></h3>
+        <img id="tile_large_image"/>
+        <p id="tile_layer"></p>
+        <p id="tile_type"></p>
+        <p id="tile_note"></p>
+    </div>
+</div>
+<h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
+<p>Location in the unpacked data: <code>textures\palette.png</code></p>
+<p>Palettes are used to recolour the many different assests in The End is Nigh.
+By loading different palettes for each unique area of the game, each zone is
+able to look drastically different whilst using many of the same assets.</p>
+<p>The file that defines the palette information can be opened in any basic paint
+program to be modified, allowing for changes to be made to existing palettes as
+well as the ability to create entirely new ones.</p>
+<p>The palette is made up of pixels, and these pixels are interpreted in two ways:
+as rows, and as a columns. The rows marks a unique palette that can be set, with
+its row number acting as its palette ID (0 - 63). Whereas each column the pixel
+is in (0 - 15) specifies what graphics the colour in that particular palette row
+will be mapped to, whether its background tiles, water/lava, tile details, etc. </p>
+<h1 id="columns"><a class="header" href="#columns">Columns</a></h1>
+<p>The following section describes what assets/graphics each column of the palette
+is mapped to:</p>
+<ul>
+<li>00 - Active tiles (solids, spikes, etc) and the player.</li>
+<li>01 - Color of rings in carts</li>
+<li>02 - Decorations for active tiles (bricks, rocks, etc.).</li>
+<li>03 - Decorations for the first background layer.</li>
+<li>04 - First background layer.</li>
+<li>05 - Second background layer.</li>
+<li>06 - Skulls, seen on a veriety of enemies throughout the game.</li>
+<li>07 - Background image, layer 1.</li>
+<li>08 - Background image, layer 2.</li>
+<li>09 - Background image, layer 3.</li>
+<li>10 - Background image, layer 4.</li>
+<li>11 - Background image, layer 5.</li>
+<li>12 - Certain NPCs, and miscellaneous objects.</li>
+<li>13 - Toxic/Pollution, and miscellaneous objects.</li>
+<li>14 - Lava and water (a more desaturated version of the lava colour).</li>
+<li>15 - Character eyes and other facial features, text, and the glow effect in The Hollows.</li>
+</ul>
+<p><img src="content/reference/palettes/../../assets/images/palette.png" alt="The Palette" /></p>
+<p>These palette columns will also impact other small features of the game’s
+graphics. However, these are the main uses of each of the different columns. </p>
+<h1 id="rows"><a class="header" href="#rows">Rows</a></h1>
+<p>The following section describes each palette row, and where it is used in the game:</p>
+<ul>
+<li>00 - Super Mega Cart All Stars Intro Screen and The Game Intro Screen</li>
+<li>01 - The End and The Save Select Menu</li>
+<li>02 - Arid Flats</li>
+<li>03 - Overflow</li>
+<li>04 - The Split and Wall of Sorrow</li>
+<li>05 - Retrograde</li>
+<li>06 - The Hollows</li>
+<li>07 - Unused</li>
+<li>08 - SS Exodus</li>
+<li>09 - The Machine</li>
+<li>10 - Golgotha and Anguish</li>
+<li>11 - Gloom</li>
+<li>12 - Blight</li>
+<li>13 - Ruin</li>
+<li>14 - The End is Nigh Cartridge + Intro Screen and Corrupted Cartridge + Intro Screen</li>
+<li>15 - Unused</li>
+<li>16 - Mortaman Cartridge</li>
+<li>17 - Blaster Massacre Cartridge</li>
+<li>18 - Nevermore/The Future</li>
+<li>19 - River City Rancid Cartridge</li>
+<li>20 - Ash Climber Cartridge</li>
+<li>21 - Catastrovania Cartridge</li>
+<li>22 - Rubble Robble Cartridge</li>
+<li>23 - Fallen Fantasy Cartridge</li>
+<li>24 - Morbid Gear Cartridge</li>
+<li>25 - Dig Dead Cartridge</li>
+<li>26 - Super Mega Cart All Stars Cartridge</li>
+<li>27 - Spike Tales Cartridge</li>
+<li>28 - Scab or Die Cartridge</li>
+<li>29 - Tombs and Torture Cartridge</li>
+<li>30 - Mortaman Intro Screen and Pus-Man Cartridge + Intro Screen</li>
+<li>31 - Blaster Massacre Intro Screen</li>
+<li>32 - River City Rancid Intro Screen</li>
+<li>33 - Ash Climber Intro Screen</li>
+<li>34 - Catastrovania Intro Screen</li>
+<li>35 - Rubble Robble Intro Screen</li>
+<li>36 - Fallen Fantasy Intro Screen</li>
+<li>37 - Morbid Gear Intro Screen</li>
+<li>38 - Dig Dead Intro Screen</li>
+<li>39 - Unused</li>
+<li>40 - Spike Tales Intro Screen</li>
+<li>41 - Scab or Die Intro Screen</li>
+<li>42 - Tombs and Torture Intro Screen</li>
+<li>43 - Ghosts ’N Grieving Cartridge</li>
+<li>44 - Ghosts ’N Grieving Intro Screen</li>
+<li>45 - Depression Cartridge + Intro Screen</li>
+<li>46 - Denial Cartridge + Intro Screen</li>
+<li>47 - Anger Cartridge + Intro Screen</li>
+<li>48 - Bargaining Cartridge + Intro Screen</li>
+<li>49 - Acceptance Cartridge + Intro Screen</li>
+<li>50 - Dead Racer Cartridge + Intro Screen</li>
+</ul>
+<p>All palettes onwards are unused and will display completely white unless
+modified. This leaves modders with 16 palettes that can be added without needing
+to modify the palette to accept more colours; see the second-half of the 
+following section for details on how to add more palettes.</p>
+<h1 id="modifying-palettes"><a class="header" href="#modifying-palettes">Modifying Palettes</a></h1>
+<p>Once the palette.png file has been modified, or if you simply want to give an
+area an existing palette, the tilesets.txt needs to be modified for a palette to
+be assigned. Locate the unpacked game data and navigate to the &quot;data&quot; directory,
+in there will be a file called &quot;tilesets.txt&quot;, open this file. Locate the area
+which you would wish to modify, this can be found by looking at the area_name
+variable which will list the name of each area. Once the area has been found
+simply set the palette variable to the row number of your desired palette;
+remember that the top-most row in the palette.png image is palette 0 and they
+continue incrementing upwards in value the further down the image they are.</p>
+<p>In the example below, the Arid Flats has been assigned the palette 10 (which is
+used for Golgotha and Anguish). Changing this value and relaunching the game
+produces the results on the right, compared to the original palette seen on the
+left.</p>
+<p><img src="content/reference/palettes/../../assets/images/screenshots/scrn_pal_01.png" alt="Arid Flats Palette 1" /> <img src="content/reference/palettes/../../assets/images/screenshots/scrn_pal_02.png" alt="Arid Flats Palette 2" /></p>
+<p>For a more in-depth look at the various aspects of the tilesets.txt file, as well
+as how to modify it, click <a href="content/reference/palettes/../tilesets.html">here</a>.</p>
+<h1 id="adding-palettes"><a class="header" href="#adding-palettes">Adding Palettes</a></h1>
+<p>In its default state, the palettes file can only store 64 unique palette entries
+(rows). However, this can be changed by modifying aspects of certain shader,
+which can be located in the &quot;shaders&quot; directory of the unpacked data. Two
+specific shaders will need to be modified for this to work &quot;colormapped.shader&quot;
+and &quot;colormapped_duplicatedforstupidreasons.shader&quot;, as these shaders control
+how colours from the palette are mapped to colours used by the game's assets.</p>
+<p>Open both palettes in any text editor (Notepad, Notepad++, Sublime-Text, etc.)
+and you will see the following text:</p>
+<h2 id="colormapped"><a class="header" href="#colormapped">colormapped:</a></h2>
+<pre><code class="language-c">#version 130
+
+uniform mat2x4 color_xform;
+uniform sampler2D palettetex;
+uniform float palette;
+
+#if COMPILING_VERTEX_PROGRAM
+
+    void vert(){
+        //gl_FrontColor = gl_Color * color_xform[0] + color_xform[1];
+        vec4 outcolor = gl_Color * color_xform[0] + color_xform[1];
+        gl_FrontColor = vec4(texture(palettetex, vec2((outcolor.r*15.0+.5)/16.0,(palette+.5)/64.0)).rgb,
+        outcolor.a);
+        gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+    }
+
+#elif COMPILING_FRAGMENT_PROGRAM
+
+    void frag(){
+        gl_FragColor = gl_Color;
+    }
+
+#endif 
+</code></pre>
+<h2 id="colormapped_duplicatedforstupidreasons"><a class="header" href="#colormapped_duplicatedforstupidreasons">colormapped_duplicatedforstupidreasons</a></h2>
+<pre><code class="language-c">#version 130
+
+uniform mat2x4 color_xform;
+uniform sampler2D palettetex;
+uniform float palette;
+
+#if COMPILING_VERTEX_PROGRAM
+
+    void vert(){
+        //gl_FrontColor = gl_Color * color_xform[0] + color_xform[1];
+        vec4 outcolor = gl_Color * color_xform[0] + color_xform[1];
+    
+        gl_FrontColor = vec4(texture(palettetex, vec2((outcolor.r*15.0+.5)/16.0,(palette+.5)/64.0)).rgb,
+        outcolor.a);
+        if(outcolor.r &lt; .1 &amp;&amp; outcolor.g &lt; .1 &amp;&amp; outcolor.b &gt; .9){
+            gl_FrontColor = vec4(0.0,0.0,0.0, outcolor.a);
+        }
+        gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+    }
+
+#elif COMPILING_FRAGMENT_PROGRAM
+
+    void frag(){
+        gl_FragColor = gl_Color;
+    }
+
+#endif
+</code></pre>
+<p>The highlighted values are the important ones, the 16.0 is the number of columns 
+in the palette file (width) and the 64.0 is the number of rows in the palette
+file (height). The height is the only value that needs to be modified, simply
+change this value in both shaders to the number of however many palettes you
+would like, make sure this matches your palette file itself. Now the new palette
+row number (64 onwards) needs to simply be referenced in the &quot;tilesets.txt&quot; file
+for the area that will use the new palette (see the <a href="content/reference/palettes/./modifying.html">Modifying Palettes</a> section
+if you do not know how to set a palette for an area), and that is all that needs
+to be done to add more palette rows to the game.</p>
+<p>For more information regarding shaders, click here. </p>
+<h1 id="remarks"><a class="header" href="#remarks">Remarks</a></h1>
+<p>Expanding the &quot;palette.png&quot; file to add more palettes, without making the
+appropriate changes to the colour mapping shaders, will result in incorrect
+colours and palettes being displayed.</p>
+<p>Transparency/alpha is not read from the palette, so saving semi-transparent
+pixels will simply result in the same colour being used in-game, but with the
+alpha being set to full - removing the transparency. Fully transparent pixels
+will either be black or white, depending on how the paint program being used to 
+modify the palette handles saving transparency.</p>
+<p>The map screen will make use of colours from the currently loaded area palette
+to tint the different icons, graphics, etc. As will other graphical elements,
+such as the tumor counter, NPC text boxes, etc. </p>
+<h1 id="overview-1"><a class="header" href="#overview-1">Overview</a></h1>
+<p>Location in the unpacked data: <code>data\npcs.txt</code></p>
+<p>The NPCs file dictates information regarding all the available NPCs in the game; it defines the traits of each NPC: sound, graphics, text, and all of the aspects that make the different NPCs unique and interesting.</p>
+<p>Here is an example of the syntax of one NPC taken from the file (NPC0):</p>
+<pre><code>NPC0 {
+#basic sideways
+  movieclip NPC0
+  sound_id NPCSkull
+  text [
+    &quot;oh \n . . . \n its you. . .&quot;
+    &quot;must be nice \n being alive \nn’ all that&quot;
+    &quot;when i died \n that tumor wiggled out&quot;
+    &quot;it’s been floating \n up there for years \n watching me&quot;
+    &quot;please\n dont take it. . . \n its all i have left&quot;
+  ]
+}
+</code></pre>
+<p>Whilst this may seem complex, the syntax for an NPC can be broken down and represented as the following:</p>
+<pre><code>[NPC_ID] {
+  moviclip [VALUE]
+  sound_id [VALUE]
+  text [
+    &quot;[VALUE]&quot;
+    ...
+  ]
+}
+</code></pre>
+<p>The # followed by text, in the example, is simply a comment and not interpreted/read by the game itself, hence why it was not added in the simplified syntax breakdown. These comments have been added to all the NPCs in the &quot;npcs.txt&quot; file to allow for more readability.</p>
+<p>So, overall, the &quot;npcs.txt&quot; file simply stores a series of NPCS and their properties, that can be placed into the game for the player to interact with. Read on for more information on each of these variables, as well as how to add/modify NPCs. </p>
+<h1 id="npc-listing-ids-and-movie-clips"><a class="header" href="#npc-listing-ids-and-movie-clips">NPC Listing (IDs and Movie Clips)</a></h1>
+<p>A graphical list displaying all of the NPCs within the game. With their 
+appropriate NPC IDs (the values used to set NPCs in the Tilesets file) below 
+them, these values also double-up as being the names used to reference the 
+particular movie_clip (graphic/sprite) that an NPC is given. Remember that
+variables and their values are case-sensitive, in the case of NPCs all of the
+IDs are fully capitalised, no lower-case.</p>
+<script src="../../assets/scripts/npcs.js"></script>
+<h2 id="skeletons"><a class="header" href="#skeletons">Skeletons</a></h2>
+<!--<script type="text/javascript">display_npcs("npc", 17, start = 0, padding = 2, per_row = 6)</script>-->
+<table id="npc" class="npcs">
+    <tr>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc0.png" alt="NPC9"><p><span class="variable">NPC0</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc1.png" alt="NPC1"><p><span class="variable">NPC1</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc2.png" alt="NPC2"><p><span class="variable">NPC2</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc3.png" alt="NPC3"><p><span class="variable">NPC3</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc4.png" alt="NPC4"><p><span class="variable">NPC4</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc5.png" alt="NPC5"><p><span class="variable">NPC5</span></p></div></td>
+    </tr>
+</table>
+<table class="npcs">
+    <tr>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc6.png" alt="NPC6"><p><span class="variable">NPC6</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc7.png" alt="NPC7"><p><span class="variable">NPC7</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc8.png" alt="NPC8"><p><span class="variable">NPC8</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc9.png" alt="NPC9"><p><span class="variable">NPC9</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc10.png" alt="NPC10"><p><span class="variable">NPC10</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc11.png" alt="NPC11"><p><span class="variable">NPC11</span></p></div></td>
+    </tr>
+</table>
+<table class="npcs">
+    <tr>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc12.png" alt="NPC12"><p><span class="variable">NPC12</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc13.png" alt="NPC13"><p><span class="variable">NPC13</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc14.png" alt="NPC14"><p><span class="variable">NPC14</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc15.png" alt="NPC15"><p><span class="variable">NPC15</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc16.png" alt="NPC16"><p><span class="variable">NPC16</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npc17.png" alt="NPC17"><p><span class="variable">NPC17</span></p></div></td>
+    </tr>
+</table>
+<h2 id="light-blobs"><a class="header" href="#light-blobs">Light Blobs</a></h2>
+<!--<script type="text/javascript">display_npcs("npcb", 7)</script>-->
+<table class="npcs">
+    <tr>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcb1.png" alt="NPCB1"><p><span class="variable">NPCB1</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcb2.png" alt="NPCB2"><p><span class="variable">NPCB2</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcb3.png" alt="NPCB3"><p><span class="variable">NPCB3</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcb4.png" alt="NPCB4"><p><span class="variable">NPCB4</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcb5.png" alt="NPCB5"><p><span class="variable">NPCB5</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcb6.png" alt="NPCB6"><p><span class="variable">NPCB6</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcb7.png" alt="NPCB7"><p><span class="variable">NPCB7</span></p></div></td>
+    </tr>
+</table>
+<h2 id="ghosts"><a class="header" href="#ghosts">Ghosts</a></h2>
+<!--<script type="text/javascript">display_npcs("npcg", 7)</script>-->
+<table class="npcs">
+    <tr>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcg1.png" alt="NPCG1"><p><span class="variable">NPCG1</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcg2.png" alt="NPCG2"><p><span class="variable">NPCG2</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcg3.png" alt="NPCG3"><p><span class="variable">NPCG3</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcg4.png" alt="NPCG4"><p><span class="variable">NPCG4</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcg5.png" alt="NPCG5"><p><span class="variable">NPCG5</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcg6.png" alt="NPCG6"><p><span class="variable">NPCG6</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcg7.png" alt="NPCG7"><p><span class="variable">NPCG7</span></p></div></td>
+    </tr>
+</table>
+<h2 id="dark-blobs"><a class="header" href="#dark-blobs">Dark Blobs</a></h2>
+<!--<script type="text/javascript">display_npcs("npcd", 7)</script>-->
+<table class="npcs">
+    <tr>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcd1.png" alt="NPCD1"><p><span class="variable">NPCD1</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcd2.png" alt="NPCD2"><p><span class="variable">NPCD2</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcd3.png" alt="NPCD3"><p><span class="variable">NPCD3</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcd4.png" alt="NPCD4"><p><span class="variable">NPCD4</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcd5.png" alt="NPCD5"><p><span class="variable">NPCD5</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcd6.png" alt="NPCD6"><p><span class="variable">NPCD6</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcd7.png" alt="NPCD7"><p><span class="variable">NPCD7</span></p></div></td>
+    </tr>
+</table>
+<h2 id="characters"><a class="header" href="#characters">Characters</a></h2>
+<!--<script type="text/javascript">display_npcs("npcx", 5, start = 1, padding = 1, per_row = 5)</script>-->
+<table class="npcs">
+    <tr>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcx1.png" alt="NPCX1"><p><span class="variable">NPCX1</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcx2.png" alt="NPCX2"><p><span class="variable">NPCX2</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcx3.png" alt="NPCX3"><p><span class="variable">NPCX3</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcx4.png" alt="NPCX4"><p><span class="variable">NPCX4</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npcx5.png" alt="NPCX5"><p><span class="variable">NPCX5</span></p></div></td>
+    </tr>
+</table>
+<h2 id="stevens"><a class="header" href="#stevens">Stevens</a></h2>
+<!--<script type="text/javascript">display_npcs("npch", 4, start = 1, padding = 1, per_row = 4)</script>-->
+<table class="npcs">
+    <tr>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npch1.png" alt="NPCH1"><p><span class="variable">NPCH1</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npch2.png" alt="NPCH2"><p><span class="variable">NPCH2</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npch3.png" alt="NPCH3"><p><span class="variable">NPCH3</span></p></div></td>
+        <td><div class="center"><img src="content/reference/npcs/../../assets/images/artalts/npcs/npch4.png" alt="NPCH4"><p><span class="variable">NPCH4</span></p></div></td>
+    </tr>
+</table>
+<br/>
+<br/>
+<p>As well as the NPC movie clips listed above, NPCs can also be assigned any of
+the alternate art values as their ```movie_clip`` value. For a full listing on
+the available movie clips that can be used, see the 
+<a href="content/reference/npcs/./reference/art_alts.html">Art Alts</a>. section. </p>
+<h1 id="sound-ids"><a class="header" href="#sound-ids">Sound IDs</a></h1>
+<p>The <code>sound_id</code> variable is used to define the sound played when the NPC is
+spoken to and when text is advanced. The available sound IDs are as follows (the
+values in brackets mark what sound file each sound ID references):</p>
+<pre><code>NPCSkull (audio\sfx\skullnpc.wav)
+NPCBlob (audio\sfx\squishnpc.wav)
+NPCGhost (audio\sfx\ghostnpc.wav)
+NPCIsaac (audio\sfx\isaacnpc.wav)
+NPCStevenCameo (audio\sfx\stevenheadwarpnpc.wav)
+NPCGish (audio\sfx\gishnpc.wav)
+NPCGuppy (audio\sfx\catnpc.wav)
+NPCAether (audio\sfx\aethernpc.wav)
+NPCSteven (audio\sfx\stevennpc.wav)
+</code></pre>
+<p>New sounds can be created by modifying <code>mainsounds.txt</code> and 
+<code>retrosounds.txt</code>; see the section Sounds for more information on
+creating new sounds. </p>
+<h1 id="text"><a class="header" href="#text">Text</a></h1>
+<p>The text variable details what <code>text</code> will be displayed when the NPC is
+interacted with; there are certain formatting rules regarding this text that
+are quite important in ensuring that the NPC’s text works correctly and looks
+visually appealing. Below is some example text from an NPC that can be used to
+compare with what is being explained, to make it easier to understand:</p>
+<pre><code>text [
+  &quot;when i used\n to hang off\n a wall&quot;
+  &quot;id pull\n out from it \nand then&quot;
+  &quot;id do a \n jump. . . and \n go like super far!&quot;
+  &quot;but when i \ndidn’t pull \noutwards&quot;
+  &quot;id mostly just \n go up higher&quot;
+  &quot;i call it the \npull out method&quot;
+  &quot;\n. . .&quot;
+  &quot;i made that \none up years \nago&quot;
+  &quot;i imagined it \nwould get more \nof a laugh&quot;
+  &quot;\n. . .&quot;
+  &quot;please \nleave me alone&quot;
+]
+</code></pre>
+<p>Text is entirely contained within square brackets []. When writing text ensure
+that it is always wrapped inside these brackets or else the game may not 
+interpret the text correctly -- or worse, crash.</p>
+<p>Text is then split into different sections, each section is encased within 
+quotes &quot;&quot;. These sections define when a button-prompt will appear asking the
+player to advance the text, when the user presses the appropriate button the
+text will advance and begin scrolling through to the next section. It is
+important to reguarly split text into sections for easier reading.</p>
+<p>Finally, a special type of character is used called a new-line <code>\n</code>, this
+character informs the game to start writing text on the next line, rather than
+being displayed itself. Once again, it is important to reguarly add new-lines so
+that the text does not clip outside of the text box; however, no more than three
+lines should be in any given text section, otherwise potential veritcal clipping
+may occur.</p>
+<p>The text box itself can fit appoximately 22 characters on each line, however,
+this number will vary depending on the characters used due to the font having
+varying character widths. </p>
+<h1 id="alt-text"><a class="header" href="#alt-text">Alt. Text</a></h1>
+<p>The <code>alt_text</code> variable is used and formatted in exactly the same way as the
+regular text variable. However, this variable is only used on the four Steven
+NPCs and acts as the alternate text to display when the appropriate number of
+tumors has been collected. Below is a list of how many tumors is needed to make
+each NPC trigger their alternate text (these amounts are hard-coded):</p>
+<ul>
+<li>NPCH1 :: 50 Tumors</li>
+<li>NPCH2 :: 100 Tumors</li>
+<li>NPCH3 :: 170 Tumors</li>
+<li>NPCH4 :: 300 Tumors</li>
+</ul>
+<p>Furthermore, the addresses for the various tumor counts needed to trigger alternate text are as follows:</p>
+<pre><code>0x000E489D: 50
+0x000E495C: 100
+0x000E49A8: 170
+0x000E4A3A: 300
+</code></pre>
+<p>Attempting to apply the <code>alt_text</code> variable to any other NPC will do nothing.
+Based on testing, it is apparent that the NPC IDs that react to alternate text
+are hard-coded into the game and will require executable hacking to modify. The
+addresses for the alternate text NPCs are as follows:</p>
+<pre><code>0x00231274: &quot;NPCH1&quot;
+0x002312AC: &quot;NPCH2&quot;
+0x002312B4: &quot;NPCH3&quot;
+0x00231294: &quot;NPCH4&quot;
+</code></pre>
+<p>For more information on how to modify these values effectively, see the
+Executable Hacking section. </p>
+<h1 id="adding-npcs"><a class="header" href="#adding-npcs">Adding NPCs</a></h1>
+<p>To add an NPC, the first thing that must be done is a new NPC entry must be
+made in the &quot;npcs.txt&quot; file. This can be written out by following the syntax
+given in the <a href="content/reference/npcs/./npcs.html">Overview</a> section, or by copying an existing NPC entry
+and changing the values as neccessary. When making a new NPC ensure that its ID
+is completely unique from all the others, otherwise conflicts will occur. Then
+set all of its variables/properties appropriately, the information in the
+previous sections of this page can be used as a guide to help.</p>
+<p>Once the NPC has had all of its information filled out, it must then be assigned
+to a specific NPC tile (Z1 - 3), using the &quot;tilesets.txt&quot; file. Locate the
+specific area tileset that you wish for the NPC to appear in and add in an
+<code>npc_x</code> variable, where x is a value between 1 and 3; this refers to which
+NPC tile will be used to place the NPC. An example excerpt from &quot;The End&quot;
+tileset, shwocasing the NPC definitions:</p>
+<pre><code>1 {
+  ...
+
+  npc_1 NPC0
+  npc_2 NPC1
+  npc_3 NPC2
+
+  ...
+}
+</code></pre>
+<p>Once this is done, placing any one of the NPC tiles in a level using this
+tileset will spawn the new NPC.</p>
+<p>For more detailed information on modifying tilesets using the &quot;tilesets.txt&quot;
+file, click <a href="content/reference/npcs/./references/tilesets/overview.html">here</a>. </p>
+<h1 id="remarks-1"><a class="header" href="#remarks-1">Remarks</a></h1>
+<p>Placing one of the NPC tiles (Z1 - 3) in a level with its value in the tileset
+being undefined or set to none will simply result in nothing appearing at the
+location. Fortunately the game will not crash or present any other kinds of
+abstract behaviour.</p>
+<p>Setting the NPCs <code>movieclip</code> or <code>sound_id</code> variables to invalid values
+will result in the game crashing when the level containing the NPC is entered.
+Futhermore, not includng any of these fields, including text, will also cause a
+crash. However, if any of these problems occur, the game will display a helpful
+error message making debugging such as issue relatively easy.</p>
+<p>Inclusion of the the text field but leaving it like so: <code>text = []</code> will
+lead to the game crashing when the NPC is interacted with; no error message is
+supplied in such instances. </p>
+<h1 id="art-alts"><a class="header" href="#art-alts">Art Alts.</a></h1>
+<p>Note, this page simply provides a reference of all the currently known art alts.
+that can be used. For information on how to modify the <code>art_alts</code> variable in
+the tilesets file, see the <a href="content/reference/../tilesets/art_alts.html">Art Alts.</a> section on the
+Tilesets page.</p>
+<p>Art alts. allow for instances of graphics to be swapped out with other graphics,
+allowing for a large amount of visual flexibility and variance. For more
+information on how to apply art alts, within an area, see the 
+<a href="content/reference/../tilesets/art_alts.html">Art Alts.</a> section of the Tilesets page. </p>
+<h1 id="art-listing"><a class="header" href="#art-listing">Art Listing</a></h1>
+<table><thead><tr><th align="left">Section</th><th align="left">Description</th></tr></thead><tbody>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#general">General</a></td><td align="left">Generic assets and items.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#enemies">Enemies</a></td><td align="left">Hostile enemies.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#minis">Minis</a></td><td align="left">Small critters.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#decorations">Decorations</a></td><td align="left">Decorative assets.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#retro">Retro</a></td><td align="left">Retro variants of entities and items.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#npcs">NPCs</a></td><td align="left">Interactive NPCs.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#tilesets">Tilesets</a></td><td align="left">Tile graphics.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#overlays">Overlays</a></td><td align="left">Decorations on top of tile graphics.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#backgrounds">Backgrounds</a></td><td align="left">Background images.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#foregrounds">Foregrounds</a></td><td align="left">Foreground images.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#midfx">Mid-FX Layers</a></td><td align="left">Shader effect layer graphics.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#particles">Particles</a></td><td align="left">Effects and particles.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#cutscenes">Cutscenes</a></td><td align="left">In-game cutscenes and animations.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#transitions">Transitions</a></td><td align="left">Screen transitions and effects.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#gui">GUI</a></td><td align="left">Interface elements and UI graphics.</td></tr>
+<tr><td align="left"><a href="content/reference/art-alts/listing.html#miscellaneous">Miscellaneous</a></td><td align="left">Assets that fit in no category above or are unused.</td></tr>
+</tbody></table>
+<br>
+<!--
+    The following tables have been implemented as HTML as it's easier to do.
+    It might be nice to convert them into Markdown at some point though.
+-->
+<table id="general">
+    <thead>
+        <tr>
+            <th align="center" colspan="5">General</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/player.png"><code>Player</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/life.png"><code>Life</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/biglife.png"><code>BigLife</code></td>
+            <td align="center" colspan="2"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cartconsole.png"><code>CartConsole</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cartridge.png"><code>Cartridge</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cart2.png"><code>cart2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cart3.png"><code>cart3</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/key.png"><code>Key</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/hopper.png"><code>Hopper</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/chainhitch.png"><code>ChainHitch</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/chainlink.png"><code>ChainLink</code><br><code>ChainLink2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/floatingmine.png"><code>FloatingMine</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/jar.png"><code>Jar</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/outwarp.png"><code>OutWarp</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/gate1.png"><code>Gate1</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/gate2.png"><code>Gate2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/gate3.png"><code>Gate3</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/gate4.png"><code>Gate4</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/deathghost.png"><code>DeathGhost</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/thehead.png"><code>TheHead</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/thebody.png"><code>TheBody</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/theheart.png"><code>TheHeart</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/stand.png"><code>Stand</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/finalsteve.png"><code>FinalSteve</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/glowshroom.png"><code>GlowShroom</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/glowshroomsmall.png"><code>GlowShroomSmall</code></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="enemies">
+    <thead>
+        <tr>
+            <th align="center" colspan="5">Enemies</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/movingorbblob.png"><code>MovingOrbBlob</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/orbblob.png"><code>OrbBlob</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/orbblob2.png"><code>OrbBlob2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/orbsmall.png"><code>OrbSmall</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/orblarge.png"><code>OrbLarge</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/orblarge2.png"><code>OrbLarge2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/orbchomp.png"><code>OrbChomp</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/aimspitter.png"><code>AimSpitter</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/aimspitter2.png"><code>AimSpitter2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/eyeshooter.png"><code>EyeShooter</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/spitterx.png"><code>SpitterX</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/spittery.png"><code>SpitterY</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/bullet.png"><code>Bullet</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/eyebullet.png"><code>EyeBullet</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/floater.png"><code>Floater</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/chargeslug.png"><code>ChargeSlug</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/slug.png"><code>Slug</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/bigcharger.png"><code>BigCharger</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/bigslug.png"><code>BigSlug</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/splatter.png"><code>Splatter</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/gasser.png"><code>Gasser</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/gascloud.png"><code>GasCloud</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cannon.png"><code>Cannon</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cannonstand.png"><code>CannonStand</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cannonball.png"><code>Cannonball</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/fireball.png"><code>Fireball</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/thwampeye.png"><code>ThwampEye</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/thwampgear.png"><code>ThwampGear</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cheepcheep.png"><code>CheepCheep</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/frog.png"><code>Frog</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/skullcrow.png"><code>SkullCrow</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/skullfloater.png"><code>SkullFloater</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/skullfloaterbreaky.png"><code>SkullFloaterBreaky</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/skullslug.png"><code>SkullSlug</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/bouncer.png"><code>Bouncer</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/chainchomp.png"><code>ChainChomp</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/creepingmass.png"><code>CreepingMass</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/creepeye.png"><code>CreepEye</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/fish.png"><code>Fish</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/fish2.png"><code>Fish2</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/mask.png"><code>Mask</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/revolver.png"><code>Revolver</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/gface.png"><code>gface</code><br><code>ElctroBall</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/ghost.png"><code>Ghost</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/sentry.png"><code>Sentry</code></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="minis">
+    <thead>
+        <tr>
+            <th align="center" colspan="5">Minis</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/minidrone.png"><code>MiniDrone</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/minibird.png"><code>MiniBird</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/minifly.png"><code>Fly</code><br><code>MiniFly</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/minifish.png"><code>MiniFish</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/minifishwhite.png"><code>MiniFishWhite</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/miniflea.png"><code>MiniFlea</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/minifrog.png"><code>MiniFrog</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/minifrogwhite.png"><code>MiniFrogWhite</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/minighost.png"><code>MiniGhost</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/miniwisp.png"><code>MiniWisp</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/minirat.png"><code>MiniRat</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/miniratwhite.png"><code>MiniRatWhite</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/miniworm.png"><code>MiniWorm</code></td>
+            <td align="center"></td>
+            <td align="center"></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="decorations">
+    <thead>
+        <tr>
+            <th align="center" colspan="5">Decorations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/decoration0.png"><code>Decoration0</code></td>
+            <td align="center" colspan="2"><img src="content/reference/art-alts/./../../../assets/images/art-alts/decoration1.png"><code>Decoration1</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/decoration8.png"><code>Deocration8</code><br><code>Deco10</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/decoration9.png"><code>Decoration9</code></td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2"><img src="content/reference/art-alts/./../../../assets/images/art-alts/decoration4.png"><code>Decoration4</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/decoration5.png"><code>Decoration5</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/decoration6.png"><code>Deocration6</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/decoration7.png"><code>Decoration7</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/deco11.png"><code>Deco11</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/inst10.png"><code>inst10</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/inst11.png"><code>inst11</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/eyeball.png"><code>eyeball</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/escapeend.png"><code>EscapeEnd</code></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="retro">
+    <thead>
+        <tr>
+            <th align="center" colspan="5">Retro</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/playerretro.png"><code>PlayerRetro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cannonretro.png"><code>Cannonretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cannonstandretro.png"><code>Cannonstandretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cannonballretro.png"><code>cannonballretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cannonballfireretro.png"><code>cannonballfireretro</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/gasserretro.png"><code>Gasserretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/gascloudretro.png"><code>GasCloudretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/floaterretro.png"><code>Floaterretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/floater2.png"><code>Floater2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/floaterglitch.png"><code>FloaterGlitch</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/skullfloaterretro.png"><code>SkullFloaterretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/skullslugretro.png"><code>SkullSlugretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/skullcrowretro.png"><code>SkullCrowretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cheepretro.png"><code>cheepretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/frogretro.png"><code>Frogretro</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/retroorbsmall.png"><code>RetroOrbSmall</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/retroorblarge.png"><code>retroOrbLarge</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/pacman.png"><code>pacman</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/retroelectroball.png"><code>RetroElectroBall</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/retroghost.png"><code>RetroGhost</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/maskretro.png"><code>Maskretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/chainchompretro.png"><code>ChainChompretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/chainhitchretro.png"><code>ChainHitchretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/chainlinkretro.png"><code>ChainLinkretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/revolverretro.png"><code>Revolverretro</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/bouncerretro.png"><code>Bouncerretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/creepingmassretro.png"><code>CreepingMassRetro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/hopperretro.png"><code>hopperretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/thwampeyeretro.png"><code>ThwampEyeRetro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/thwampgearretro.png"><code>ThwampGearRetro</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/slugretro.png"><code>Slugretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/retrochargerslug.png"><code>RetroChargerSlug</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/splatterretro.png"><code>Splatterretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/bulletretro.png"><code>bulletretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/retrofish.png"><code>RetroFish</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/spitterzretro.png"><code>SpitterZretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/spitteryretro.png"><code>SpitterYretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/spitterxretro.png"><code>SpitterXretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/coin.png"><code>Coin</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/cartend.png"><code>cartend</code></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="npcs">
+    <thead>
+        <tr>
+            <th align="center" colspan="5">NPCs</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc0.png"><code>NPC0</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc1.png"><code>NPC1</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc2.png"><code>NPC2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc3.png"><code>NPC3</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc4.png"><code>NPC4</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc5.png"><code>NPC5</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc6.png"><code>NPC6</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc7.png"><code>NPC7</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc8.png"><code>NPC8</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc9.png"><code>NPC9</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc10.png"><code>NPC10</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc11.png"><code>NPC11</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc12.png"><code>NPC12</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc13.png"><code>NPC13</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc14.png"><code>NPC14</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc15.png"><code>NPC15</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc16.png"><code>NPC16</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npc17.png"><code>NPC17</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcb1.png"><code>NPCB1</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcb2.png"><code>NPCB2</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcb3.png"><code>NPCB3</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcb4.png"><code>NPCB4</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcb5.png"><code>NPCB5</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcb6.png"><code>NPCB6</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcb7.png"><code>NPCB7</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcg1.png"><code>NPCG1</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcg2.png"><code>NPCG2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcg3.png"><code>NPCG3</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcg4.png"><code>NPCG4</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcg5.png"><code>NPCG5</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcg6.png"><code>NPCG6</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcg7.png"><code>NPCG7</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcd1.png"><code>NPCD1</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcd2.png"><code>NPCD2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcd3.png"><code>NPCD3</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcd4.png"><code>NPCD4</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcd5.png"><code>NPCD5</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcd6.png"><code>NPCD6</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcd7.png"><code>NPCD7</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcx1.png"><code>NPCX1</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcx2.png"><code>NPCX2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcx3.png"><code>NPCX3</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcx4.png"><code>NPCX4</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npcx5.png"><code>NPCX5</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npch1.png"><code>NPCH1</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npch2.png"><code>NPCH2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npch3.png"><code>NPCH3</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/npch4.png"><code>NPCH4</code></td>
+            <td align="center"></td>
+            <td align="center"></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="tilesets">
+    <thead>
+        <tr>
+            <th align="center" colspan="2">Tilesets</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tilecity.png"><code>Tilecity</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tilefield.png"><code>Tilefield</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tilecaves.png"><code>Tilecaves</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tiletox.png"><code>Tiletox</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tiletox2.png"><code>Tiletox2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tilehell.png"><code>Tilehell</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tileairship.png"><code>Tileairship</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tilecomplex.png"><code>Tilecomplex</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/theglow.png"><code>theglow</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tileend.png"><code>TileEnd</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tileretro.png"><code>Tileretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tileglitch.png"><code>TileGlitch</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tilesewers.png"><code>Tilesewers</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tile.png"><code>Tile</code></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="overlays">
+    <thead>
+        <tr>
+            <th align="center" colspan="2">Overlays</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/overlayscity.png"><code>Overlayscity</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/overlaysfield.png"><code>Overlaysfield</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/overlayscaves.png"><code>Overlayscaves</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/overlaystox.png"><code>Overlaystox</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/overlaystox2.png"><code>Overlaystox2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/overlayshell.png"><code>Overlayshell</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/overlaysairship.png"><code>Overlaysairship</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/overlayscomplex.png"><code>Overlayscomplex</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/overlaystheglow.png"><code>Overlaystheglow</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/overlaysend.png"><code>Overlaysend</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/overlaysretro.png"><code>Overlaysretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/tileoverlays.png"><code>TileOverlays</code></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="backgrounds">
+    <thead>
+        <tr>
+            <th align="center" colspan="2">Backgrounds</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/bg2.png"><code>bg2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/ch2bg.png"><code>ch2bg</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/ch3bg.png"><code>ch3bg</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/ch4abg.png"><code>ch4abg</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/background.png"><code>Background</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/hellbg.png"><code>hellbg</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/airshipbg.png"><code>airshipbg</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/field2bg.png"><code>field2bg</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/bgsolid.png"><code>bgsolid</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/neverbg.png"><code>neverbg</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/bgretro.png"><code>bgretro</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/bgretrox.png"><code>bgretrox</code></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/bgretro2.png"><code>bgretro2</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/none.png"><code>None</code></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="foregrounds">
+    <thead>
+        <tr>
+            <th align="center" colspan="2">Foregrounds</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/fg1.png"><code>fg1</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/fgretro.png"><code>fgretro</code></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="midfx">
+    <thead>
+        <tr>
+            <th align="center" colspan="2">Mid-FX Layers</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/solidbox.png"><code>SolidBox</code></td>
+            <td align="center"><img src="content/reference/art-alts/./../../../assets/images/art-alts/shadebox.png"><code>ShadeBox</code></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="particles">
+    <thead>
+        <tr>
+            <th align="center" colspan="2">Particles</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>ToxicParticle</code></td>
+            <td>Used in the toxic waterfall particle effect.</td>
+        </tr>
+        <tr>
+            <td><code>ToxicParticle2</code></td>
+            <td>An unused variant of the toxic particle.</td>
+        </tr>
+        <tr>
+            <td><code>TestParticle</code></td>
+            <td>Used for the falling tile dust particle.</td>
+        </tr>
+        <tr>
+            <td><code>TestParticle2</code></td>
+            <td>Used in a variety of different particle effects.</td>
+        </tr>
+        <tr>
+            <td><code>soliddrip</code></td>
+            <td>Used in a variety of liquid-based particle effects.</td>
+        </tr>
+        <tr>
+            <td><code>spark</code></td>
+            <td>A sparking particle.</td>
+        </tr>
+        <tr>
+            <td><code>spark2</code></td>
+            <td>A slight variation on the other sparking particle.</td>
+        </tr>
+        <tr>
+            <td><code>Rock</code></td>
+            <td>Used in the <code>rocks</code> particle effect.</td>
+        </tr>
+        <tr>
+            <td><code>Rock2</code></td>
+            <td>Used in a variety of block breaking particle effects.</td>
+        </tr>
+        <tr>
+            <td><code>Light</code></td>
+            <td>An orb of light used in a single particle effect.</td>
+        </tr>
+        <tr>
+            <td><code>Lightning</code></td>
+            <td>A lightning effect used in Nevermore and The Future.</td>
+        </tr>
+        <tr>
+            <td><code>Leaf</code></td>
+            <td>Falling leaves particle.</td>
+        </tr>
+        <tr>
+            <td><code>Leaf2</code></td>
+            <td>A slight variation of the falling leaves particle.</td>
+        </tr>
+        <tr>
+            <td><code>goo1</code></td>
+            <td>An unused goo particle.</td>
+        </tr>
+        <tr>
+            <td><code>goo2</code></td>
+            <td>A goo particle used when splashing in toxic water.</td>
+        </tr>
+        <tr>
+            <td><code>Gibs</code></td>
+            <td>Unused player death particles.</td>
+        </tr>
+        <tr>
+            <td><code>Gibs2</code></td>
+            <td>One of the particles used in the player's death.</td>
+        </tr>
+        <tr>
+            <td><code>DistortionParticle</code></td>
+            <td>Greeny-red blobs used in distortion-based particles.</td>
+        </tr>
+        <tr>
+            <td><code>DistortionParticle2</code></td>
+            <td>A slight variation of the other distortion-based particle.</td>
+        </tr>
+        <tr>
+            <td><code>WindCloud</code></td>
+            <td>A variety of different cloud shapes.</td>
+        </tr>
+        <tr>
+            <td><code>Cloud</code></td>
+            <td>Used in player/enemy bouncing particles and the exploding mines.</td>
+        </tr>
+        <tr>
+            <td><code>blackpart</code></td>
+            <td>One of the effects used in the player's death.</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="cutscenes">
+    <thead>
+        <tr>
+            <th align="center" colspan="2">Cutscenes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>towerending</code></td>
+            <td>Completing the Acceptance cartridge.</td>
+        </tr>
+        <tr>
+            <td><code>allstarending</code></td>
+            <td>Completing the All Stars cartridge.</td>
+        </tr>
+        <tr>
+            <td><code>towercart</code></td>
+            <td>Collecting all Iron Carts.</td>
+        </tr>
+        <tr>
+            <td><code>supercart</code></td>
+            <td>Collecting all Regular Carts</td>
+        </tr>
+        <tr>
+            <td><code>NevermoreCutscene</code></td>
+            <td>Intro after losing 450 tumors.</td>
+        </tr>
+        <tr>
+            <td><code>NevermoreCutscene_Win</code></td>
+            <td>True ending for the game after beating Nevermore.</td>
+        </tr>
+        <tr>
+            <td><code>GameIntro</code></td>
+            <td>Intro cutscene before playing the cartridge.</td>
+        </tr>
+        <tr>
+            <td><code>CartIntro</code></td>
+            <td>Intro cutscene before playing the cartridge, with The End is Nigh cart intro as well.</td>
+        </tr>
+        <tr>
+            <td><code>IntroCutscene</code></td>
+            <td>Intro cutscene after dying in the intor cartridge.</td>
+        </tr>
+        <tr>
+            <td><code>IntroCutscene_Egg</code></td>
+            <td>Cutscene played if the intor cartridge is completed.</td>
+        </tr>
+        <tr>
+            <td><code>GameOverCutscene</code></td>
+            <td>Game over screen in The Future levels.</td>
+        </tr>
+        <tr>
+            <td><code>GameOverCutscene_Cart</code></td>
+            <td>Game over screen in the cartridge levels.</td>
+        </tr>
+        <tr>
+            <td><code>EscapeSequenceCutscene</code></td>
+            <td>Intro to the Acceptance escape sequence.</td>
+        </tr>
+        <tr>
+            <td><code>EscapeSequenceCutscene_Win</code></td>
+            <td>Ending cutscene for beating the Acceptance escape sequence.</td>
+        </tr>
+        <tr>
+            <td><code>CartIntro2</code></td>
+            <td>Cartridge cover intro with fade into the level.</td>
+        </tr>
+        <tr>
+            <td><code>ContinueCutscene</code></td>
+            <td>Continue screen when all lives are lost in a retro cartridge.</td>
+        </tr>
+        <tr>
+            <td><code>CartWin</code></td>
+            <td>Screen for beating a cartridge.</td>
+        </tr>
+        <tr>
+            <td><code>AssembleDudeCutscene</code></td>
+            <td>Cutscene played after all friend pieces have been assembled.</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="transitions">
+    <thead>
+        <tr>
+            <th align="center" colspan="2">Transitions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>Wipetranswarp</code></td>
+            <td>Map warping and leaving a secret transition.</td>
+        </tr>
+        <tr>
+            <td><code>Wipetranssteven</code></td>
+            <td>Entering one of The Future levels via a Steven.</td>
+        </tr>
+        <tr>
+            <td><code>Wipetransright</code></td>
+            <td>Screen wipe from left-to-right.</td>
+        </tr>
+        <tr>
+            <td><code>Wipetransleft</code></td>
+            <td>Screen wipe from right-to-left.</td>
+        </tr>
+        <tr>
+            <td><code>Wipetransdown</code></td>
+            <td>Screen wipe from top-to-bottom.</td>
+        </tr>
+        <tr>
+            <td><code>Wipetransup</code></td>
+            <td>Screen wipe from bottom-to-top.</td>
+        </tr>
+        <tr>
+            <td><code>Wipetrans</code></td>
+            <td>Screen wipe from left-to-right.</td>
+        </tr>
+        <tr>
+            <td><code>fadetrans</code></td>
+            <td>Retro fade to black.</td>
+        </tr>
+        <tr>
+            <td><code>halfretrofadetrans</code></td>
+            <td>Retro fade to black and normal fade out from black.</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="gui">
+    <thead>
+        <tr>
+            <th align="center" colspan="2">GUI</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>Unlockinfo</code></td>
+            <td>"Cartridge Unlocked" pop-up message.</td>
+        </tr>
+        <tr>
+            <td><code>Unlockinfo2</code></td>
+            <td>"Warp Point Unlocked" pop-up message.</td>
+        </tr>
+        <tr>
+            <td><code>TumorIcon</code></td>
+            <td>Various tumor icons used for the top-left tumor count.</td>
+        </tr>
+        <tr>
+            <td><code>TitleScreen</code></td>
+            <td>Game intro followed by the title screen animation.</td>
+        </tr>
+        <tr>
+            <td><code>SpeechBubble</code></td>
+            <td>NPC speech bubble.</td>
+        </tr>
+        <tr>
+            <td><code>SpeechBubble2</code></td>
+            <td>NPC speech bubble.</td>
+        </tr>
+        <tr>
+            <td><code>SkipPrompt</code></td>
+            <td>"Skip Cutscene" prompt.</td>
+        </tr>
+        <tr>
+            <td><code>SaveFileCard</code></td>
+            <td>One of the save file ghosts with unlock info.</td>
+        </tr>
+        <tr>
+            <td><code>RetroLivesCounter</code></td>
+            <td>Counter of the current number of lives in a cartridge.</td>
+        </tr>
+        <tr>
+            <td><code>prog_cart</code></td>
+            <td>Progress counter for cartridges on the select screen.</td>
+        </tr>
+        <tr>
+            <td><code>PauseMenu</code></td>
+            <td>Pause menu screen.</td>
+        </tr>
+        <tr>
+            <td><code>MapPing</code></td>
+            <td>Downward arrow that points to important locations on the map.</td>
+        </tr>
+        <tr>
+            <td><code>MapIcon</code></td>
+            <td>Ash icon that moves around the map.</td>
+        </tr>
+        <tr>
+            <td><code>map_node</code></td>
+            <td>Singular dotted-line and area icon with text for the map.</td>
+        </tr>
+        <tr>
+            <td><code>Map</code></td>
+            <td>Entire map menu with all of the map nodes.</td>
+        </tr>
+        <tr>
+            <td><code>MainMenu_Selector</code></td>
+            <td>Text options on the main menu of the game.</td>
+        </tr>
+        <tr>
+            <td><code>LoadFile</code></td>
+            <td>Entire save file selection screen.</td>
+        </tr>
+        <tr>
+            <td><code>LevelTitle</code></td>
+            <td>Area label frames that fade in and out.</td>
+        </tr>
+        <tr>
+            <td><code>LetterBox</code></td>
+            <td>Letterboxing effect.</td>
+        </tr>
+        <tr>
+            <td><code>HUD</code></td>
+            <td>All of the on-screen HUD elements (including Acceptance escape counter).</td>
+        </tr>
+        <tr>
+            <td><code>DebugConsole</code></td>
+            <td>Debug console screen.</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table id="miscellaneous">
+    <thead>
+        <tr>
+            <th align="center" colspan="2">Miscellaneous</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>BigLink</code></td>
+            <td>Three chain links with a red scribble drawn through them.</td>
+        </tr>
+        <tr>
+            <td><code>x</code></td>
+            <td>Unused game over message using the normal font.</td>
+        </tr>
+        <tr>
+            <td><code>Warp</code></td>
+            <td>A static piece of the scret "Leave Area" warp graphic.</td>
+        </tr>
+        <tr>
+            <td><code>OS_Indicator</code></td>
+            <td>Circle containing Ash's face.</td>
+        </tr>
+        <tr>
+            <td><code>EscapeTrigger</code></td>
+            <td>Doodle of a character holding a bomb.</td>
+        </tr>
+        <tr>
+            <td><code>Carts</code></td>
+            <td>Placeholder cartridge art.</td>
+        </tr>
+        <tr>
+            <td><code>CamOverlay</code></td>
+            <td>Random text in the top-left corner of the screen.</td>
+        </tr>
+        <tr>
+            <td><code>PlayerTrail</code></td>
+            <td>Player's trail in the air.</td>
+        </tr>
+        <tr>
+            <td><code>PlayerTrailGround</code></td>
+            <td>Player's trail on the ground.</td>
+        </tr>
+        <tr>
+            <td><code>PlayerTrailGround2</code></td>
+            <td>Slightly different variation of the player's trail on the ground.</td>
+        </tr>
+        <tr>
+            <td><code>PlayerTrailDucking</code></td>
+            <td>Player's trail whilst ducking.</td>
+        </tr>
+        <tr>
+            <td><code>ButtonBlock_Out</code></td>
+            <td>Tile shrinking animation used when a switch despawns a tile.</td>
+        </tr>
+        <tr>
+            <td><code>ButtonBlock_In</code></td>
+            <td>Tile expanding animation used when a switch spawns a tile.</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="adding-art-alts"><a class="header" href="#adding-art-alts">Adding Art Alts</a></h1>
+<p>Adding art alts. can be done by modifying the game’s SWF. Making art alts.
+requires an understanding of existing art alts. so that frame and layer patterns
+can be replicated correctly based on what is being created (e.g. all tilesets
+require the same basic layout, just different graphics). Once the graphics have
+been developed, AS (ActionScript) linkage must be applied to that the game has a
+name it can use to reference the asset, just like with the other art alts.</p>
+<p>[UNDER DEVELOPMENT: Current information is bare-bones and will be updated with
+more detail in a future update.]</p>
+<h1 id="remarks-2"><a class="header" href="#remarks-2">Remarks</a></h1>
+<p>Art alts are used and referenced in a variety of different files to add graphics
+to certain entities within the game. These files are as follows: 
+<a href="content/reference/art-alts/../npcs/npcs.html"><code>data\npcs.txt</code></a>, <a href="content/reference/art-alts/../tilesets.html"><code>data\tilesets.txt</code></a>,
+and <code>data\particles.txt</code>.
+Clicking on any of these filenames will take you to their respective pages
+for more information (particles not yet available).</p>
+<p>Not all art alts. will work in a usable fashion and be compatible with one
+another. A good example being any of the tilesets which, if applied to something
+like an NPC, will simply display all of its individual tile graphics in rapid
+succession. Noting down all of these potential incompatibilities would be far
+too large and complex of a list, so trial-and-error, as well as practice, is
+the best method for figuring out what will and will not work.</p>
+<p>If the game crashes with an error referring to a movie clip not being found, it
+is most likely due to an art alt. being named incorrectly in one of the files
+referenced above. </p>
+<h1 id="tilesets"><a class="header" href="#tilesets">Tilesets</a></h1>
+<p>Location in the unpacked data: <code>data\tilesets.txt</code></p>
+<p>The tilesets file is one of the most important when modding TEIN, especially in
+regards to adding new areas/zones. The file dictates general information about a
+given area, but also defines many of the traits and aspects that will make an
+area unique (graphical elements, what music to use, palette, etc.).</p>
+<p>Here is an example tileset taken from the game, (&quot;The End&quot; downward secret area
+tileset):</p>
+<pre><code>1xd { #1 bonus downward areas
+  area_name &quot;The End&quot;
+  area_label_frame 1
+  tile_graphics Tilecity
+  overlay_graphics Overlayscity
+  background_graphics bg2
+  palette 1
+  fx_shader reflectionripples
+
+
+  music [**hmk_secret_intro.ogg, hmk_secret_loop.ogg**]
+  ambience rain.ogg
+  stop_previous_music false
+
+  music_volume 1
+  ambience_volume 1
+
+  area_type normal
+
+  tile_particle_1 drip
+
+  npc_1 NPCD6
+  npc_2 NPC0
+  npc_3 none
+}
+</code></pre>
+<p>Whilst this may seem complex, the syntax for a tileset can be broken down and
+represented as the following:</p>
+<pre><code>[**TILESET_NAME**] {
+  [**VARIABLE_NAME**] [VALUE]
+  ...
+}
+</code></pre>
+<p>The # followed by text, in The End example, is simply a comment and not
+interpreted/read by the game itself, hence why it was not added in the
+simplified syntax breakdown.</p>
+<p>So, overall, the &quot;tilesets.txt&quot; file simply stores a series of tilesets that
+define properties, features, and aspects of the different zones in the game.
+Allowing for them to make use of different assets, music, NPCs, alternate
+graphics, particles, etc. </p>
+<h2 id="contents"><a class="header" href="#contents">Contents</a></h2>
+<ul>
+<li><a href="content/reference/./vars.html"><strong>Variables Overview</strong></a> - Details about the Area Name variable.</li>
+<li><a href="content/reference/./area_name.html"><strong>Area Name</strong></a> - Details about the Area Label Frame variable.</li>
+<li><a href="content/reference/./area_label.html"><strong>Area Label Frame</strong></a> - Details about the Area Type variable.</li>
+<li><a href="content/reference/./area_type.html"><strong>Area Type</strong></a> - Details about the Tile Graphics variable.</li>
+<li><a href="content/reference/./tiles.html"><strong>Tile Graphics</strong></a> - Details about the Overlay Graphics variable.</li>
+<li><a href="content/reference/./overlay.html"><strong>Overlay Graphics</strong></a> - Details about the Background Graphics variable.</li>
+<li><a href="content/reference/./back.html"><strong>Background Graphics</strong></a> - Details about the Foreground Graphics variable.</li>
+<li><a href="content/reference/./front.html"><strong>Foreground Graphics</strong></a> - Details about the Palette variable.</li>
+<li><a href="content/reference/./palette.html"><strong>Palette</strong></a> - Details about the Music variable.</li>
+<li><a href="content/reference/./music.html"><strong>Music</strong></a> - Details about the Ambience variable.</li>
+<li><a href="content/reference/./ambience.html"><strong>Ambience</strong></a> - Details about the Music Volume variable.</li>
+<li><a href="content/reference/./music_vol.html"><strong>Music Volume</strong></a> - Details about the Ambience Volume variable.</li>
+<li><a href="content/reference/./ambi_vol.html"><strong>Ambience Volume</strong></a> - Details about the Stop Previous Music variable.</li>
+<li><a href="content/reference/./stop_music.html"><strong>Stop Previous Music</strong></a> - Details about the NPC variable.</li>
+<li><a href="content/reference/./npc.html"><strong>NPC</strong></a> - Details about the Art Alts. variable.</li>
+<li><a href="content/reference/./alts.html"><strong>Art Alts</strong></a> -  Details about the Toxic Timer variable.</li>
+<li><a href="content/reference/./toxic.html"><strong>Toxic Timer</strong></a> - Details about the Cart Intro PNG variable.</li>
+<li><a href="content/reference/./cart_png.html"><strong>Cart Intro PNG</strong></a> - Details about the Cart Intro Palette variable.</li>
+</ul>
+<h1 id="variables-overview"><a class="header" href="#variables-overview">Variables Overview</a></h1>
+<ul>
+<li><strong><a href="content/reference/tilesets/./area_name.html">area_name</a></strong> - The name that will appear on the save file. It is also used to reference the area in certain instances.</li>
+<li><strong><a href="content/reference/tilesets/./area_label.html">area_label_frame</a></strong> - The title graphic in the game’s SWF that is displayed when the area is entered.</li>
+<li><strong><a href="content/reference/tilesets/./area_type.html">area_type</a></strong> - What sub-type of area is it, defines certain properties of the level (e.g. dark levels use tumors as lives).</li>
+<li><strong><a href="content/reference/tilesets/./tiles.html">tile_graphics</a></strong> - The graphical tileset to use, changes details about the visuals of the area’s layers.</li>
+<li><strong><a href="content/reference/tilesets/./overlay.html">overlay_graphics</a></strong> - The graphics that are displayed on top of the active layer (bricks, rocks, bones, etc.).</li>
+<li><strong><a href="content/reference/tilesets/./back.html">background_graphics</a></strong> - The background image to use for the area.</li>
+<li><strong><a href="content/reference/tilesets/./front.html">foreground_graphics</a></strong> - The foreground image to use for the area.</li>
+<li><strong>midfx_graphics</strong> - ???</li>
+<li><strong>midfx_layer</strong> - ???</li>
+<li><strong>fx_shader</strong> - The shader to apply certain visual effects in the area.</li>
+<li><strong>fx_shader_mid</strong> - ???</li>
+<li><strong>shader_param</strong> - Controls the intensity of the mid_fx layer (from 0 to 1, decimal numbers valid).</li>
+<li><strong><a href="content/reference/tilesets/./palette.html">palette</a></strong> - The row of the <code>palette.png</code> to use for rendering graphics. (Palette rows start couting from 0, not 1).</li>
+<li><strong><a href="content/reference/tilesets/./music.html">music</a></strong> - The music to play whilst in the area.</li>
+<li><strong><a href="content/reference/tilesets/./ambience.html">ambience</a></strong> - The ambient background noise that will be played in the area.</li>
+<li><strong><a href="content/reference/tilesets/./music_vol.html">music_volume</a></strong> - The volume the area’s music should be played at.</li>
+<li><strong><a href="content/reference/tilesets/./ambi_vol.html">ambience_volume</a></strong> - The volume the area’s ambience should be played at.</li>
+<li><strong><a href="content/reference/tilesets/./stop_music.html">stop_previous_music</a></strong> - A flag stating whether the previous music track should stop or continue playing silently.</li>
+<li><strong>tile_particle_1 (to 5)</strong> - A particle effect, defined in <code>particles.txt</code>, to assign to the two particle tiles.</li>
+<li><strong>global_particle_1 (to ???)</strong> - A particle effect, defined in <code>particles.txt</code>, to spawn globally throughout the area.</li>
+<li><strong><a href="content/reference/tilesets/./npc.html">npc_1 (to 3)</a></strong> - The NPCs, defined in npcs.txt, to assign to the three NPC tiles used in the level.</li>
+<li><strong>decoration_1 (to ???)</strong> - The decorations to assign to the ??? decoration tiles used in the level.</li>
+<li><strong><a href="content/reference/tilesets/./alts.html">art_alts</a></strong> - Alternate sprite graphics to use on entities that allow for alts.</li>
+<li><strong><a href="content/reference/tilesets/./toixc.html">toxic_timer</a></strong> - Controls how long toxic clouds and water will take to kill the player in seconds.</li>
+<li><strong><a href="content/reference/tilesets/./cart_png.html">cart_intro_png</a></strong> - The filename from the <code>textures\</code> folder to use as the cartridge area’s intro graphic.</li>
+<li><strong><a href="content/reference/tilesets/./cart_palette.html">cart_intro_palette</a></strong> - The palette to use when rendering the cartridge intro graphic.</li>
+</ul>
+<h1 id="area-name"><a class="header" href="#area-name">Area Name</a></h1>
+<p>The area name is a unique identifier for a given area, it is the text that will
+appear on the save file when a game is saved within the zone, when writing the
+label frame within the tilesets file, it should be wrapped in double-quotes
+&quot;Example Name&quot; allowing for spaces. Not doing this may confuse the game and
+cause problems when reading the area’s tileset.</p>
+<p>Whilst it may be assumed that this variable also controls the level name
+(bottom-right corner in-game), this is in fact incorrect. The individual level
+names are controlled via the <code>levelinfo.txt</code> file, in the <code>data\</code> folder of the
+unpacked game files; for more information on editing level info, click here. The
+text graphic displayed at the top of the screen when a new zone is entered is
+also not controlled by this property, see the Area Label Frame section below for
+more info.</p>
+<p>The only other factor controlled by the area name is the slant effect seen in
+Nevermore/The Future (see image below). By setting an area’s name to &quot;Nevermore&quot;
+it will be given said slanting effect, but as stated previously, will also
+result in the, most likely, unwanted side-effect of the save file displaying
+&quot;Nevermore&quot;. The only, currently known, solution to setting the slant effect
+is by hacking and modifying a plain-text value contained withing the game’s
+executable located at address 0x00232A18. However, performing the hack and
+handling the legality of redistributing the executable is more effort than it is
+worth. Furthermore, the string appears to be of a fixed length, or at the very
+least only contain a few more bytes that could be overwritten. Meaning assigning
+a zone like the Wall of Sorrow the slanting effect would be impossible, due to
+this limitation. </p>
+<p><img src="content/reference/tilesets/../../assets/images/screenshots/scrn_slant_01.png" alt="Nevermore slanting effect" />
+Notice the slight slant down on the left side of the screen, when compared to the right.</p>
+<h1 id="area-label-frame"><a class="header" href="#area-label-frame">Area Label Frame</a></h1>
+<p>Area Label Frame</p>
+<p>The area label is the unique graphic that appears on screen whenever a new area
+is entered. The area label frame variable refers to a specific frame of the area
+label symbol, located inside the game’s SWF, informing the game which graphic to
+render--basically acting as an ID for each graphic. Below is a list detailing
+what frame holds each graphic, and some examples of area labels on the right:</p>
+<ul>
+<li>00 - No Area Label</li>
+<li>01 - The End</li>
+<li>02 - Arid Flats</li>
+<li>03 - Overflow</li>
+<li>04 - The Split</li>
+<li>05 - Wall of Sorrow</li>
+<li>06 - SS Exodus</li>
+<li>07 - Retrograde</li>
+<li>08 - The Machine</li>
+<li>09 - The Hollows</li>
+<li>10 - Golgotha</li>
+<li>11 - Anguish</li>
+<li>12 - Gloom</li>
+<li>13 - Blight</li>
+<li>14 - Ruin</li>
+<li>15 - Nevermore</li>
+<li>16 - The Future</li>
+</ul>
+<p><img src="content/reference/tilesets/../../assets/images/arealabels.png" alt="Area Image Labels" /></p>
+<h2 id="area-label-examples"><a class="header" href="#area-label-examples">Area Label Examples</a></h2>
+<p>Adding new area labels, or modifying existing ones, involves modifying the
+game’s SWF. For more information on the SWF and modifying it, click here. </p>
+<h1 id="area-type"><a class="header" href="#area-type">Area Type</a></h1>
+<p>The <code>area_type</code> variable controls specific aspects of a tileset/area,
+such as how it will handle deaths, etc. If the area type variable is left
+undefined, then the area will be of type <code>normal</code> -- the default value. The
+variable accepts the following values, with each one having a unique effect that
+will change the way the area acts:</p>
+<h2 id="ironcart"><a class="header" href="#ironcart"><code>ironcart</code></a></h2>
+<p>The retro monitor filter will be applied, as will retro sounds, and a cart intro
+graphic (cart_intro_png) will be displayed when entering the area. Dying will
+send the player back to the first level in the area; if used in an area that was
+not reached via the TV/Console, then the player will be spawned in the last
+non-ironcart room they were in. Using the &quot;Exit Cart&quot; option from the menu will
+take the player back to 1-1.</p>
+<h2 id="cart"><a class="header" href="#cart"><code>cart</code></a></h2>
+<p>The retro monitor filter will be applied, as will retro sounds, and a cart intro
+graphic (cart_intro_png) will be displayed when entering the area. The player
+will have a limited number of lives to beat the area. Using the &quot;Exit Cart&quot;
+option from the menu will take the player back to 1-1.</p>
+<h2 id="glitch"><a class="header" href="#glitch"><code>glitch</code></a></h2>
+<p>The retro monitor filter will be applied, as will retro sounds, and a cart intro
+graphic (cart_intro_png) will be displayed when entering the area. Graphical
+elements will be reset/randomised on every death. Using the &quot;Exit Cart&quot; option
+from the menu will take the player back to 1-1.</p>
+<h2 id="normal"><a class="header" href="#normal"><code>normal</code></a></h2>
+<p>The standard areas in the game, there are no extra effects or parameters added.</p>
+<h2 id="dark"><a class="header" href="#dark"><code>dark</code></a></h2>
+<p>The current tumor count will act as the player’s lives, and losing all lives
+will respawn the player at the first level in the area.</p>
+<h1 id="tile-graphics"><a class="header" href="#tile-graphics">Tile Graphics</a></h1>
+<p>The <code>tile_graphics</code> variable dictates what graphics are used when drawing the
+environment tiles for the game, these include the solid tiles and the modular
+background layer pieces. As can be seen in the example images, this could mean
+changing a damaged building wall in The End tileset, to a natural rocky wall in
+the Arid Flats tileset, and so on; allowing for each area to have a unique theme
+and visual flare. As well as the graphics for the environment tiles themselves,
+the value given to the tile graphics will also control what default decorations
+an area will use. However, these decorations can be overwritten by assigning new
+ones using the <code>decoration_1</code> (to ???) variable. For more information on what these
+default decorations are, see the Decorations section on this page. If the
+variable is unset then it will be given the value of <code>Tile</code>, the default value.
+None is not a valid value for tile graphics, and will result in the game crashing
+on startup.</p>
+<p>Whilst it may be logical to also assume that the tile graphics will impact the
+small images drawn on top of the tiles (bricks, rocks, etc.), this is in fact not
+true and is instead controlled by the <code>overlay_graphics</code> variable. Furthermore,
+graphics such as Water, Lava, and Pollution/Toxic are also controlled via other
+factors, in this case shaders. For more info on adding shaders to tilesets, click
+here.</p>
+<p>The specific graphics assigned to each tile within the tileset is determined
+randomly when the level is loaded, and in the case of <code>TileGlitch</code> graphics,
+further randomisation to the tiles will occur.</p>
+<p>As the tile graphics variable takes in movie clips as its value, this means that
+any of the available art alts. can be used as tile graphics. For a full list on
+all the available art alts. see the <a href="content/reference/tilesets/../art_alts/overview.html">Art Alts</a>. section.</p>
+<p>Examples of the different tile graphics can be seen below.</p>
+<script src="../../../assets/scripts/alts.js"></script>
+<script type="text/javascript">
+    display_alt("tiles", 
+        per_row = 2,
+        ord_name = [
+            "theglow", 
+            "Tile",
+            "Tileairship",
+            "Tilecaves",
+            "Tilecity",
+            "Tilecomplex",
+            "TileEnd",
+            "Tilefield",
+            "TileGlitch",
+            "Tilehell",
+            "Tileretro",
+            "Tilesewers",
+            "Tiletox",
+            "Tiletox2"
+        ],
+        ord_extra = [
+            "(Ruin, and Acceptance)", 
+            "(N/A)", 
+            "(SS Exodus)",
+            "(Overflow, and Blight)",
+            "(The End, and Anguish)",
+            "(The Machine)",
+            "(Nevermore, and The Future)",
+            "(Arid Flats, and Retrograde)",
+            "(Glitch Carts)",
+            "(Golgotha, and Gloom)",
+            "(Retro and Iron Carts)",
+            "(Unused)",
+            "(The Split, and Wall of Sorrow)",
+            "(The Hollows)"
+        ])</script>
+<h1 id="overlay-graphics"><a class="header" href="#overlay-graphics">Overlay Graphics</a></h1>
+<p>The <code>overlay_graphics</code> variable dictates what graphics are drawn on top of
+the active/solid tiles and the first layer of modular background tiles. As can
+be seen in the example images, this could mean changing a few bricks in
+The End overlay, to a cluster of rocks in the Arid Flats overlay, and so on;
+allowing for each area to have a unique theme and visual flare. If the variable
+is unset then it will be given the value of <code>TileOverlays</code>, the default
+value. None is also a valid value for overlay graphics, and will result in no
+overlays being displayed for the area.</p>
+<p>The specific graphics overlayed on each tile in the level is determined randomly
+when the level is loaded, and if <code>TileGlitch</code> is being used as the 
+<code>tile_graphics</code> value, then further randomisation to the tiles and overlays
+will occur.</p>
+<p>As the overlay graphics variable takes in movie clips as its value, this means
+that any of the available art alts. can be used as overlay graphics. For a full
+list on all the available art alts. see the <a href="content/reference/tilesets/../art_alts/overview.html">Art Alts.</a>
+section.</p>
+<p>Examples of the different overlay graphics can be seen below. </p>
+<script src="../../../assets/scripts/alts.js"></script>
+<script type="text/javascript">
+    display_alt("overs", 
+        per_row = 2,
+        ord_name = [
+           "Overlaysairship",
+           "Overlayscaves",
+           "Overlayscity",
+           "Overlayscomplex",
+           "Overlaysend",
+           "Overlaysfield",
+           "Overlayshell",
+           "Overlaysretro",
+           "Overlaystheglow",
+           "Overlaystox",
+           "Overlaystox2",
+           "TileOverlays"
+        ],
+        ord_extra = [
+            "(SS Exodus)",
+            "(Overflow, and Blight)",
+            "(The End, and Anguish)",
+            "(The Machine)",
+            "(Nevermore, and The Future)",
+            "(Arid Flats, and Retrograde)",
+            "(Glitch Carts)",
+            "(Golgotha, and Gloom)",
+            "(Retro and Iron Carts)",
+            "(Ruin, and Acceptance)", 
+            "(The Split, and Wall of Sorrow)",
+            "(The Hollows)",
+            "(N/A)" 
+        ]);
+</script>
+<h1 id="background-graphics"><a class="header" href="#background-graphics">Background Graphics</a></h1>
+<p>The <code>background_graphics</code> variable specifies what graphic to display as the
+background image of a level. If no background_graphics variable is specified then
+the game will render the background as a solid dark-grey colour; this is the same
+as if None is used as the background graphics value. Each background has a unique
+anchor-point, meaning each one will be placed in a level differently, sometimes
+resulting in the solid grey colour showing through in areas. The <code>N0</code> tile can be
+used to offset the background within a level, so that it can be placed where desired.</p>
+<p>As the background graphics variable takes in movie clips as its value, this means
+that any of the available art alts. can be used as a background image. For a full
+list on all the available art alts. see the <a href="content/reference/tilesets/../art_alts/overview.html">Art Alts.</a>
+section.</p>
+<p>Examples of the different background graphics can be seen below. </p>
+<script src="../../../assets/scripts/alts.js"></script>
+<script type="text/javascript">
+    display_alt("backs", 
+        per_row = 2,
+        ord_name = [
+            "aireshipbg",
+            "Background",
+            "bg2",
+            "bgretro",
+            "bgretro2",
+            "bgretrox",
+            "bgsolid",
+            "ch2bg",
+            "ch3bg",
+            "ch4abg",
+            "field2bg",
+            "hellbg",
+            "neverbg",
+            "None"
+        ],
+        ord_extra = [
+            "(SS Exodus)",
+            "(The Hollows)",
+            "(The End, and Anguish)",
+            "(Retro and Iron Carts)",
+            "(Unused)",
+            "(IronCarts)",
+            "(Ruin and Acceptance)",
+            "(Arid Flats, and Gloom)",
+            "(Overflow, and Blight)",
+            "(The Split, and Wall of Sorrow)",
+            "(Retrograde and The Machine)",
+            "(Golgotha)",
+            "(Nevermore and the Future)",
+            "(N/A)"
+        ]);
+</script>
+<h1 id="foreground-graphics"><a class="header" href="#foreground-graphics">Foreground Graphics</a></h1>
+<p>The <code>foreground_graphics</code> variable specifies what graphic to display as the
+foreground image of a level. If no foreground_graphics variable is specified then
+the game will not render anything as the foreground; this is the same as if None
+is used as the foreground graphics value. Each foreground has a unique
+anchor-point, meaning each one will be placed in a level differently. The N1
+tile can be used to offset the foreground within a level, so that it can be
+placed where desired.</p>
+<p>As the foreground graphics variable takes in movie clips as its value, this
+means that any of the available art alts. can be used as a foreground image.
+For a full list on all the available art alts. see the
+<a href="content/reference/tilesets/../art_alts/overview.html">Art Alts.</a> section.</p>
+<p>Examples of the different foreground graphics can be seen below. </p>
+<script src="../../../assets/scripts/alts.js"></script>
+<script type="text/javascript">
+    display_alt("fronts", 
+        per_row = 2,
+        ord_name = [],
+        ord_extra = ["(The End and Anguish)", "(Unused)"]);
+</script>
+<h1 id="palette"><a class="header" href="#palette">Palette</a></h1>
+<p>The palette variable is used to specify which colour palette the tileset/area
+will use when drawing graphics to the screen. The number supplied as a value
+references a row of colours, in the palettes file, that will be used to draw the
+level. The file storing these colours is the <code>textures\palette.png</code> file. The
+first row in the file uses the ID number 0 and each palette going down follows
+consecutively, ending with palette 63 -- meaning there are 64 unique palettes in
+total. If no palette variable is specified for a tileset, it will use palette 0
+by default.</p>
+<p>For more information on what each row and column of the palette file means, how
+to modify palettes themselves, how to expand the palettes file, and other general
+palette information, see the <a href="content/reference/tilesets/../palettes/overview.html">Palettes</a> section of the
+reference.</p>
+<h1 id="music"><a class="header" href="#music">Music</a></h1>
+<p>The <code>music</code> variable can take in either one or two filenames from the
+<code>audio\music\</code> folder (as well as its various sub-folders). This variable
+will dictate the looping background music that will play throughout the area.
+If one filename is supplied for the variable, it will simply play said music file
+continuously throughout the area. However, if two music files are given then the
+first file will be played once as an intro, and the second will be played on loop
+for the rest of the area. The syntax for these two methods of using <code>music</code>
+are as follows:</p>
+<pre><code>music FILENAME.ogg # single-file
+music [FILENAME_INTRO.ogg, FILENAME_LOOP.ogg] # multi-file
+</code></pre>
+<p>Where the all-caps <code>FILENAME</code> variants are various music files.</p>
+<p>The music files themselves are of type <code>OGG</code> and the <code>.ogg</code> extension
+must be added to the name when being referenced. For example:</p>
+<pre><code>music 1812_loop #wrong
+music [1812_intro, 1812_loop] # wrong
+
+music 1812_loop.ogg #correct
+music [1812_intro.ogg, 1812_loop.ogg] # correct
+</code></pre>
+<p>Note that music is not just contained within the root folder and there are other
+sub-folders that contain music. When accessing retro, and glitch music it is
+important to include the appropriate directory/folder name so that the game knows
+where to search for the files. Like so:</p>
+<pre><code>music retro\danse_loop.ogg
+music glitch\nobm_loop.ogg
+</code></pre>
+<p>The default music intros, loops, etc. are as follows:</p>
+<ul>
+<li>
+<p><code>danse_intro.ogg</code> and <code>danse_loop.ogg</code> - (The End)</p>
+</li>
+<li>
+<p><code>newworld_intro.ogg</code> and <code>newworld_loop.ogg</code> - (Arid Flats)</p>
+</li>
+<li>
+<p><code>1812_intro.ogg</code> and <code>1812_loop.ogg</code> - (Overflow)</p>
+</li>
+<li>
+<p><code>hungarian_rhapsody_intro.ogg</code> and <code>hungarian_rhapsody_loop.ogg</code> - (Wall of Sorrow)</p>
+</li>
+<li>
+<p><code>slave_intro.ogg</code> and <code>slave_loop.ogg</code> - (SS Exodus)</p>
+</li>
+<li>
+<p><code>dante_intro.ogg</code> and <code>dante_loop.ogg</code> - (The Hollows)</p>
+</li>
+<li>
+<p><code>hell_intro.ogg</code> and <code>hell_loop.ogg</code> - (Golgotha)</p>
+</li>
+<li>
+<p><code>fields_intro.ogg</code> and <code>fields_loop.ogg</code> - (Retrograde)</p>
+</li>
+<li>
+<p><code>bumblebee_intro.ogg</code> and <code>bumblebee_loop.ogg</code> - (The Machine)</p>
+</li>
+<li>
+<p><code>danse_intro_dark.ogg</code> and <code>danse_loop_dark.ogg</code> - (Anguish)</p>
+</li>
+<li>
+<p><code>newworld_intro_dark.ogg</code> and <code>newworld_loop_dark.ogg</code> - (Gloom)</p>
+</li>
+<li>
+<p><code>1812_intro_dark.ogg</code> and <code>1812_loop_dark.ogg</code> - (Blight)</p>
+</li>
+<li>
+<p><code>mountainking_fakeout.ogg</code> and <code>mountainking_loop.ogg</code> - (Ruin)</p>
+</li>
+<li>
+<p><code>escape.ogg</code> - (Acceptance)</p>
+</li>
+<li>
+<p><code>requiem_intro.ogg</code> and <code>requiem_loop.ogg</code> - (Nevermore and The Future)</p>
+</li>
+<li>
+<p><code>hmk_secret_intro.ogg</code> and <code>hmk_secret_loop.ogg</code> - (Downwards Secret)</p>
+</li>
+<li>
+<p><code>gymnopedies_intro.ogg</code> and <code>gymnopedies_loop.ogg</code> - (Upwards Secret)</p>
+</li>
+<li>
+<p><code>gynossiennes_intro.ogg</code> and <code>gynossiennes_loop.ogg</code> - (Main Menu)</p>
+</li>
+<li>
+<p><code>supercart.ogg</code> - (All (Iron) Carts Collected)</p>
+</li>
+<li>
+<p><code>the_end_is_nigh_vocals.ogg</code> - (Credits Vocals)</p>
+</li>
+<li>
+<p><code>credits.ogg</code> - (Credits Instrumental)</p>
+</li>
+<li>
+<p><code>newworld2_intro.ogg</code> and <code>newworld2_loop.ogg</code> - (Unused)</p>
+</li>
+<li>
+<p><code>gameover.ogg</code> - (Unused)</p>
+</li>
+<li>
+<p><code>mountainking_intro.ogg</code> - (Unused)</p>
+</li>
+<li>
+<p><code>retro\danse_intro.ogg</code> and <code>retro\danse_loop.ogg</code> - (Mortaman)</p>
+</li>
+<li>
+<p><code>retro\newworld_intro.ogg</code> and <code>retro\newworld_loop.ogg</code> - (Blaster Massacre)</p>
+</li>
+<li>
+<p><code>retro\1812_intro.ogg</code> and <code>retro\1812_loop.ogg</code> - (River City Rancid)</p>
+</li>
+<li>
+<p><code>retro\hungarian_rhapsody_intro.ogg</code> and <code>retro\hungarian_rhapsody_loop.ogg</code> - (Ash Climber)</p>
+</li>
+<li>
+<p><code>retro\slave_intro.ogg</code> and <code>retro\slave_Loop.ogg</code> - (Fallen Fantasy)</p>
+</li>
+<li>
+<p><code>retro\dante_intro.ogg</code> and <code>retro\dante_loop.ogg</code> - (Catastrovania)</p>
+</li>
+<li>
+<p><code>retro\hell_intro.ogg</code> and <code>retro\hell_Loop.ogg</code> - (Dig Dead)</p>
+</li>
+<li>
+<p><code>retro\fields_intro.ogg</code> and <code>retro\fields_loop.ogg</code> - (Rubble Bobble)</p>
+</li>
+<li>
+<p><code>retro\bumblebee_intro.ogg</code> and <code>retro\bumblebee_loop.ogg</code> - (Morbid Gear)</p>
+</li>
+<li>
+<p><code>retro\beeth5_intro.ogg</code> and <code>retro\beeth5_loop.ogg</code> - (Super Mega Cart All Stars)</p>
+</li>
+<li>
+<p><code>retro\requiem_intro.ogg</code> and <code>retro\requiem_loop.ogg</code> - (Iron Carts)</p>
+</li>
+<li>
+<p><code>retro\turkish_intro.ogg</code> and <code>retro\turkish_loop.ogg</code> - (The End is Nigh)</p>
+</li>
+<li>
+<p><code>retro\gnossiennes_loop.ogg</code> - (Cartridge Menu)</p>
+</li>
+<li>
+<p><code>retro\gameover.ogg</code> - (Cartrige Game Over)</p>
+</li>
+<li>
+<p><code>glitch\nobm_intro.ogg</code> and <code>glitch\nobm_loop.ogg</code> - (Scab or Die)</p>
+</li>
+<li>
+<p><code>glitch\newworld_intro.ogg</code> and <code>glitch\newworld_loop.ogg</code> - (Tombs and Torture)</p>
+</li>
+<li>
+<p><code>glitch\bumblebee_intro.ogg</code> and <code>glitch\bumblebee_loop.ogg</code> - (Pus-man)</p>
+</li>
+<li>
+<p><code>glitch\homk_intro.ogg</code> and <code>glitch\homk_loop.ogg</code> - (Ghosts ’N Grieving)</p>
+</li>
+<li>
+<p><code>glitch\dante_intro.ogg</code> and <code>glitch\dante_loop.ogg</code> - (Dead Racer)</p>
+</li>
+<li>
+<p><code>glitch\dance_intro.ogg</code> and <code>glitch\dance_loop.ogg</code> - (Spike Tales)</p>
+</li>
+<li>
+<p><code>glitch\turkish_intro.ogg</code> and <code>glitch\turkish_loop.ogg</code> - (The End is Nigh Corrupted)</p>
+</li>
+</ul>
+<p>If the music variable is left unset then no background music will be played in the area. </p>
+<h1 id="ambience"><a class="header" href="#ambience">Ambience</a></h1>
+<p>The <code>ambience</code> variable takes in a filename from the <code>audio\ambience\</code>
+data folder. This variable will dictate the looping ambient noise that will play
+throughout the area. The ambience files are of type <code>OGG</code> and the ```.ogg``
+extension must be added to the name when being referenced. For example:</p>
+<pre><code>ambience caves # wrong
+ambience caves.ogg # correct
+</code></pre>
+<p>The default available ambient sound loops are as follows:</p>
+<ul>
+<li><code>caves.ogg</code> - (The Hollows, SS Exodus, Ruin)</li>
+<li><code>cogs.ogg</code> - (Unused)</li>
+<li><code>flesh.ogg</code> - (Retrograde, Nevermore)</li>
+<li><code>labloop.ogg</code> - (The Machine)</li>
+<li><code>rain.ogg</code> - (The End, Anguish)</li>
+<li><code>ruins.ogg</code> - (Overflow, Blight, Ruin, The Future)</li>
+<li><code>volcano.ogg</code> - (Anguish, Golgotha)</li>
+<li><code>water.ogg</code> - (Unused)</li>
+<li><code>wind.ogg</code> - (Arid Flats, Gloom, The Split, Wall of Sorrow)</li>
+</ul>
+<p>If the ambience variable is left unset then no ambient noise will be played in the area. </p>
+<h1 id="music-volume"><a class="header" href="#music-volume">Music Volume</a></h1>
+<p>The <code>music_volume</code> variable controls the volume the music is played at,
+relative to the global music volume setting. Most areas will leave this variable
+at a value of 1. If this value is left unset then it defaults to 1. </p>
+<h1 id="ambience-volume"><a class="header" href="#ambience-volume">Ambience Volume</a></h1>
+<p>The <code>ambience_volume</code> variable controls the volume the ambience is played at,
+relative to the global sound volume setting. Most areas will leave this variable
+at a value of 1. If this value is left unset then it defaults to 1. </p>
+<h1 id="stop-previous-music"><a class="header" href="#stop-previous-music">Stop Previous Music</a></h1>
+<p>The <code>stop_previous_music</code> variable is used to specify whether the previous
+music track being played should be stopped or not; it accepts either a <code>true</code> or
+<code>false</code> value. If it is set to false then when the previous area is re-entered the
+music will not play from the start again, this is usually used in secret areas so
+that the music does not reset everytime a secret is entered. However, if it is
+set to <code>true</code> then the music will restart from the beginning when the previous area
+is re-entered. The default value for this variable is <code>true</code>, so if the variable is
+left unset then the previous music track will be set to stop when entering the
+area. </p>
+<h1 id="npc"><a class="header" href="#npc">NPC</a></h1>
+<p>The <code>npc_x</code> variables (where <code>x</code> is a number between 1 and 3) are used to
+specify which NPCs from the <code>data\npcs.txt</code> will be spawned using the
+respective Z1 - 3 tiles, when placed in a level. If an NPC variable is left
+unset, then placing the corresponding NPC tile will simply do nothing and no NPC
+will be spawned. This will be the same if the NPC variable is assigned a value
+of None. Supplying an invalid/nonexistent NPC name to one of the variables will
+result in a GSON error when the room containing the NPC is entered.</p>
+<p>For more information about what NPCs are available to spawn, and how to modify
+and create new NPCs, see the <a href="content/reference/tilesets/../npcs/npcs.html">NPCs</a> section for detailed descriptions. </p>
+<h1 id="art-alts-1"><a class="header" href="#art-alts-1">Art Alts</a></h1>
+<p>The <code>art_alts</code> variable controls what graphics will be swapped out for other
+graphics within the area, and is quite different from many of the other variables
+seen within the tilesets file. So, the purpose of art alts. is to tell the game
+to replace any instance of a certain graphic and replace it with a different one;
+for example, replacing all tumor graphics to make them look like mega tumors
+instead. Note that entities altered by art alts. will still act exactly the same,
+they will just appear diffeent. The basic syntax for art_alts is as follows:</p>
+<pre><code>art_alts [
+  [ORIGINAL, REPLACEMENT]
+  ...
+]
+</code></pre>
+<p>Where <code>ORIGINAL</code> is an art asset name to change, and <code>REPLACEMENT</code> is an
+art asset name that will replace the original asset. Line 2 in the example can
+then be repeated over-and-over again allowing for as many art alts. to be applied
+to an area as possible.</p>
+<p>There is no limit to what assets can be swapped, however, not all graphics will
+work correctly when being swapped; with some glitching or moving sporadically. To
+avoid this it is usually best to swap out similar graphics, or graphics of the
+same type (enemies, tiles, etc.). For a full list on all the available art alts.
+within the game, see the <a href="content/reference/tilesets/../art_alts/overview.html">Art Alts.</a> section for more
+information. Do remember that art alts. are case-sensitive values. </p>
+<h1 id="toxic-timer"><a class="header" href="#toxic-timer">Toxic Timer</a></h1>
+<p>The <code>toxic_timer</code> variable specifies how long it takes for toxic clouds and
+water to kill the player, in seconds. This variable allows for values containing
+a decimal-point. If the toxic timer is not specified the default time given is
+within 1.8 to 2.0 seconds (this is a rough approximation). </p>
+<h1 id="cart-intro-png"><a class="header" href="#cart-intro-png">Cart Intro PNG</a></h1>
+<p>The <code>cart_intro_png</code> variable is used to specify what image to draw as the
+intro when entering a cartridge level, as well as the graphic used in the
+cartridge menu; this can be any graphic in the <code>textures\</code> folder, even newly
+added ones. When specifying the filename, the &quot;.png&quot; file extension does not need
+to be specified and adding it will result in the game crashing when it attempts to
+load the the tileset. Furthermore, unlike other variable values in the tilesets
+file, the intro PNG filename is not case-sensitive. If no value is specified the
+game will default to using <code>textures\titlecart.png</code> as the intro graphic and
+<code>textures\emptycart.png</code> as the cartridge menu graphic.</p>
+<p>The existing cartridge graphics are 160x90 pixels in size, scaled up to use a 
+resolution of 1280x720 (a 16:9 aspect ratio). Cartridge graphics can be any
+size, but if they do not match the 16:9 aspect ratio, then the graphic will be
+displayed stretched and distorted. Furthermore, any number of colours is allowed
+in the PNG graphic, however, when rendered in-game the graphic will be limited
+to the colours in the chosen <code>cart_intro_palette</code>. Examples of both of these
+limitations can be seen below (the retro filter was disabled for easier and
+clearer viewing): </p>
+<p><img src="content/reference/tilesets/../../assets/images/screenshots/scrn_intropng_colour.png" alt="Cart Intro Colour Limitation" />
+The title background image used here has far fewer colours than the original PNG.</p>
+<p><img src="content/reference/tilesets/../../assets/images/screenshots/scrn_intropng_size.png" alt="Cart Intro Size Limitation" />
+The square trophy image is stretched and distorted to fit the aspect ratio.</p>
+<p>When creating new cart intro graphics, it is best to use similar greyscale
+colours to those used in the original cart graphics. This will allow for more
+accurate control over what pixels map to what palette colours. Below is a useful
+palette to use when drawing cart intros, with each colour mapping one-to-one with
+the respective columns of the palette that will be used for rendering the PNG:</p>
+<p><span class="outlineblack"><img src="content/reference/tilesets/../../assets/images/cartpalette.png" alt="Cart Intro Palette" /></span></p>
+<h1 id="cart-intro-palette"><a class="header" href="#cart-intro-palette">Cart Intro Palette</a></h1>
+<p>The <code>cart_intro_palette</code> variable is used to specify what palette should be
+used to draw the intro graphic for a cartridge. As with regular palettes, the
+number references the row of colours to use from the <code>textures\palette.png</code>
+file -- starting from 0 and ending at 63. However, unlike regular palettes, the
+colours used in the cart intro images are not mapped to columns in the same way.
+Rather than column colours being mapped based on what element is being drawn
+(tile, background, etc.), cartridge palette columns map based on the greyscale
+shade. Using the greyscale palette specified in the <a href="content/reference/tilesets/./cart_png.html">Cart Intro PNG</a>
+section to draw cartridge graphics will help when mapping palette colours to a
+given intro image. If no palette variable is specified for a cart intro, it will
+use palette 0 by default.</p>
+<p>For more information on what each row and column of the palette file means, how
+to modify palettes themselves, how to expand the palettes file, and other
+general palette information, see the <a href="content/reference/tilesets/../palettes/overview.html">Palettes</a> section
+of the reference. </p>
+<h1 id="physics"><a class="header" href="#physics">Physics</a></h1>
+<p>The various physics files define a variety of variables/values that can be
+redefined to control the physics of the game. Note that this effects the game on
+a global scale and cannot be defined to only impact specific areas. Modifying the
+different physics files can lead to some drastic changes to gameplay and can even
+create entirely new methods of play, making it an extremely powerful modding tool.</p>
+<p>The physics files are split into two main categories: player physics, which
+defines variables directly relating to the control and feel of the player; and
+platform physics, which defines variables controlling how the various tag
+movement tiles move tiles/entities. </p>
+<h1 id="player-physics"><a class="header" href="#player-physics">Player Physics</a></h1>
+<p>Location in the unpacked data: <code>data\playerphysics.txt</code>
+Location in the unpacked data: <code>data\playerphysics_lowgrav.txt</code>
+Location in the unpacked data: <code>data\playerphysics_water.txt</code></p>
+<p>The player physics files define a variety of different variables relating
+specifically to how the player moves throughout the game world. The values will
+control, movement speed, jump height, long-jump speed, and much more. Player
+physics is split into three different files, all containing the same variables:
+the first, <code>playerphysics.txt</code>, is the standard physics for the player when moving
+around levels, on ground and in air; the second, <code>playerphysics_lowgrav.txt</code>,
+is the physics used when the player is within a gravitational-pull beam; and the
+third, <code>playerphysics_water.txt</code>, is the physics applied when the player is
+currently in a liquid (water, or toxic water). The variables contained within
+these three files are as follows:</p>
+<ul>
+<li>gravity - The gravity applied to the player normally.</li>
+<li>leniency - The amount of time a player can fall through the air and still jump.</li>
+<li>max_fallspeed - The maximum speed the player can reach whilst fall.</li>
+<li>maxspeed - ???</li>
+<li>runspeed - The maximum movement speed of the player.</li>
+<li>ground_friction - The friction applied to turning whilst on the ground.</li>
+<li>stop_friction - How quickly the player stops moving after releasing a move key.</li>
+<li>air_friction - The friction applied to turning whilst in the air.</li>
+<li>fastfall_gravity - The gravity applied to the player whilst fast-falling.</li>
+<li>fastfall_jerkdown - Inital jerkdown force applied to the player when fast-fall is initiated.</li>
+<li>fastfall_maxspeed - The maximum speed the player can reach whilst fast-falling.</li>
+<li>float_time - ???</li>
+<li>jumpheight - The max height of the player’s jump.</li>
+<li>release_jumpheight - The height of the player’s short hop (tapping the jump button).</li>
+<li>longjump_slidethreshold - ???</li>
+<li>longjump_speed - The speed at which the player moves during a long jump.</li>
+<li>longjump_height - The height gained when performing a long jump from a ledge.</li>
+<li>longjump_airfriction - The friction applied to turning during a long jump.</li>
+<li>ledgejump_height - The height gained from a normal ledge jump (not a long jump).</li>
+<li>enemy_bounceheight_nojump - The height gained by the player when bouncing off an enemy.</li>
+<li>enemy_bounceheight_jump - The height gained by the player when bouncing off an enemy with a jump.</li>
+<li>mush_bounceheight_nojump - The height gained by the player when bouncing off a spring.</li>
+<li>mush_bounceheight_jump - The height gained by the player when bouncing off a spring with a jump.</li>
+<li>enemy_prebounce_time - ???</li>
+<li>enemy_postbounce_time - How long the &quot;no jump&quot; bounce force is applied for? (Impacts no jump bounce height.)</li>
+<li>swimspeed - The speed the player moves horizontally in the water.</li>
+<li>water_exitheight - The height gained when jumping out of the water.</li>
+</ul>
+<h1 id="platform-physics"><a class="header" href="#platform-physics">Platform Physics</a></h1>
+<p>Location in the unpacked data: <code>data\platformphysics.txt</code></p>
+<p>The platform physics file defines a variety of different variables relating
+specifically to how the various movement tag tiles will move tiles aroud levels.
+The speeds for each tile type can be set from within this file, which contains
+the following variables:</p>
+<ul>
+<li><strong>MovingPlatformSpeedLow</strong> - The speed at which tags F8-G1 move tiles.</li>
+<li><strong>MovingPlatformSpeedMed</strong> - The speed at which tags G2-G5 move tiles.</li>
+<li><strong>MovingPlatformSpeedHigh</strong> - The speed at which tags G6-G9 move tiles.</li>
+<li><strong>SmoothMovingPlatformSpeedXSlow</strong> - The speed at which tags N2-N5 move tiles.</li>
+<li><strong>SmoothMovingPlatformSpeedLow</strong> - The speed at which tags ID-I5 move tiles.</li>
+<li><strong>SmoothMovingPlatformSpeedMed</strong> - The speed at which tags I6-I9 move tiles.</li>
+<li><strong>SmoothMovingPlatformSpeedHigh</strong> - The speed at which tags J0-J3 move tiles.</li>
+<li><strong>FallingPlatformGravityLow</strong> - The speed at which tag F2 makes tiles fall.</li>
+<li><strong>FallingPlatformGravityMed</strong> - The speed at which tag F3 makes tiles fall.</li>
+<li><strong>FallingPlatformGravityHigh</strong> - The speed at which tag F4 makes tiles fall.</li>
+<li><strong>WeightedPlatformSpeedSlow</strong> - The speed at which tag L7 makes tiles move.</li>
+<li><strong>WeightedPlatformSpeedMed</strong> - The speed at which tag L8 makes tiles move.</li>
+<li><strong>WeightedPlatformSpeedHigh</strong> - The speed at which tag L9 makes tiles move.</li>
+<li><strong>SmasherSpeedLow</strong> - No effect.</li>
+<li><strong>SmasherSpeedMed</strong> - No effect.</li>
+<li><strong>SmasherSpeedHigh</strong> - No effect.</li>
+<li><strong>SmasherDelayLow</strong> - No effect.</li>
+<li><strong>SmasherDelayMed</strong> - No effect.</li>
+<li><strong>SmasherDelayHigh</strong> - No effect.</li>
+</ul>
+<h1 id="adding-new-physics"><a class="header" href="#adding-new-physics">Adding New Physics</a></h1>
+<p>Originally, physics variables were handled globally and could not be applied in individual areas of the game. At some point Tyler decided to be a really cool guy and gave us the ability to do just that.</p>
+<p>Say you wanted to give The End twice as much gravity.
+First you would need to make a copy of the physics file you want to edit. For this example, we want to edit playerphysics.txt.
+Name the copied file something logical like &quot;playerphysics_heavygravity&quot;.
+Next, you would open this file and change the value of the gravity to twice its original value (from 40 to 80).
+Now for the most important part. After you have saved this new file you need to add it to the tileset for the area you want it to be abpplied to.
+To do this, open tilesets.txt and add a line specifying the physics file you just created.
+In our example it would look like this:</p>
+<pre><code>player_physics data/playerphysics_heavygravity.txt
+</code></pre>
+<p>For water physics, gravity beam physics, or platform physics, you use the same method above except that in the tilesets file you will specify them with the following variables:</p>
+<pre><code>water_physics data/playerphysics_honey.txt
+lowgrav_physics data/playerphysics_gyrobeams.txt
+platform_physics data/platformphysics_fast.txt
+</code></pre>
+<p>The names used above are just used as an example. Obviously you would want to put the name of whatever file you are using in their place.
+If the specified file does not exist, then the game will default to the normal physics.</p>
+<p>Removing a variable from any of the physics files will lead to it being assigned
+a default value, most likely 0. However, leaving a variable without a value in
+the file will result in undefined and obscure behaviour from the game and is not
+recommended at all.</p>
+<h1 id="credits"><a class="header" href="#credits">Credits</a></h1>
+<!-- If you made an edit to the manual feel free to add your name and what you've done somewhere in the middle of this table! -->
+<table><thead><tr><th align="left">Name</th><th align="left">Role</th></tr></thead><tbody>
+<tr><td align="left"><strong>Joshua Robertson</strong></td><td align="left">Creating the manual, additional research, and tool developmment.</td></tr>
+<tr><td align="left"><strong>Malik Kissarli</strong></td><td align="left">Developing the new version of the manual using mdbook.</td></tr>
+<tr><td align="left"><strong>pm2k</strong></td><td align="left">Researching and creating the original tile reference.</td></tr>
+<tr><td align="left"><strong>Canderos</strong></td><td align="left">Hosting the original version of the manual and researching art alts.</td></tr>
+<tr><td align="left"><strong>SoulWare</strong></td><td align="left">Researching art alts.</td></tr>
+<tr><td align="left"><strong>Okay, Why Not?</strong></td><td align="left">Palette column research.</td></tr>
+<tr><td align="left"><strong>Hapax</strong></td><td align="left">Executable address research.</td></tr>
+<tr><td align="left"><strong>MattTheDuck</strong></td><td align="left">Documenting NPC information.</td></tr>
+<tr><td align="left"><strong>FUNKENGINE</strong></td><td align="left">Writing up the original guide on how to add NPCs.</td></tr>
+<tr><td align="left"><strong>Mixelz</strong></td><td align="left">Testing and improving the original Tile Reference section.</td></tr>
+<tr><td align="left"><strong>The TEIN Public Discord</strong></td><td align="left">Research, documentation, help, testing, and support.</td></tr>
+</tbody></table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
