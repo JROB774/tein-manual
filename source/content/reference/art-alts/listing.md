@@ -33,42 +33,42 @@
     </thead>
     <tbody>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/player.png"><code>Player</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/life.png"><code>Life</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/biglife.png"><code>BigLife</code></td>
-            <td align="center" colspan="2"><img src="./../../../assets/images/art-alts/general/cartconsole.png"><code>CartConsole</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/player.png"><code>Player</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/life.png"><code>Life</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/biglife.png"><code>BigLife</code></td>
+            <td align="center" colspan="2"><img src="./../../../assets/images/art-alts/cartconsole.png"><code>CartConsole</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/cartridge.png"><code>Cartridge</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/cart2.png"><code>cart2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/cart3.png"><code>cart3</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/key.png"><code>Key</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/hopper.png"><code>Hopper</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cartridge.png"><code>Cartridge</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cart2.png"><code>cart2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cart3.png"><code>cart3</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/key.png"><code>Key</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/hopper.png"><code>Hopper</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/chainhitch.png"><code>ChainHitch</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/chainlink.png"><code>ChainLink</code><br><code>ChainLink2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/floatingmine.png"><code>FloatingMine</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/jar.png"><code>Jar</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/outwarp.png"><code>OutWarp</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/chainhitch.png"><code>ChainHitch</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/chainlink.png"><code>ChainLink</code><br><code>ChainLink2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/floatingmine.png"><code>FloatingMine</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/jar.png"><code>Jar</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/outwarp.png"><code>OutWarp</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/gate1.png"><code>Gate1</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/gate2.png"><code>Gate2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/gate3.png"><code>Gate3</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/gate4.png"><code>Gate4</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/deathghost.png"><code>DeathGhost</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/gate1.png"><code>Gate1</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/gate2.png"><code>Gate2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/gate3.png"><code>Gate3</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/gate4.png"><code>Gate4</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/deathghost.png"><code>DeathGhost</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/thehead.png"><code>TheHead</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/thebody.png"><code>TheBody</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/theheart.png"><code>TheHeart</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/stand.png"><code>Stand</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/finalsteve.png"><code>FinalSteve</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/thehead.png"><code>TheHead</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/thebody.png"><code>TheBody</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/theheart.png"><code>TheHeart</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/stand.png"><code>Stand</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/finalsteve.png"><code>FinalSteve</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/glowshroom.png"><code>GlowShroom</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/general/glowshroomsmall.png"><code>GlowShroomSmall</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/glowshroom.png"><code>GlowShroom</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/glowshroomsmall.png"><code>GlowShroomSmall</code></td>
             <td align="center"></td>
             <td align="center"></td>
             <td align="center"></td>
@@ -84,67 +84,67 @@
     </thead>
     <tbody>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/movingorbblob.png"><code>MovingOrbBlob</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/orbblob.png"><code>OrbBlob</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/orbblob2.png"><code>OrbBlob2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/orbsmall.png"><code>OrbSmall</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/orblarge.png"><code>OrbLarge</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/movingorbblob.png"><code>MovingOrbBlob</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/orbblob.png"><code>OrbBlob</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/orbblob2.png"><code>OrbBlob2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/orbsmall.png"><code>OrbSmall</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/orblarge.png"><code>OrbLarge</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/orblarge2.png"><code>OrbLarge2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/orbchomp.png"><code>OrbChomp</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/aimspitter.png"><code>AimSpitter</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/aimspitter2.png"><code>AimSpitter2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/eyeshooter.png"><code>EyeShooter</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/orblarge2.png"><code>OrbLarge2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/orbchomp.png"><code>OrbChomp</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/aimspitter.png"><code>AimSpitter</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/aimspitter2.png"><code>AimSpitter2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/eyeshooter.png"><code>EyeShooter</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/spitterx.png"><code>SpitterX</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/spittery.png"><code>SpitterY</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/bullet.png"><code>Bullet</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/eyebullet.png"><code>EyeBullet</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/floater.png"><code>Floater</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/spitterx.png"><code>SpitterX</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/spittery.png"><code>SpitterY</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/bullet.png"><code>Bullet</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/eyebullet.png"><code>EyeBullet</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/floater.png"><code>Floater</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/chargeslug.png"><code>ChargeSlug</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/slug.png"><code>Slug</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/bigcharger.png"><code>BigCharger</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/bigslug.png"><code>BigSlug</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/splatter.png"><code>Splatter</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/chargeslug.png"><code>ChargeSlug</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/slug.png"><code>Slug</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/bigcharger.png"><code>BigCharger</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/bigslug.png"><code>BigSlug</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/splatter.png"><code>Splatter</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/gasser.png"><code>Gasser</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/gascloud.png"><code>GasCloud</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/cannon.png"><code>Cannon</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/cannonstand.png"><code>CannonStand</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/cannonball.png"><code>Cannonball</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/gasser.png"><code>Gasser</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/gascloud.png"><code>GasCloud</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cannon.png"><code>Cannon</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cannonstand.png"><code>CannonStand</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cannonball.png"><code>Cannonball</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/fireball.png"><code>Fireball</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/thwampeye.png"><code>ThwampEye</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/thwampgear.png"><code>ThwampGear</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/cheepcheep.png"><code>CheepCheep</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/frog.png"><code>Frog</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/fireball.png"><code>Fireball</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/thwampeye.png"><code>ThwampEye</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/thwampgear.png"><code>ThwampGear</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cheepcheep.png"><code>CheepCheep</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/frog.png"><code>Frog</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/skullcrow.png"><code>SkullCrow</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/skullfloater.png"><code>SkullFloater</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/skullfloaterbreaky.png"><code>SkullFloaterBreaky</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/skullslug.png"><code>SkullSlug</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/bouncer.png"><code>Bouncer</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/skullcrow.png"><code>SkullCrow</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/skullfloater.png"><code>SkullFloater</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/skullfloaterbreaky.png"><code>SkullFloaterBreaky</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/skullslug.png"><code>SkullSlug</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/bouncer.png"><code>Bouncer</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/chainchomp.png"><code>ChainChomp</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/creepingmass.png"><code>CreepingMass</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/creepeye.png"><code>CreepEye</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/fish.png"><code>Fish</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/fish2.png"><code>Fish2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/chainchomp.png"><code>ChainChomp</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/creepingmass.png"><code>CreepingMass</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/creepeye.png"><code>CreepEye</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/fish.png"><code>Fish</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/fish2.png"><code>Fish2</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/mask.png"><code>Mask</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/revolver.png"><code>Revolver</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/gface.png"><code>gface</code><br><code>ElctroBall</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/ghost.png"><code>Ghost</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/enemies/sentry.png"><code>Sentry</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/mask.png"><code>Mask</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/revolver.png"><code>Revolver</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/gface.png"><code>gface</code><br><code>ElctroBall</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/ghost.png"><code>Ghost</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/sentry.png"><code>Sentry</code></td>
         </tr>
     </tbody>
 </table>
@@ -157,23 +157,23 @@
     </thead>
     <tbody>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/minidrone.png"><code>MiniDrone</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/minibird.png"><code>MiniBird</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/minifly.png"><code>Fly</code><br><code>MiniFly</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/minifish.png"><code>MiniFish</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/minifishwhite.png"><code>MiniFishWhite</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/minidrone.png"><code>MiniDrone</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/minibird.png"><code>MiniBird</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/minifly.png"><code>Fly</code><br><code>MiniFly</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/minifish.png"><code>MiniFish</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/minifishwhite.png"><code>MiniFishWhite</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/miniflea.png"><code>MiniFlea</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/minifrog.png"><code>MiniFrog</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/minifrogwhite.png"><code>MiniFrogWhite</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/minighost.png"><code>MiniGhost</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/miniwisp.png"><code>MiniWisp</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/miniflea.png"><code>MiniFlea</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/minifrog.png"><code>MiniFrog</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/minifrogwhite.png"><code>MiniFrogWhite</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/minighost.png"><code>MiniGhost</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/miniwisp.png"><code>MiniWisp</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/minirat.png"><code>MiniRat</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/miniratwhite.png"><code>MiniRatWhite</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/minis/miniworm.png"><code>MiniWorm</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/minirat.png"><code>MiniRat</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/miniratwhite.png"><code>MiniRatWhite</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/miniworm.png"><code>MiniWorm</code></td>
             <td align="center"></td>
             <td align="center"></td>
         </tr>
@@ -188,23 +188,23 @@
     </thead>
     <tbody>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/decorations/decoration0.png"><code>Decoration0</code></td>
-            <td align="center" colspan="2"><img src="./../../../assets/images/art-alts/decorations/decoration1.png"><code>Decoration1</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/decorations/decoration8.png"><code>Deocration8</code><br><code>Deco10</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/decorations/decoration9.png"><code>Decoration9</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/decoration0.png"><code>Decoration0</code></td>
+            <td align="center" colspan="2"><img src="./../../../assets/images/art-alts/decoration1.png"><code>Decoration1</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/decoration8.png"><code>Deocration8</code><br><code>Deco10</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/decoration9.png"><code>Decoration9</code></td>
         </tr>
         <tr>
-            <td align="center" colspan="2"><img src="./../../../assets/images/art-alts/decorations/decoration4.png"><code>Decoration4</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/decorations/decoration5.png"><code>Decoration5</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/decorations/decoration6.png"><code>Deocration6</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/decorations/decoration7.png"><code>Decoration7</code></td>
+            <td align="center" colspan="2"><img src="./../../../assets/images/art-alts/decoration4.png"><code>Decoration4</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/decoration5.png"><code>Decoration5</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/decoration6.png"><code>Deocration6</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/decoration7.png"><code>Decoration7</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/decorations/deco11.png"><code>Deco11</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/decorations/inst10.png"><code>inst10</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/decorations/inst11.png"><code>inst11</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/decorations/eyeball.png"><code>eyeball</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/decorations/escapeend.png"><code>EscapeEnd</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/deco11.png"><code>Deco11</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/inst10.png"><code>inst10</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/inst11.png"><code>inst11</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/eyeball.png"><code>eyeball</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/escapeend.png"><code>EscapeEnd</code></td>
         </tr>
     </tbody>
 </table>
@@ -217,60 +217,60 @@
     </thead>
     <tbody>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/playerretro.png"><code>PlayerRetro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/cannonretro.png"><code>Cannonretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/cannonstandretro.png"><code>Cannonstandretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/cannonballretro.png"><code>cannonballretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/cannonballfireretro.png"><code>cannonballfireretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/playerretro.png"><code>PlayerRetro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cannonretro.png"><code>Cannonretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cannonstandretro.png"><code>Cannonstandretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cannonballretro.png"><code>cannonballretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cannonballfireretro.png"><code>cannonballfireretro</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/gasserretro.png"><code>Gasserretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/gascloudretro.png"><code>GasCloudretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/floaterretro.png"><code>Floaterretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/floater2.png"><code>Floater2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/floaterglitch.png"><code>FloaterGlitch</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/gasserretro.png"><code>Gasserretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/gascloudretro.png"><code>GasCloudretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/floaterretro.png"><code>Floaterretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/floater2.png"><code>Floater2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/floaterglitch.png"><code>FloaterGlitch</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/skullfloaterretro.png"><code>SkullFloaterretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/skullslugretro.png"><code>SkullSlugretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/skullcrowretro.png"><code>SkullCrowretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/cheepretro.png"><code>cheepretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/frogretro.png"><code>Frogretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/skullfloaterretro.png"><code>SkullFloaterretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/skullslugretro.png"><code>SkullSlugretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/skullcrowretro.png"><code>SkullCrowretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cheepretro.png"><code>cheepretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/frogretro.png"><code>Frogretro</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/retroorbsmall.png"><code>RetroOrbSmall</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/retroorblarge.png"><code>retroOrbLarge</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/pacman.png"><code>pacman</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/retroelectroball.png"><code>RetroElectroBall</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/retroghost.png"><code>RetroGhost</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/retroorbsmall.png"><code>RetroOrbSmall</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/retroorblarge.png"><code>retroOrbLarge</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/pacman.png"><code>pacman</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/retroelectroball.png"><code>RetroElectroBall</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/retroghost.png"><code>RetroGhost</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/maskretro.png"><code>Maskretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/chainchompretro.png"><code>ChainChompretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/chainhitchretro.png"><code>ChainHitchretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/chainlinkretro.png"><code>ChainLinkretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/revolverretro.png"><code>Revolverretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/maskretro.png"><code>Maskretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/chainchompretro.png"><code>ChainChompretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/chainhitchretro.png"><code>ChainHitchretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/chainlinkretro.png"><code>ChainLinkretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/revolverretro.png"><code>Revolverretro</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/bouncerretro.png"><code>Bouncerretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/creepingmassretro.png"><code>CreepingMassRetro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/hopperretro.png"><code>hopperretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/thwampeyeretro.png"><code>ThwampEyeRetro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/thwampgearretro.png"><code>ThwampGearRetro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/bouncerretro.png"><code>Bouncerretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/creepingmassretro.png"><code>CreepingMassRetro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/hopperretro.png"><code>hopperretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/thwampeyeretro.png"><code>ThwampEyeRetro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/thwampgearretro.png"><code>ThwampGearRetro</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/slugretro.png"><code>Slugretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/retrochargerslug.png"><code>RetroChargerSlug</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/splatterretro.png"><code>Splatterretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/bulletretro.png"><code>bulletretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/retrofish.png"><code>RetroFish</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/slugretro.png"><code>Slugretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/retrochargerslug.png"><code>RetroChargerSlug</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/splatterretro.png"><code>Splatterretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/bulletretro.png"><code>bulletretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/retrofish.png"><code>RetroFish</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/spitterzretro.png"><code>SpitterZretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/spitteryretro.png"><code>SpitterYretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/spitterxretro.png"><code>SpitterXretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/coin.png"><code>Coin</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/retro/cartend.png"><code>cartend</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/spitterzretro.png"><code>SpitterZretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/spitteryretro.png"><code>SpitterYretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/spitterxretro.png"><code>SpitterXretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/coin.png"><code>Coin</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/cartend.png"><code>cartend</code></td>
         </tr>
     </tbody>
 </table>
@@ -283,72 +283,72 @@
     </thead>
     <tbody>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc0.png"><code>NPC0</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc1.png"><code>NPC1</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc2.png"><code>NPC2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc3.png"><code>NPC3</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc4.png"><code>NPC4</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc0.png"><code>NPC0</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc1.png"><code>NPC1</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc2.png"><code>NPC2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc3.png"><code>NPC3</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc4.png"><code>NPC4</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc5.png"><code>NPC5</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc6.png"><code>NPC6</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc7.png"><code>NPC7</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc8.png"><code>NPC8</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc9.png"><code>NPC9</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc5.png"><code>NPC5</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc6.png"><code>NPC6</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc7.png"><code>NPC7</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc8.png"><code>NPC8</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc9.png"><code>NPC9</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc10.png"><code>NPC10</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc11.png"><code>NPC11</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc12.png"><code>NPC12</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc13.png"><code>NPC13</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc14.png"><code>NPC14</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc10.png"><code>NPC10</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc11.png"><code>NPC11</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc12.png"><code>NPC12</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc13.png"><code>NPC13</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc14.png"><code>NPC14</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc15.png"><code>NPC15</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc16.png"><code>NPC16</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npc17.png"><code>NPC17</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcb1.png"><code>NPCB1</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcb2.png"><code>NPCB2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc15.png"><code>NPC15</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc16.png"><code>NPC16</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npc17.png"><code>NPC17</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcb1.png"><code>NPCB1</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcb2.png"><code>NPCB2</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcb3.png"><code>NPCB3</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcb4.png"><code>NPCB4</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcb5.png"><code>NPCB5</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcb6.png"><code>NPCB6</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcb7.png"><code>NPCB7</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcb3.png"><code>NPCB3</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcb4.png"><code>NPCB4</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcb5.png"><code>NPCB5</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcb6.png"><code>NPCB6</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcb7.png"><code>NPCB7</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcg1.png"><code>NPCG1</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcg2.png"><code>NPCG2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcg3.png"><code>NPCG3</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcg4.png"><code>NPCG4</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcg5.png"><code>NPCG5</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcg1.png"><code>NPCG1</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcg2.png"><code>NPCG2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcg3.png"><code>NPCG3</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcg4.png"><code>NPCG4</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcg5.png"><code>NPCG5</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcg6.png"><code>NPCG6</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcg7.png"><code>NPCG7</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcd1.png"><code>NPCD1</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcd2.png"><code>NPCD2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcd3.png"><code>NPCD3</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcg6.png"><code>NPCG6</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcg7.png"><code>NPCG7</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcd1.png"><code>NPCD1</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcd2.png"><code>NPCD2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcd3.png"><code>NPCD3</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcd4.png"><code>NPCD4</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcd5.png"><code>NPCD5</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcd6.png"><code>NPCD6</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcd7.png"><code>NPCD7</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcx1.png"><code>NPCX1</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcd4.png"><code>NPCD4</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcd5.png"><code>NPCD5</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcd6.png"><code>NPCD6</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcd7.png"><code>NPCD7</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcx1.png"><code>NPCX1</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcx2.png"><code>NPCX2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcx3.png"><code>NPCX3</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcx4.png"><code>NPCX4</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcx5.png"><code>NPCX5</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcH1.png"><code>NPCH1</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcx2.png"><code>NPCX2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcx3.png"><code>NPCX3</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcx4.png"><code>NPCX4</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npcx5.png"><code>NPCX5</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npch1.png"><code>NPCH1</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcH2.png"><code>NPCH2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcH3.png"><code>NPCH3</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/npcs/npcH4.png"><code>NPCH4</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npch2.png"><code>NPCH2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npch3.png"><code>NPCH3</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/npch4.png"><code>NPCH4</code></td>
             <td align="center"></td>
             <td align="center"></td>
         </tr>
@@ -363,32 +363,32 @@
     </thead>
     <tbody>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tilecity.png"><code>Tilecity</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tilefield.png"><code>Tilefield</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tilecity.png"><code>Tilecity</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tilefield.png"><code>Tilefield</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tilecaves.png"><code>Tilecaves</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tiletox.png"><code>Tiletox</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tilecaves.png"><code>Tilecaves</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tiletox.png"><code>Tiletox</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tiletox2.png"><code>Tiletox2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tilehell.png"><code>Tilehell</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tiletox2.png"><code>Tiletox2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tilehell.png"><code>Tilehell</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tileairship.png"><code>Tileairship</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tilecomplex.png"><code>Tilecomplex</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tileairship.png"><code>Tileairship</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tilecomplex.png"><code>Tilecomplex</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/theglow.png"><code>theglow</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tileend.png"><code>TileEnd</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/theglow.png"><code>theglow</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tileend.png"><code>TileEnd</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tileretro.png"><code>Tileretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tileglitch.png"><code>TileGlitch</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tileretro.png"><code>Tileretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tileglitch.png"><code>TileGlitch</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tilesewers.png"><code>Tilesewers</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/tilesets/tile.png"><code>Tile</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tilesewers.png"><code>Tilesewers</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tile.png"><code>Tile</code></td>
         </tr>
     </tbody>
 </table>
@@ -401,28 +401,28 @@
     </thead>
     <tbody>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/overlays/overlayscity.png"><code>Overlayscity</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/overlays/overlaysfield.png"><code>Overlaysfield</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/overlayscity.png"><code>Overlayscity</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/overlaysfield.png"><code>Overlaysfield</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/overlays/overlayscaves.png"><code>Overlayscaves</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/overlays/overlaystox.png"><code>Overlaystox</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/overlayscaves.png"><code>Overlayscaves</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/overlaystox.png"><code>Overlaystox</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/overlays/overlaystox2.png"><code>Overlaystox2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/overlays/overlayshell.png"><code>Overlayshell</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/overlaystox2.png"><code>Overlaystox2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/overlayshell.png"><code>Overlayshell</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/overlays/overlaysairship.png"><code>Overlaysairship</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/overlays/overlayscomplex.png"><code>Overlayscomplex</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/overlaysairship.png"><code>Overlaysairship</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/overlayscomplex.png"><code>Overlayscomplex</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/overlays/overlaystheglow.png"><code>Overlaystheglow</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/overlays/Overlaysend.png"><code>Overlaysend</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/overlaystheglow.png"><code>Overlaystheglow</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/Overlaysend.png"><code>Overlaysend</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/overlays/overlaysretro.png"><code>Overlaysretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/overlays/tileoverlays.png"><code>TileOverlays</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/overlaysretro.png"><code>Overlaysretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/tileoverlays.png"><code>TileOverlays</code></td>
         </tr>
     </tbody>
 </table>
@@ -435,32 +435,32 @@
     </thead>
     <tbody>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/bg2.png"><code>bg2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/ch2bg.png"><code>ch2bg</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/bg2.png"><code>bg2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/ch2bg.png"><code>ch2bg</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/ch3bg.png"><code>ch3bg</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/ch4abg.png"><code>ch4abg</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/ch3bg.png"><code>ch3bg</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/ch4abg.png"><code>ch4abg</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/background.png"><code>Background</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/hellbg.png"><code>hellbg</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/background.png"><code>Background</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/hellbg.png"><code>hellbg</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/airshipbg.png"><code>airshipbg</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/field2bg.png"><code>field2bg</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/airshipbg.png"><code>airshipbg</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/field2bg.png"><code>field2bg</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/bgsolid.png"><code>bgsolid</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/neverbg.png"><code>neverbg</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/bgsolid.png"><code>bgsolid</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/neverbg.png"><code>neverbg</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/bgretro.png"><code>bgretro</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/bgretrox.png"><code>bgretrox</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/bgretro.png"><code>bgretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/bgretrox.png"><code>bgretrox</code></td>
         </tr>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/bgretro2.png"><code>bgretro2</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/backgrounds/none.png"><code>None</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/bgretro2.png"><code>bgretro2</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/none.png"><code>None</code></td>
         </tr>
     </tbody>
 </table>
@@ -473,8 +473,8 @@
     </thead>
     <tbody>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/foregrounds/fg1.png"><code>fg1</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/foregrounds/fgretro.png"><code>fgretro</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/fg1.png"><code>fg1</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/fgretro.png"><code>fgretro</code></td>
         </tr>
     </tbody>
 </table>
@@ -487,8 +487,8 @@
     </thead>
     <tbody>
         <tr>
-            <td align="center"><img src="./../../../assets/images/art-alts/midfx/solidbox.png"><code>SolidBox</code></td>
-            <td align="center"><img src="./../../../assets/images/art-alts/midfx/shadebox.png"><code>ShadeBox</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/solidbox.png"><code>SolidBox</code></td>
+            <td align="center"><img src="./../../../assets/images/art-alts/shadebox.png"><code>ShadeBox</code></td>
         </tr>
     </tbody>
 </table>
